@@ -19,6 +19,10 @@ interface ButtonProps {
    * Optional click handler
    */
   onClick?: () => void;
+  /**
+   * Optional children elements
+   */
+  children?: React.ReactNode;
 }
 
 /**
