@@ -1,9 +1,10 @@
 interface RedirectProps {
     href: string;
+    ariaLabel: string;
     children: React.ReactNode;
     redirectClassName?: string;
 }
 
-export const Redirect: React.FC<RedirectProps> = ({ href, children, redirectClassName }) => {
-    return <a href={href} className={redirectClassName}>{children}</a>
+export const Redirect: React.FC<RedirectProps> = ({ href, ariaLabel, children, redirectClassName }) => {
+    return <a href={href} aria-label={ariaLabel} className={redirectClassName}>{children}</a>
 }

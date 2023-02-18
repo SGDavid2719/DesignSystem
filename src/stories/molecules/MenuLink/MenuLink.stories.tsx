@@ -15,6 +15,7 @@ const Template: ComponentStory<typeof MenuLink> = (args) => <MenuLink {...args} 
 export const Default = Template.bind({});
 Default.args = {
     href: "string",
+    ariaLabel: "ariaLabel",
     mainText: "Main text",
     subText: "Sub text"
 };

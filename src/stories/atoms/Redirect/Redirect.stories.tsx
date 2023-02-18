@@ -15,10 +15,12 @@ const Template: ComponentStory<typeof Redirect> = (args) => <Redirect {...args} 
 export const Default = Template.bind({});
 Default.args = {
     href: "/?path=/story/atoms-button--default",
+    ariaLabel: "button"
 };
 
 export const WithChildren = Template.bind({});
 WithChildren.args = {
     href: "/?path=/story/atoms-button--default",
+    ariaLabel: "children",
     children: <p>Children</p>
 };
