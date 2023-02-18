@@ -1,9 +1,8 @@
 interface SpanProps {
     text: string;
+    spanClassName?: string;
 }
 
-const Span: React.FC<SpanProps> = ({ text }) => {
-    return <span>{text}</span>
+export const Span: React.FC<SpanProps> = ({ text, spanClassName }) => {
+    return <span className={[spanClassName].join(" ")}>{text}</span>
 }
-
-export default Span;

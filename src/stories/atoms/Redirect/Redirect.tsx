@@ -3,8 +3,6 @@ interface RedirectProps {
     children: React.ReactNode;
 }
 
-const Redirect: React.FC<RedirectProps> = ({ href, children }) => {
+export const Redirect: React.FC<RedirectProps> = ({ href, children }) => {
     return <a href={href}>{children}</a>
 }
-
-export default Redirect;
