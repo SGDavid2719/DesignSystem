@@ -113,7 +113,7 @@ export const Button = ({
 			disabled={disabled}
 			tabIndex={tabIndex}
 			className={[
-				"flex",
+				"p-1 flex",
         `${disabled ? "cursor-not-allowed" : "cursor-pointer" }`,
         `${align === "end" ? "justify-between" : "flex-row-reverse justify-end"}`,
 				btnClassName,
@@ -128,7 +128,7 @@ export const Button = ({
 				<span className={[].join(" ")}>{label}</span>
 			)}
 			{renderIcon && (
-				<div className={`m-auto ${!hasIconOnly ? "mx-1" : ""}`}>
+				<div className={`my-auto`}>
 					{<Icon iconId={renderIcon} iconClassName={iconClassName} />}
 				</div>
 			)}
