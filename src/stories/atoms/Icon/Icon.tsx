@@ -38,7 +38,7 @@ const ICONS = [
 	},
 ];
 
-const Icon: React.FC<IconProps> = ({ iconId,  iconClassName}) => {
+export const Icon: React.FC<IconProps> = ({ iconId,  iconClassName}) => {
     const icon = ICONS.filter((icon) => icon.iconId === iconId);
 
 	return (
@@ -56,5 +56,3 @@ const Icon: React.FC<IconProps> = ({ iconId,  iconClassName}) => {
 		</svg>
 	);
 }
-
-export default Icon;
