@@ -13,15 +13,15 @@ export const HiddenMenu = ({
 
   return (
   <div>
-    {openned && <div className={["flex justify-between", "grid grid-cols-3 lg:grid-cols-6", "border-b"].join(" ")}>
+    {openned && <ul className={["bg-white grid grid-cols-3 lg:grid-cols-6", "border-b", "gap-2", "p-[1rem]"].join(" ")}>
       {menuLinks.map((menuLink) => { 
         const { href, ariaLabel, mainText, subText } = menuLink;
-        return <MenuLink key={href} href={href} ariaLabel={ariaLabel} mainText={mainText} subText={subText} />
+        return <li><MenuLink key={href} href={href} ariaLabel={ariaLabel} mainText={mainText} subText={subText} menuLinkClassName="bg-[#f6f6f6] p-[0.75rem]"/></li>
       })}
-    </div>}
-    <div className="flex justify-end pr-10">
-      <Button label="FUEIB" renderIcon="add" align="start" onClick={() => setOppened((prevState) => !prevState)} btnClassName={"border-b border-l border-r text-[#555] hover:font-bold hover:text-black w-[6rem] justify-center"}/>
-    </div>
+    </ul>}
+      <div className="flex justify-end">
+      <Button label="FUEIB" renderIcon="add" align="start" onClick={() => setOppened((prevState) => !prevState)} btnClassName={"bg-white border-b border-l border-r text-[#555] hover:font-bold hover:text-black w-[6rem] justify-center mr-12"}/>
+      </div>
   </div>)
 };
   

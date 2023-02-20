@@ -4,15 +4,16 @@ import {Image} from '../../atoms/image/Image';
 export interface ImageLinkProps {
     href: string;
     ariaLabel: string;
-    imageLinkClassName?: string;
+    linkClassName?: string;
+    imageClassName?: string;
     src: string;
     alt: string;
 }
 
-export const ImageLink: React.FC<ImageLinkProps> = ({ href, ariaLabel, imageLinkClassName, src, alt }) => {
+export const ImageLink: React.FC<ImageLinkProps> = ({ href, ariaLabel, linkClassName, imageClassName, src, alt }) => {
     return (
-        <Redirect href={href} ariaLabel={ariaLabel} redirectClassName={[imageLinkClassName].join(" ")}>
-            <Image src={src} alt={alt}/>
+        <Redirect href={href} ariaLabel={ariaLabel} redirectClassName={["w-fit block", linkClassName].join(" ")}>
+            <Image src={src} alt={alt} imageClassName={imageClassName}/>
         </Redirect>
     )
 }
