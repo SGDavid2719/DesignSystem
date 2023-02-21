@@ -1,8 +1,8 @@
 interface SpanProps {
-    text: string;
+    children: React.ReactNode | string;
     spanClassName?: string;
 }
 
-export const Span: React.FC<SpanProps> = ({ text, spanClassName }) => {
-    return <span className={[spanClassName].join(" ")}>{text}</span>
+export const Span: React.FC<SpanProps> = ({ children, spanClassName }) => {
+    return <span className={[spanClassName].join(" ")}>{children}</span>
 }

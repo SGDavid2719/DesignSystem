@@ -21,14 +21,14 @@ Default.args = {
             subText: "a la UIB",
             subSections: [
               {
-                href: "string",
+                href: "string1",
                 ariaLabel: "ariaLabel",
-                children: "string"
+                children: "string1"
               },
               {
-                href: "string",
+                href: "string2",
                 ariaLabel: "ariaLabel",
-                children: "string"
+                children: "string2"
               }
             ]
         },
@@ -39,14 +39,14 @@ Default.args = {
             subText: "de Estudiants",
             subSections: [
               {
-                href: "string",
+                href: "string3",
                 ariaLabel: "ariaLabel",
-                children: "string"
+                children: "string3"
               },
               {
-                href: "string",
+                href: "string4",
                 ariaLabel: "ariaLabel",
-                children: "string"
+                children: "string4"
               }
             ]
         },
@@ -57,14 +57,14 @@ Default.args = {
             subText: "y Proyectos",
             subSections: [
               {
-                href: "string",
+                href: "string5",
                 ariaLabel: "ariaLabel",
-                children: "string"
+                children: "string5"
               },
               {
-                href: "string",
+                href: "string6",
                 ariaLabel: "ariaLabel",
-                children: "string"
+                children: "string6"
               }
             ]
         },
@@ -75,14 +75,14 @@ Default.args = {
             subText: "Events Management",
             subSections: [
               {
-                href: "string",
+                href: "string7",
                 ariaLabel: "ariaLabel",
-                children: "string"
+                children: "string7"
               },
               {
-                href: "string",
+                href: "string8",
                 ariaLabel: "ariaLabel",
-                children: "string"
+                children: "string8"
               }
             ]
         },
@@ -93,14 +93,14 @@ Default.args = {
             subText: "e Inserción Profesional",
             subSections: [
               {
-                href: "string",
+                href: "string9",
                 ariaLabel: "ariaLabel",
-                children: "string"
+                children: "string9"
               },
               {
-                href: "string",
+                href: "string10",
                 ariaLabel: "ariaLabel",
-                children: "string"
+                children: "string10"
               }
             ]
         },
@@ -111,14 +111,14 @@ Default.args = {
             subText: "acceso usuarios",
             subSections: [
               {
-                href: "string",
+                href: "string11",
                 ariaLabel: "ariaLabel",
-                children: "string"
+                children: "string11"
               },
               {
-                href: "string",
+                href: "string12",
                 ariaLabel: "ariaLabel",
-                children: "string"
+                children: "string12"
               }
             ]
         },
@@ -129,14 +129,14 @@ Default.args = {
             subText: "acceso usuarios",
             subSections: [
               {
-                href: "string",
+                href: "string13",
                 ariaLabel: "ariaLabel",
-                children: "string"
+                children: "string13"
               },
               {
-                href: "string",
+                href: "string14",
                 ariaLabel: "ariaLabel",
-                children: "string"
+                children: "string14"
               }
             ]
         }

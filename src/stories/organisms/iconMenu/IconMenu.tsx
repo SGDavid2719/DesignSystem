@@ -11,7 +11,7 @@ export const IconMenu = ({
       <ul className={["grid", `grid-cols-6`, "w-fit", "gap-8"].join(" ")}>
       {iconLinks.map((iconLink) => { 
         const { href, ariaLabel, iconLinkClassName, iconId } = iconLink;
-        return <li><IconLink key={href} href={href} ariaLabel={ariaLabel} iconLinkClassName={iconLinkClassName} iconId={iconId} /></li>
+        return <li key={href}><IconLink href={href} ariaLabel={ariaLabel} iconLinkClassName={iconLinkClassName} iconId={iconId} /></li>
       })}
       </ul>)
 };

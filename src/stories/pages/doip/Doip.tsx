@@ -1,6 +1,8 @@
 import { Button } from "../../atoms/button/Button"
+import { Image } from "../../atoms/image/Image"
 import { Redirect } from "../../atoms/redirect/Redirect"
 import { ImageLink } from "../../molecules/imageLink/ImageLink"
+import { Footer } from "../../organisms/footer/Footer"
 import { HiddenMenu } from "../../organisms/hiddenMenu/HiddenMenu"
 import { IconMenu } from "../../organisms/iconMenu/IconMenu"
 import { NavBar } from "../../organisms/navBar/NavBar"
@@ -47,7 +49,7 @@ export const DoipPage = () => {
         }
     ]
 
-    const imageLink = {
+    const logoLink = {
         href: "href",
         ariaLabel: "logo",
         src: "/assets/logo.png",
@@ -101,32 +103,32 @@ export const DoipPage = () => {
             subText: "saber más",
             subSections: [
               {
-                href: "string",
+                href: "string1",
                 ariaLabel: "ariaLabel",
                 children: "¿Qué hacemos?"
               },
               {
-                href: "string",
+                href: "string2",
                 ariaLabel: "ariaLabel",
                 children: "¿Quiénes somos?"
               },
               {
-                href: "string",
+                href: "string3",
                 ariaLabel: "ariaLabel",
                 children: "Ubicación y horarios"
               },
               {
-                href: "string",
+                href: "string4",
                 ariaLabel: "ariaLabel",
                 children: "Datos y cifras"
               },
               {
-                href: "string",
+                href: "string5",
                 ariaLabel: "ariaLabel",
                 children: "Datos y cifras mensuales"
               },
               {
-                href: "string",
+                href: "string6",
                 ariaLabel: "ariaLabel",
                 children: "Noticias del DOIP"
               }
@@ -139,32 +141,32 @@ export const DoipPage = () => {
             subText: "estudiantes y titulados",
             subSections: [
               {
-                href: "string",
+                href: "string7",
                 ariaLabel: "ariaLabel",
                 children: "Alta/Acceso DOIP"
               },
               {
-                href: "string",
+                href: "string8",
                 ariaLabel: "ariaLabel",
                 children: "Tablón de ofertas"
               },
               {
-                href: "string",
+                href: "string9",
                 ariaLabel: "ariaLabel",
                 children: "Prácticas y empleo"
               },
               {
-                href: "string",
+                href: "string10",
                 ariaLabel: "ariaLabel",
                 children: "Preguntas frecuentes"
               },
               {
-                href: "string",
+                href: "string11",
                 ariaLabel: "ariaLabel",
                 children: "Condiciones y normativa"
               },
               {
-                href: "string",
+                href: "string12",
                 ariaLabel: "ariaLabel",
                 children: "Decálogo del estudiante en prácticas"
               }
@@ -177,22 +179,22 @@ export const DoipPage = () => {
             subText: "y entidades",
             subSections: [
                 {
-                    href: "string",
+                    href: "string13",
                     ariaLabel: "ariaLabel",
                     children: "Alta/Acceso DOIP"
                 },
                 {
-                    href: "string",
+                    href: "string14",
                     ariaLabel: "ariaLabel",
                     children: "Busca candidatos"
                 },
                 {
-                    href: "string",
+                    href: "string15",
                     ariaLabel: "ariaLabel",
                     children: "Preguntas frecuentes"
                 },
                 {
-                    href: "string",
+                    href: "string16",
                     ariaLabel: "ariaLabel",
                     children: "Condiciones, costes y normativa"
                 },
@@ -211,27 +213,27 @@ export const DoipPage = () => {
             subText: "en mallorca, menorca y pituisas",
             subSections: [
               {
-                href: "string",
+                href: "string17",
                 ariaLabel: "ariaLabel",
                 children: "¿Qué es el servicio de Orientación profesional?"
               },
               {
-                href: "string",
+                href: "string18",
                 ariaLabel: "ariaLabel",
                 children: "Pide una cita al servicio de orientación"
               },
               {
-                href: "string",
+                href: "string19",
                 ariaLabel: "ariaLabel",
                 children: "Recursos útiles"
               },
               {
-                href: "string",
+                href: "string20",
                 ariaLabel: "ariaLabel",
                 children: "Asesoramiento en oposiciones"
               },
               {
-                href: "string",
+                href: "string21",
                 ariaLabel: "ariaLabel",
                 children: "Cápsula de éxito profesional"
               }
@@ -442,13 +444,136 @@ export const DoipPage = () => {
         }
       ]
 
+    /**
+     * MAIN
+     */
+
+    const departmentImage = {
+        src: "/assets/departOrient.png",
+        alt: "Departamento orientación"
+    }
+
+    const offersLink = {
+        href: "href",
+        ariaLabel: "logo",
+        src: "/assets/tableroOfertas.png",
+        alt: "Tablero ofertas"
+    }
+
+    const doipLogos = {
+        src: "/assets/logosDoip.png",
+        alt: "Logos DOIP"
+    }
+
+    /**
+     * FOOTER
+     */
+
+    const footer = {
+        officesList: [
+            {
+                location: "Ctra. de Valldemossa, km 7.5 (Edificio Instalaciones Deportivas, Campus UIB). 07122 Palma, Illes Balears (España)",
+                phoneNumber: "(+34) 971259697",
+                email: "doip@fueib.org",
+                schedules: ["Lu-Ju: 08:00-15:30", "Vi: 08:00-15:00"]
+            },
+            {
+                location: "Calle de Santa Rita 11 (Sede universitaria de Menorca) . 07730 Alaior, Illes Balears (España)",
+                phoneNumber: "(+34) 661280318",
+                email: "josep.capo@fueib.org",
+                schedules: ["Lu-Ma: 08:00-15:30", "Mi: 09:00-16:30", "Ju-Vi: 09:00-15:30"]
+            },
+            {
+                location: "Calle Calvari,1 (Antiguo Edificio de la Comandancia). 07800 Ibiza, Illes Balears (España)",
+                phoneNumber: "(+34) 661281650",
+                email: "carla.blancafort@fueib.org",
+                schedules: ["Lu: 09:00-16:30", "Ma-Vi: 08:00-15:30"]
+            },
+            {
+                location: "Calle Miquel de Sants i Oliver, 2 (Edificio Sa Riera). 07012 Palma, Illes Balears (España)",
+                phoneNumber: "(+34) 971173302",
+                email: "orientacio@fueib.org",
+                schedules: ["Lu-Mi: 08:00-15:30", "Ju: 08:00-17:00", "Vi: 08:00-15:00"]
+            },
+        ],
+        mainParagraph: "© 2023. Fundació Universitat-Empresa de les Illes Balears MP. CIF: G07779895",
+        secondaryParagraph: "Agencia de colocación nº0400000007",
+        iconsLinks: [
+            {
+                href: "link1",
+                ariaLabel: "link1",
+                iconId: "home",
+                iconLinkClassName: "text-blue-400"
+            },
+            {
+                href: "link2",
+                ariaLabel: "link2",
+                iconId: "magnifying-glass",
+                iconLinkClassName: "text-blue-400"
+            },
+            {
+                href: "link3",
+                ariaLabel: "link3",
+                iconId: "facebook",
+                iconLinkClassName: "text-blue-400"
+            },
+            {
+                href: "link4",
+                ariaLabel: "link4",
+                iconId: "twitter",
+                iconLinkClassName: "text-blue-400"
+            },
+            {
+                href: "link5",
+                ariaLabel: "link5",
+                iconId: "youtube",
+                iconLinkClassName: "text-blue-400"
+            },
+            {
+                href: "link6",
+                ariaLabel: "link6",
+                iconId: "instagram",
+                iconLinkClassName: "text-blue-400"
+            }
+        ],
+        mainLinks: [
+            {
+                href: "string22",
+                children: "Aviso legal",
+                ariaLabel: "Aviso legal"
+            },
+            {
+                href: "string23",
+                children: "Política de privacidad",
+                ariaLabel: "Política de privacidad"
+            },
+            {
+                href: "string24",
+                children: "Mapa de contenidos",
+                ariaLabel: "Mapa de contenidos"
+            },
+        ],
+        secondaryLinks: [
+            {
+                href: "string25",
+                children: "Política de cookies (galetes)",
+                ariaLabel: "Política de cookies (galetes)"
+            },
+            {
+                href: "string26",
+                children: "Configurar cookies (galetes)",
+                ariaLabel: "Configurar cookies (galetes)"
+            },
+        ]
+    };
+
     return (
         <div className="bg-[#f9f9f9]">
             <header>
                 <HiddenMenu menuLinks={menuLinks} />
                 <div className="flex my-10 px-10">
                     <div className="w-2/3">
-                        <ImageLink  {...imageLink} imageClassName="h-[5rem]"/>
+                        <ImageLink  {...logoLink} imageClassName="h-[5rem]"/>
                     </div>
                     <div className="w-1/3">
                         <div>
@@ -465,6 +590,30 @@ export const DoipPage = () => {
                     <NavBar mainLinks={mainLinks} sections={sections}/>
                 </div>
             </header>
+            <main>
+                <div className="flex">
+                    <div className="w-1/3 p-10">
+                        <Image {...departmentImage}/>
+                        <ImageLink  {...offersLink}/>
+                    </div>
+                    <div className="w-2/3">
+                        <p>PENDING</p>
+                    </div>
+                </div>
+                <div>
+                    <h1 className="uppercase text-xl text-center">Actualidad</h1>
+                </div>
+                <div className="p-8">
+                    <p>PENDING</p>
+                </div>
+                <div>
+                    <h2 className="uppercase text-xl text-center">Con la colaboración de</h2>
+                </div>
+                <div className="p-8">
+                    <Image {...doipLogos}/>
+                </div>
+            </main>
+            <Footer {...footer}/>
         </div>
     )
     

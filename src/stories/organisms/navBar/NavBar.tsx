@@ -15,7 +15,7 @@ export const NavBar = ({
     <ul className={["grid grid-cols-8 gap-2"].join(" ")}>
       {mainLinks.map((menuLink) => { 
         const { href, ariaLabel, mainText, subText, subSections } = menuLink;
-        return <li><MenuLink key={href} href={href} ariaLabel={ariaLabel} mainText={mainText} subText={subText} subSections={subSections} menuLinkClassName="p-[0.75rem] uppercase"/></li>
+        return <li key={href}><MenuLink href={href} ariaLabel={ariaLabel} mainText={mainText} subText={subText} subSections={subSections} menuLinkClassName="p-[0.75rem] uppercase"/></li>
       })}
       <li className="mt-4"><MenuButton sections={sections} /></li>
     </ul>

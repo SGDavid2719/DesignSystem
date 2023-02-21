@@ -16,7 +16,7 @@ export const HiddenMenu = ({
     {openned && <ul className={["bg-white grid grid-cols-3 lg:grid-cols-6", "border-b", "gap-2", "p-[1rem]"].join(" ")}>
       {menuLinks.map((menuLink) => { 
         const { href, ariaLabel, mainText, subText } = menuLink;
-        return <li><MenuLink key={href} href={href} ariaLabel={ariaLabel} mainText={mainText} subText={subText} menuLinkClassName="bg-[#f6f6f6] p-[0.75rem]"/></li>
+        return <li key={href}><MenuLink href={href} ariaLabel={ariaLabel} mainText={mainText} subText={subText} menuLinkClassName="bg-[#f6f6f6] p-[0.75rem]"/></li>
       })}
     </ul>}
       <div className="flex justify-end">

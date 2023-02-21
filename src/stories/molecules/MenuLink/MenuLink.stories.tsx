@@ -14,7 +14,7 @@ const Template: ComponentStory<typeof MenuLink> = (args) => <MenuLink {...args} 
 
 export const Default = Template.bind({});
 Default.args = {
-  href: "string",
+  href: "string1",
   ariaLabel: "ariaLabel",
   mainText: "Main text",
   subText: "Sub text"
@@ -22,20 +22,20 @@ Default.args = {
 
 export const WithSubsections = Template.bind({});
 WithSubsections.args = {
-  href: "string",
+  href: "string1",
   ariaLabel: "ariaLabel",
   mainText: "Main text",
   subText: "Sub text",
   subSections: [
     {
-      href: "string",
+      href: "string2",
       ariaLabel: "ariaLabel",
-      children: "string"
+      children: "string1"
     },
     {
-      href: "string",
+      href: "string3",
       ariaLabel: "ariaLabel",
-      children: "string"
+      children: "string2"
     }
   ]
 };

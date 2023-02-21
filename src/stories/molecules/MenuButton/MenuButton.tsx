@@ -19,7 +19,7 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ sections }) => {
     const portalElement = document.getElementById("overlays");
 
     return <>
-        <Button label="MENÚ" renderIcon="add" align="start" onClick={() => setShowMenu((prevState) => !prevState)} btnClassName={"text-xl hover:text-blue-600 focus:text-blue-600"}/>
+        <Button label="MENÚ" renderIcon="menu" align="start" onClick={() => setShowMenu((prevState) => !prevState)} btnClassName={"text-xl hover:text-blue-600 focus:text-blue-600"}/>
         {showMenu && 
             ReactDOM.createPortal(
                 <div className='mt-2 border grid grid-cols-4 bg-white m-6 p-2'>
@@ -27,14 +27,14 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ sections }) => {
                         const { title, sectionLinks } = section;
 
                         return (
-                            <div className='p-4'>
+                            <div className='p-4' key={title}>
                                 <h1 className='uppercaset text-2xl text-blue-600 font-light mb-1'>{title}</h1>
                                 <ul>
                                     {sectionLinks.map((sectionLink) => {
                                         const { href, ariaLabel, mainText, subText } = sectionLink;
                 
                                         return (
-                                            <li className='mb-1'><MenuLink key={href} href={href} ariaLabel={ariaLabel} mainText={mainText} subText={subText} menuLinkClassName='flex align-baseline'/></li>
+                                            <li className='mb-1' key={href}><MenuLink href={href} ariaLabel={ariaLabel} mainText={mainText} subText={subText} menuLinkClassName='flex align-baseline'/></li>
                                         )
                                     })}
                                     </ul>
