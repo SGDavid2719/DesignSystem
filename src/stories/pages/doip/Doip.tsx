@@ -5,7 +5,9 @@ import { ImageLink } from "../../molecules/imageLink/ImageLink"
 import { Footer } from "../../organisms/footer/Footer"
 import { HiddenMenu } from "../../organisms/hiddenMenu/HiddenMenu"
 import { IconMenu } from "../../organisms/iconMenu/IconMenu"
+import { InfoCard } from "../../organisms/infoCard/InfoCard"
 import { NavBar } from "../../organisms/navBar/NavBar"
+import { OffersList } from "../../organisms/offersList/OffersList"
 
 
 export const DoipPage = () => {
@@ -465,6 +467,93 @@ export const DoipPage = () => {
         alt: "Logos DOIP"
     }
 
+    const firstInfoCard = {
+        cardPhoto: {
+            href: "href",
+            ariaLabel: "logo",
+            src: "/assets/infoImage.png",
+            alt: "logo"
+        },
+        dateTime: new Date(2023, 2, 22),
+        mainRedirect: {
+            href: "href",
+            ariaLabel: "mainRedirect",
+            children: "1.256 ofertas de trabajo y 589 prácticas extracurriculares, balance del DOIP durante el curso 2021-22"
+        },
+        secondaryRedirect: {
+            href: "href",
+            ariaLabel: "secondaryRedirect",
+            children: "Doip"
+        },
+        text: "Durante el curso 2021-22, 589 estudiantes han podido realizar prácticas extracurriculares a empresas y se han gestionado 1.256 ofertas laborales. El número de contratos laborales firmados de los que se tiene constancia es de 197.",
+        iconId: "tags"
+    }
+
+    const secondInfoCard = {
+        cardPhoto: {
+            href: "href",
+            ariaLabel: "logo",
+            src: "/assets/infoImage2.png",
+            alt: "logo"
+        },
+        dateTime: new Date(2023, 1, 19),
+        mainRedirect: {
+            href: "href",
+            ariaLabel: "mainRedirect",
+            children: "La FUEIB da a conocer la Residencia de Estudiantes, el DOIP y CampusEsport en Ibiza"
+        },
+        secondaryRedirect: {
+            href: "href",
+            ariaLabel: "secondaryRedirect",
+            children: "Doip"
+        },
+        text: "La Fundación Universidad Empresa de las Islas Baleares MP participa hoy en la jornada de puertas abiertas de la sede universitaria de Eivissa.",
+        iconId: "tags"
+    }
+
+    const offersList = {
+        offerLinks: [
+            {
+                offerRedirect: {
+                    href: "href",
+                    ariaLabel: "offerRedirect",
+                    children: "Sales Development Representative"
+                },
+                offerName: "Oferta de trabajo",
+                placeName: "Islas Baleares, España",
+                publicationDate: new Date(2023, 2, 24),
+                referenceNumber: 10742
+            },
+            {
+                offerRedirect: {
+                    href: "href",
+                    ariaLabel: "offerRedirect",
+                    children: "Back office Dpto Expansión (sector hotelero)"
+                },
+                offerName: "Oferta de trabajo",
+                placeName: "Islas Baleares, España",
+                publicationDate: new Date(2023, 2, 20),
+                referenceNumber: 10743
+            },
+            {
+                offerRedirect: {
+                    href: "href",
+                    ariaLabel: "offerRedirect",
+                    children: "JOB DAY UIB 2023 - Administativo/a"
+                },
+                offerName: "Oferta de trabajo",
+                placeName: "Islas Baleares, España",
+                publicationDate: new Date(2023, 2, 20),
+                referenceNumber: 10744
+            }
+        ],
+        redirect: {
+            href: "href",
+            ariaLabel: "mainRedirect",
+            children: "... visualiza todas las ofertas"
+        },
+    }
+
     /**
      * FOOTER
      */
@@ -603,8 +692,10 @@ export const DoipPage = () => {
                 <div>
                     <h1 className="uppercase text-xl text-center">Actualidad</h1>
                 </div>
-                <div className="p-8">
-                    <p>PENDING</p>
+                <div className="p-8 grid grid-cols-3 gap-3">
+                    <InfoCard {...firstInfoCard}/>
+                    <InfoCard {...secondInfoCard}/>
+                    <OffersList {...offersList}/>
                 </div>
                 <div>
                     <h2 className="uppercase text-xl text-center">Con la colaboración de</h2>

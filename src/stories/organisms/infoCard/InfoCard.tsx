@@ -22,11 +22,11 @@ export const InfoCard = ({
 }: InfoCardProps) => {
 
   return (
-  <div className="w-[25rem] border">
-    <div className="p-4">
-        <ImageLink  {...cardPhoto} imageClassName="h-[7rem] w-full"/>
+  <div className="w-[22rem] h-[34rem] bg-white">
+    <div className="">
+        <ImageLink  {...cardPhoto} imageClassName=" w-full"/>
     </div>
-    <div className="flex gap-2 p-4">
+    <div className="flex gap-2 p-4 h-[8rem]">
         <div className="w-1/5">
             <Time dateTime={dateTime}/>
         </div>
@@ -34,8 +34,8 @@ export const InfoCard = ({
             <Redirect {...mainRedirect} redirectClassName="text-blue-600 font-semibold"/>
         </div>
     </div>
-    <div className="p-4">
-        <Paragraph text={text}/>
+    <div className="p-4 h-[12rem]">
+        <Paragraph text={text} textClassName="text-justify"/>
     </div>
     <div className="flex gap-2 p-4">
         <Icon iconId={iconId} iconClassName="mt-1"/>
