@@ -15,6 +15,6 @@ export const Default = Template.bind({});
 Default.args = {
     href: "href",
     ariaLabel: "logo",
-    src: "/assets/logo.png",
+    src: "./assets/logo.png",
     alt: "logo"
 };

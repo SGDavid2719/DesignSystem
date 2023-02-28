@@ -13,6 +13,6 @@ const Template: ComponentStory<typeof Image> = (args) => <Image {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  src: "/assets/logo.png",
+  src: "./assets/logo.png",
   alt: "alt"
 };

@@ -54,7 +54,7 @@ export const DoipPage = () => {
     const logoLink = {
         href: "href",
         ariaLabel: "logo",
-        src: "/assets/logo.png",
+        src: "./assets/logo.png",
         alt: "logo"
     }
 
@@ -451,19 +451,19 @@ export const DoipPage = () => {
      */
 
     const departmentImage = {
-        src: "/assets/departOrient.png",
+        src: "./assets/departOrient.png",
         alt: "Departamento orientación"
     }
 
     const offersLink = {
         href: "href",
         ariaLabel: "logo",
-        src: "/assets/tableroOfertas.png",
+        src: "./assets/tableroOfertas.png",
         alt: "Tablero ofertas"
     }
 
     const doipLogos = {
-        src: "/assets/logosDoip.png",
+        src: "./assets/logosDoip.png",
         alt: "Logos DOIP"
     }
 
@@ -471,7 +471,7 @@ export const DoipPage = () => {
         cardPhoto: {
             href: "href",
             ariaLabel: "logo",
-            src: "/assets/infoImage.png",
+            src: "./assets/infoImage.png",
             alt: "logo"
         },
         dateTime: new Date(2023, 2, 22),
@@ -493,7 +493,7 @@ export const DoipPage = () => {
         cardPhoto: {
             href: "href",
             ariaLabel: "logo",
-            src: "/assets/infoImage2.png",
+            src: "./assets/infoImage2.png",
             alt: "logo"
         },
         dateTime: new Date(2023, 1, 19),

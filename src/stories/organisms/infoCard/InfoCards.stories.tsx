@@ -16,7 +16,7 @@ Default.args = {
     cardPhoto: {
         href: "href",
         ariaLabel: "logo",
-        src: "/assets/logo.png",
+        src: "./assets/logo.png",
         alt: "logo"
     },
     dateTime: new Date(2020, 4, 20),
