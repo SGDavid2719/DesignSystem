@@ -1,15 +1,16 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { IconMenu } from './IconMenu';
+import { IconMenu } from "./IconMenu";
 
 export default {
-  title: 'Organisms/IconMenu',
-  component: IconMenu,
-  argTypes: {
-  },
+    title: "Organisms/IconMenu",
+    component: IconMenu,
+    argTypes: {},
 } as ComponentMeta<typeof IconMenu>;
 
-const Template: ComponentStory<typeof IconMenu> = (args) => <IconMenu {...args} />;
+const Template: ComponentStory<typeof IconMenu> = (args) => (
+    <IconMenu {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {
@@ -17,32 +18,32 @@ Default.args = {
         {
             href: "link1",
             ariaLabel: "link1",
-            iconId: "home"
+            iconId: "home",
         },
         {
             href: "link2",
             ariaLabel: "link2",
-            iconId: "magnifying-glass"
+            iconId: "magnifying-glass",
         },
         {
             href: "link3",
             ariaLabel: "link3",
-            iconId: "facebook"
+            iconId: "facebook",
         },
         {
             href: "link4",
             ariaLabel: "link4",
-            iconId: "twitter"
+            iconId: "twitter",
         },
         {
             href: "link5",
             ariaLabel: "link5",
-            iconId: "youtube"
+            iconId: "youtube",
         },
         {
             href: "link6",
             ariaLabel: "link6",
-            iconId: "instagram"
-        }
-    ]
+            iconId: "instagram",
+        },
+    ],
 };

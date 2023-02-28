@@ -1,18 +1,18 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Span } from './Span';
+import { Span } from "./Span";
 
 export default {
-  title: 'Atoms/Span',
-  component: Span,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+    title: "Atoms/Span",
+    component: Span,
+    argTypes: {
+        backgroundColor: { control: "color" },
+    },
 } as ComponentMeta<typeof Span>;
 
 const Template: ComponentStory<typeof Span> = (args) => <Span {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  children: "Span"
+    children: "Span",
 };

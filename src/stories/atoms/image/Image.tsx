@@ -5,5 +5,5 @@ interface ImageProps {
 }
 
 export const Image: React.FC<ImageProps> = ({ src, alt, imageClassName }) => {
-    return <img src={src} alt={alt} className={imageClassName}/>
-}
+    return <img src={src} alt={alt} className={imageClassName} />;
+};

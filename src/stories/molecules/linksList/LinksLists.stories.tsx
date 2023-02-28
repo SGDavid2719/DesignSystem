@@ -1,15 +1,16 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { LinksList } from './LinksList';
+import { LinksList } from "./LinksList";
 
 export default {
-  title: 'Molecules/LinksList',
-  component: LinksList,
-  argTypes: {
-  },
+    title: "Molecules/LinksList",
+    component: LinksList,
+    argTypes: {},
 } as ComponentMeta<typeof LinksList>;
 
-const Template: ComponentStory<typeof LinksList> = (args) => <LinksList {...args} />;
+const Template: ComponentStory<typeof LinksList> = (args) => (
+    <LinksList {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {
@@ -17,17 +18,17 @@ Default.args = {
         {
             href: "string1",
             children: "Aviso legal",
-            ariaLabel: "Aviso legal"
+            ariaLabel: "Aviso legal",
         },
         {
             href: "string2",
             children: "Política de privacidad",
-            ariaLabel: "Política de privacidad"
+            ariaLabel: "Política de privacidad",
         },
         {
             href: "string3",
             children: "Mapa de contenidos",
-            ariaLabel: "Mapa de contenidos"
+            ariaLabel: "Mapa de contenidos",
         },
-    ]
+    ],
 };
