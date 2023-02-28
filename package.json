@@ -2,6 +2,7 @@
   "name": "design-system",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sgdavid2719.github.io/DesignSystem/",
   "dependencies": {
     "@storybook/addon-a11y": "^6.5.16",
     "@testing-library/jest-dom": "^5.16.5",
@@ -27,6 +28,8 @@
     "watch:storybook": "start-storybook -p 6006 -s public",
     "watch:tailwind": "npx tailwindcss -i ./src/tailwind-input.css -o ./src/styles/tailwind.css --watch",
     "build-tailwind": "npx tailwindcss -i ./src/tailwind-input.css -o ./src/styles/tailwind.css",
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
     "build-storybook": "npm run build-tailwind && build-storybook -s public"
   },
   "eslintConfig": {
@@ -69,6 +72,7 @@
     "@storybook/react": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "gh-pages": "^5.0.0",
     "prop-types": "^15.8.1",
     "tailwindcss": "^3.2.6",
     "webpack": "^5.75.0"
