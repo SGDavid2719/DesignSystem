@@ -26,8 +26,8 @@
     "storybook": "concurrently 'npm:watch:*'",
     "watch:storybook": "start-storybook -p 6006 -s public",
     "watch:tailwind": "npx tailwindcss -i ./src/tailwind-input.css -o ./src/styles/tailwind.css --watch",
-    "build-storybook": "build:tailwind && build-storybook -s public",
-    "build:tailwind": "npx tailwindcss -i ./src/tailwind-input.css -o ./src/styles/tailwind.css"
+    "build-tailwind": "npx tailwindcss -i ./src/tailwind-input.css -o ./src/styles/tailwind.css",
+    "build-storybook": "npm run build-tailwind && build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [

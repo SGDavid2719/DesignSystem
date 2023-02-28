@@ -14,5 +14,5 @@ const Template: ComponentStory<typeof Span> = (args) => <Span {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-    text: "Span"
+  children: "Span"
 };

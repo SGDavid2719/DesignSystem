@@ -1,9 +1,8 @@
 interface ParagraphProps {
     text: string;
+    textClassName?: string;
 }
 
-const Paragraph: React.FC<ParagraphProps> = ({ text }) => {
-    return <p>{text}</p>
+export const Paragraph: React.FC<ParagraphProps> = ({ text, textClassName }) => {
+    return <p className={textClassName}>{text}</p>
 }
-
-export default Paragraph;
