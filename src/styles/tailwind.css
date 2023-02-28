@@ -585,6 +585,14 @@ video {
   margin-bottom: 0.25rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .mb-\[3px\] {
   margin-bottom: 3px;
 }
@@ -597,6 +605,10 @@ video {
   margin-right: 3rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -607,34 +619,6 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
-.mb-3 {
-  margin-bottom: 0.75rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
-}
-
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
-.mb-7 {
-  margin-bottom: 1.75rem;
 }
 
 .block {
@@ -661,8 +645,24 @@ video {
   height: 1rem;
 }
 
+.h-\[12rem\] {
+  height: 12rem;
+}
+
+.h-\[25rem\] {
+  height: 25rem;
+}
+
+.h-\[34rem\] {
+  height: 34rem;
+}
+
 .h-\[5rem\] {
   height: 5rem;
+}
+
+.h-\[8rem\] {
+  height: 8rem;
 }
 
 .h-fit {
@@ -671,68 +671,12 @@ video {
   height: fit-content;
 }
 
-.h-\[7rem\] {
-  height: 7rem;
-}
-
-.h-\[50rem\] {
-  height: 50rem;
-}
-
-.h-\[30rem\] {
-  height: 30rem;
-}
-
-.h-\[10rem\] {
-  height: 10rem;
-}
-
-.h-\[20rem\] {
-  height: 20rem;
-}
-
-.h-\[24rem\] {
-  height: 24rem;
-}
-
-.h-\[25rem\] {
-  height: 25rem;
-}
-
-.h-\[26rem\] {
-  height: 26rem;
-}
-
-.h-\[32rem\] {
-  height: 32rem;
-}
-
-.h-\[34rem\] {
-  height: 34rem;
-}
-
-.h-\[35rem\] {
-  height: 35rem;
-}
-
-.h-\[36rem\] {
-  height: 36rem;
-}
-
-.h-\[8rem\] {
-  height: 8rem;
-}
-
-.h-\[12rem\] {
-  height: 12rem;
-}
-
-.h-\[32remrem\] {
-  height: 32remrem;
-}
-
 .w-1\/3 {
   width: 33.333333%;
+}
+
+.w-1\/5 {
+  width: 20%;
 }
 
 .w-2\/3 {
@@ -743,8 +687,16 @@ video {
   width: 1rem;
 }
 
+.w-4\/5 {
+  width: 80%;
+}
+
 .w-\[20rem\] {
   width: 20rem;
+}
+
+.w-\[22rem\] {
+  width: 22rem;
 }
 
 .w-\[6rem\] {
@@ -759,22 +711,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-1\/5 {
-  width: 20%;
-}
-
-.w-4\/5 {
-  width: 80%;
-}
-
-.w-\[25rem\] {
-  width: 25rem;
-}
-
-.w-\[22rem\] {
-  width: 22rem;
 }
 
 .cursor-not-allowed {
@@ -817,8 +753,16 @@ video {
   justify-content: space-between;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
 }
 
 .gap-4 {
@@ -827,14 +771,6 @@ video {
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-1 {
-  gap: 0.25rem;
-}
-
-.gap-3 {
-  gap: 0.75rem;
 }
 
 .self-end {
@@ -935,10 +871,6 @@ video {
   padding: 1rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -956,14 +888,6 @@ video {
 
 .pt-5 {
   padding-top: 1.25rem;
-}
-
-.pt-2 {
-  padding-top: 0.5rem;
-}
-
-.pt-1 {
-  padding-top: 0.25rem;
 }
 
 .text-center {
@@ -1025,19 +949,9 @@ video {
   color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
-.text-white {
+.text-blue-800 {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-green-800 {
-  --tw-text-opacity: 1;
-  color: rgb(22 101 52 / var(--tw-text-opacity));
-}
-
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(30 64 175 / var(--tw-text-opacity));
 }
 
 .text-green-900 {
@@ -1045,9 +959,9 @@ video {
   color: rgb(20 83 45 / var(--tw-text-opacity));
 }
 
-.text-blue-800 {
+.text-white {
   --tw-text-opacity: 1;
-  color: rgb(30 64 175 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .blur {
@@ -1066,24 +980,14 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
-.hover\:bg-\[\#f6f6f6\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(246 246 246 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-gray-400:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-gray-200:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-\[\#E6E6E6\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(230 230 230 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#f6f6f6\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 246 246 / var(--tw-bg-opacity));
 }
 
 .hover\:font-bold:hover {
