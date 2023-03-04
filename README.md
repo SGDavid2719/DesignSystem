@@ -28,3 +28,7 @@ The build is minified and the filenames include the hashes.\
 The deploys to GitHub Pages.
 
 View deployment [Design System](https://sgdavid2719.github.io/DesignSystem/)
+
+## To build the solution
+
+### `npm run build`

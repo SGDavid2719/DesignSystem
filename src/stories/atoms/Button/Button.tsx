@@ -82,7 +82,7 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
+export const Button: React.FC<ButtonProps> = ({
     type = "button",
     role = "button",
     label,
@@ -102,7 +102,7 @@ export const Button = ({
     onMouseLeave,
     btnClassName,
     iconClassName,
-}: ButtonProps) => {
+}) => {
     return (
         <button
             type={type}
