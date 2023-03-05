@@ -17,7 +17,7 @@ export const OffersList = ({ offerLinks, redirect }: InfoCardProps) => {
                 />
                 <Icon iconId="bullhorn" />
             </div>
-            <div className="h-[25rem] overflow-y-scroll mb-5">
+            <div className="h-[22.75rem] lg:h-[25.75rem] overflow-y-scroll mb-5">
                 {offerLinks.map((offerLink) => {
                     return (
                         <div key={offerLink.referenceNumber} className="p-4">

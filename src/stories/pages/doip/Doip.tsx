@@ -677,15 +677,19 @@ export const DoipPage = () => {
         <div className="bg-[#f9f9f9]">
             <header>
                 <HiddenMenu menuLinks={menuLinks} />
-                <div className="flex my-10 px-10">
-                    <div className="w-2/3">
-                        <ImageLink {...logoLink} imageClassName="h-[5rem]" />
+                <div className="block lg:flex my-10 px-10">
+                    <div className="w-full lg:w-2/3">
+                        <ImageLink
+                            {...logoLink}
+                            imageClassName="h-[5rem]"
+                            linkClassName="w-fit"
+                        />
                     </div>
-                    <div className="w-1/3">
+                    <div className="w-full mt-4 lg:mt-0 lg:w-1/3">
                         <div>
                             <IconMenu iconLinks={iconsLink} />
                         </div>
-                        <div className="mt-4 flex justify-end gap-4">
+                        <div className="mt-4 flex justify-start lg:justify-end gap-4">
                             <Redirect
                                 {...yearsRedirect}
                                 redirectClassName="hover:text-blue-600 self-center"
@@ -728,8 +732,8 @@ export const DoipPage = () => {
                 </div>
                 <div className="p-8 block md:flex gap-3">
                     <div className="block sm:flex gap-3 w-full lg:w-2/3 mt-4">
-                        <InfoCard {...firstInfoCard} />
-                        <InfoCard {...secondInfoCard} />
+                        <InfoCard {...firstInfoCard} infoCardClassName="mb-4" />
+                        <InfoCard {...secondInfoCard} infoCardClassName="" />
                     </div>
                     <div className="w-full md:w-1/3 mt-4">
                         <OffersList {...offersList} />
