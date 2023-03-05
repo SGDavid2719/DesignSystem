@@ -12,37 +12,37 @@ import { OffersList } from "../../organisms/offersList/OffersList";
 export const DoipPage = () => {
     const menuLinks = [
         {
-            href: "link1",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link1",
             mainText: "Deporte",
             subText: "a la UIB",
         },
         {
-            href: "link2",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link2",
             mainText: "Residencia",
             subText: "de Estudiants",
         },
         {
-            href: "link3",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link3",
             mainText: "OTRI",
             subText: "y Proyectos",
         },
         {
-            href: "link4",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link4",
             mainText: "UIBCongrés",
             subText: "Events Management",
         },
         {
-            href: "link5",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link5",
             mainText: "Orientación",
             subText: "e Inserción Profesional",
         },
         {
-            href: "link6",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link6",
             mainText: "UIBdigital",
             subText: "acceso usuarios",
@@ -50,7 +50,7 @@ export const DoipPage = () => {
     ];
 
     const logoLink = {
-        href: "href",
+        href: "/?path=/story/pages-notfoundpage--default",
         ariaLabel: "logo",
         src: "./assets/logo.png",
         alt: "logo",
@@ -58,32 +58,32 @@ export const DoipPage = () => {
 
     const iconsLink = [
         {
-            href: "link1",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link1",
             iconId: "home",
         },
         {
-            href: "link2",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link2",
             iconId: "magnifying-glass",
         },
         {
-            href: "link3",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link3",
             iconId: "facebook",
         },
         {
-            href: "link4",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link4",
             iconId: "twitter",
         },
         {
-            href: "link5",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link5",
             iconId: "youtube",
         },
         {
-            href: "link6",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link6",
             iconId: "instagram",
         },
@@ -97,156 +97,156 @@ export const DoipPage = () => {
 
     const mainLinks = [
         {
-            href: "link1",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link1",
             mainText: "DOIP",
             subText: "saber más",
             subSections: [
                 {
-                    href: "string1",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "¿Qué hacemos?",
                 },
                 {
-                    href: "string2",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "¿Quiénes somos?",
                 },
                 {
-                    href: "string3",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "Ubicación y horarios",
                 },
                 {
-                    href: "string4",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "Datos y cifras",
                 },
                 {
-                    href: "string5",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "Datos y cifras mensuales",
                 },
                 {
-                    href: "string6",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "Noticias del DOIP",
                 },
             ],
         },
         {
-            href: "link2",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link2",
             mainText: "Universitarios",
             subText: "estudiantes y titulados",
             subSections: [
                 {
-                    href: "string7",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "Alta/Acceso DOIP",
                 },
                 {
-                    href: "string8",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "Tablón de ofertas",
                 },
                 {
-                    href: "string9",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "Prácticas y empleo",
                 },
                 {
-                    href: "string10",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "Preguntas frecuentes",
                 },
                 {
-                    href: "string11",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "Condiciones y normativa",
                 },
                 {
-                    href: "string12",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "Decálogo del estudiante en prácticas",
                 },
             ],
         },
         {
-            href: "link3",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link3",
             mainText: "Empresas",
             subText: "y entidades",
             subSections: [
                 {
-                    href: "string13",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "Alta/Acceso DOIP",
                 },
                 {
-                    href: "string14",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "Busca candidatos",
                 },
                 {
-                    href: "string15",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "Preguntas frecuentes",
                 },
                 {
-                    href: "string16",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "Condiciones, costes y normativa",
                 },
             ],
         },
         {
-            href: "link4",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link4",
             mainText: "JOB DAY UIB",
             subText: "Foro de la ocupación",
         },
         {
-            href: "link5",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link5",
             mainText: "Orientación profesional",
             subText: "en mallorca, menorca y pituisas",
             subSections: [
                 {
-                    href: "string17",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "¿Qué es el servicio de Orientación profesional?",
                 },
                 {
-                    href: "string18",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "Pide una cita al servicio de orientación",
                 },
                 {
-                    href: "string19",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "Recursos útiles",
                 },
                 {
-                    href: "string20",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "Asesoramiento en oposiciones",
                 },
                 {
-                    href: "string21",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "ariaLabel",
                     children: "Cápsula de éxito profesional",
                 },
             ],
         },
         {
-            href: "link6",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link6",
             mainText: "Cápsulas",
             subText: "de éxito profesional",
         },
         {
-            href: "link7",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "link7",
             mainText: "Blog",
             subText: "del DOIP",
@@ -258,43 +258,43 @@ export const DoipPage = () => {
             title: "Universitaris",
             sectionLinks: [
                 {
-                    href: "link1",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link1",
                     mainText: "Deporte",
                     subText: "a la UIB",
                 },
                 {
-                    href: "link2",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link2",
                     mainText: "Residencia",
                     subText: "de Estudiants",
                 },
                 {
-                    href: "link3",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link3",
                     mainText: "OTRI",
                     subText: "y Proyectos",
                 },
                 {
-                    href: "link4",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link4",
                     mainText: "UIBCongrés",
                     subText: "Events Management",
                 },
                 {
-                    href: "link5",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link5",
                     mainText: "Orientación",
                     subText: "e Inserción Profesional",
                 },
                 {
-                    href: "link6",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link6",
                     mainText: "UIBdigital",
                     subText: "acceso usuarios",
                 },
                 {
-                    href: "link7",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link7",
                     mainText: "UIBdigital",
                     subText: "acceso usuarios",
@@ -305,43 +305,43 @@ export const DoipPage = () => {
             title: "Universitaris",
             sectionLinks: [
                 {
-                    href: "link1",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link1",
                     mainText: "Deporte",
                     subText: "a la UIB",
                 },
                 {
-                    href: "link2",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link2",
                     mainText: "Residencia",
                     subText: "de Estudiants",
                 },
                 {
-                    href: "link3",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link3",
                     mainText: "OTRI",
                     subText: "y Proyectos",
                 },
                 {
-                    href: "link4",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link4",
                     mainText: "UIBCongrés",
                     subText: "Events Management",
                 },
                 {
-                    href: "link5",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link5",
                     mainText: "Orientación",
                     subText: "e Inserción Profesional",
                 },
                 {
-                    href: "link6",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link6",
                     mainText: "UIBdigital",
                     subText: "acceso usuarios",
                 },
                 {
-                    href: "link7",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link7",
                     mainText: "UIBdigital",
                     subText: "acceso usuarios",
@@ -352,43 +352,43 @@ export const DoipPage = () => {
             title: "Universitaris",
             sectionLinks: [
                 {
-                    href: "link1",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link1",
                     mainText: "Deporte",
                     subText: "a la UIB",
                 },
                 {
-                    href: "link2",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link2",
                     mainText: "Residencia",
                     subText: "de Estudiants",
                 },
                 {
-                    href: "link3",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link3",
                     mainText: "OTRI",
                     subText: "y Proyectos",
                 },
                 {
-                    href: "link4",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link4",
                     mainText: "UIBCongrés",
                     subText: "Events Management",
                 },
                 {
-                    href: "link5",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link5",
                     mainText: "Orientación",
                     subText: "e Inserción Profesional",
                 },
                 {
-                    href: "link6",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link6",
                     mainText: "UIBdigital",
                     subText: "acceso usuarios",
                 },
                 {
-                    href: "link7",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link7",
                     mainText: "UIBdigital",
                     subText: "acceso usuarios",
@@ -399,43 +399,43 @@ export const DoipPage = () => {
             title: "Universitaris",
             sectionLinks: [
                 {
-                    href: "link1",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link1",
                     mainText: "Deporte",
                     subText: "a la UIB",
                 },
                 {
-                    href: "link2",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link2",
                     mainText: "Residencia",
                     subText: "de Estudiants",
                 },
                 {
-                    href: "link3",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link3",
                     mainText: "OTRI",
                     subText: "y Proyectos",
                 },
                 {
-                    href: "link4",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link4",
                     mainText: "UIBCongrés",
                     subText: "Events Management",
                 },
                 {
-                    href: "link5",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link5",
                     mainText: "Orientación",
                     subText: "e Inserción Profesional",
                 },
                 {
-                    href: "link6",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link6",
                     mainText: "UIBdigital",
                     subText: "acceso usuarios",
                 },
                 {
-                    href: "link7",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "link7",
                     mainText: "UIBdigital",
                     subText: "acceso usuarios",
@@ -454,7 +454,7 @@ export const DoipPage = () => {
     };
 
     const offersLink = {
-        href: "href",
+        href: "/?path=/story/pages-notfoundpage--default",
         ariaLabel: "logo",
         src: "./assets/tableroOfertas.png",
         alt: "Tablero ofertas",
@@ -467,20 +467,20 @@ export const DoipPage = () => {
 
     const firstInfoCard = {
         cardPhoto: {
-            href: "href",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "logo",
             src: "./assets/infoImage.png",
             alt: "logo",
         },
         dateTime: new Date(2023, 2, 22),
         mainRedirect: {
-            href: "href",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "mainRedirect",
             children:
                 "1.256 ofertas de trabajo y 589 prácticas extracurriculares, balance del DOIP durante el curso 2021-22",
         },
         secondaryRedirect: {
-            href: "href",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "secondaryRedirect",
             children: "Doip",
         },
@@ -490,20 +490,20 @@ export const DoipPage = () => {
 
     const secondInfoCard = {
         cardPhoto: {
-            href: "href",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "logo",
             src: "./assets/infoImage2.png",
             alt: "logo",
         },
         dateTime: new Date(2023, 1, 19),
         mainRedirect: {
-            href: "href",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "mainRedirect",
             children:
                 "La FUEIB da a conocer la Residencia de Estudiantes, el DOIP y CampusEsport en Ibiza",
         },
         secondaryRedirect: {
-            href: "href",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "secondaryRedirect",
             children: "Doip",
         },
@@ -515,7 +515,7 @@ export const DoipPage = () => {
         offerLinks: [
             {
                 offerRedirect: {
-                    href: "href",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "offerRedirect",
                     children: "Sales Development Representative",
                 },
@@ -526,7 +526,7 @@ export const DoipPage = () => {
             },
             {
                 offerRedirect: {
-                    href: "href",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "offerRedirect",
                     children: "Back office Dpto Expansión (sector hotelero)",
                 },
@@ -537,7 +537,7 @@ export const DoipPage = () => {
             },
             {
                 offerRedirect: {
-                    href: "href",
+                    href: "/?path=/story/pages-notfoundpage--default",
                     ariaLabel: "offerRedirect",
                     children: "JOB DAY UIB 2023 - Administativo/a",
                 },
@@ -548,7 +548,7 @@ export const DoipPage = () => {
             },
         ],
         redirect: {
-            href: "href",
+            href: "/?path=/story/pages-notfoundpage--default",
             ariaLabel: "mainRedirect",
             children: "... visualiza todas las ofertas",
         },
@@ -561,6 +561,7 @@ export const DoipPage = () => {
     const footer = {
         officesList: [
             {
+                name: "DOIP Campus",
                 location:
                     "Ctra. de Valldemossa, km 7.5 (Edificio Instalaciones Deportivas, Campus UIB). 07122 Palma, Illes Balears (España)",
                 phoneNumber: "(+34) 971259697",
@@ -568,6 +569,7 @@ export const DoipPage = () => {
                 schedules: ["Lu-Ju: 08:00-15:30", "Vi: 08:00-15:00"],
             },
             {
+                name: "DOIP Menorca",
                 location:
                     "Calle de Santa Rita 11 (Sede universitaria de Menorca) . 07730 Alaior, Illes Balears (España)",
                 phoneNumber: "(+34) 661280318",
@@ -579,6 +581,7 @@ export const DoipPage = () => {
                 ],
             },
             {
+                name: "DOIP Pitiüses",
                 location:
                     "Calle Calvari,1 (Antiguo Edificio de la Comandancia). 07800 Ibiza, Illes Balears (España)",
                 phoneNumber: "(+34) 661281650",
@@ -586,6 +589,7 @@ export const DoipPage = () => {
                 schedules: ["Lu: 09:00-16:30", "Ma-Vi: 08:00-15:30"],
             },
             {
+                name: "DOIP Palma",
                 location:
                     "Calle Miquel de Sants i Oliver, 2 (Edificio Sa Riera). 07012 Palma, Illes Balears (España)",
                 phoneNumber: "(+34) 971173302",
@@ -697,17 +701,23 @@ export const DoipPage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="border-y">
+                <div className="border-t m-1">
                     <NavBar mainLinks={mainLinks} sections={sections} />
                 </div>
             </header>
             <main>
-                <div className="flex">
-                    <div className="w-1/3 p-10">
-                        <Image {...departmentImage} />
-                        <ImageLink {...offersLink} />
+                <div className="block lg:flex">
+                    <div className="w-full flex lg:block lg:w-1/3 p-10">
+                        <Image
+                            {...departmentImage}
+                            imageClassName="w-1/2 lg:w-full"
+                        />
+                        <ImageLink
+                            {...offersLink}
+                            linkClassName="w-1/2 lg:w-full"
+                        />
                     </div>
-                    <div className="w-2/3">
+                    <div className="w-full lg:w-2/3">
                         <p>PENDING</p>
                     </div>
                 </div>
@@ -716,10 +726,14 @@ export const DoipPage = () => {
                         Actualidad
                     </h1>
                 </div>
-                <div className="p-8 grid grid-cols-3 gap-3">
-                    <InfoCard {...firstInfoCard} />
-                    <InfoCard {...secondInfoCard} />
-                    <OffersList {...offersList} />
+                <div className="p-8 block md:flex gap-3">
+                    <div className="block sm:flex gap-3 w-full lg:w-2/3 mt-4">
+                        <InfoCard {...firstInfoCard} />
+                        <InfoCard {...secondInfoCard} />
+                    </div>
+                    <div className="w-full md:w-1/3 mt-4">
+                        <OffersList {...offersList} />
+                    </div>
                 </div>
                 <div>
                     <h2 className="uppercase text-xl text-center">

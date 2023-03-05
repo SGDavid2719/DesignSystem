@@ -2,6 +2,7 @@ import { Icon } from "../../atoms/icon/Icon";
 import { Span } from "../../atoms/span/Span";
 
 export interface OfficeItemProps {
+    name: string;
     location: string;
     phoneNumber: string;
     email: string;
@@ -9,13 +10,15 @@ export interface OfficeItemProps {
 }
 
 export const OfficeItem = ({
+    name,
     location,
     phoneNumber,
     email,
     schedules,
 }: OfficeItemProps) => {
     return (
-        <div>
+        <div className="mb-4">
+            <div className="text-xl mb-4">{name}</div>
             <div className="flex">
                 <Span
                     children={
@@ -23,7 +26,7 @@ export const OfficeItem = ({
                             {" "}
                             <Icon
                                 iconId="location"
-                                iconClassName="inline-block"
+                                iconClassName="inline-block text-blue-400"
                             />{" "}
                             {location}{" "}
                         </>
@@ -37,7 +40,7 @@ export const OfficeItem = ({
                             {" "}
                             <Icon
                                 iconId="phone"
-                                iconClassName="inline-block"
+                                iconClassName="inline-block text-blue-400"
                             />{" "}
                             {phoneNumber}{" "}
                         </>
@@ -51,7 +54,7 @@ export const OfficeItem = ({
                             {" "}
                             <Icon
                                 iconId="mail"
-                                iconClassName="inline-block"
+                                iconClassName="inline-block text-blue-400"
                             />{" "}
                             {email}{" "}
                         </>
@@ -65,7 +68,7 @@ export const OfficeItem = ({
                             {" "}
                             <Icon
                                 iconId="schedule"
-                                iconClassName="inline-block"
+                                iconClassName="inline-block text-blue-400"
                             />{" "}
                             {schedules.map((schedule, index) => (
                                 <Span

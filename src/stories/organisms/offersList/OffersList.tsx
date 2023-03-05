@@ -9,7 +9,7 @@ interface InfoCardProps {
 }
 export const OffersList = ({ offerLinks, redirect }: InfoCardProps) => {
     return (
-        <div className="w-[22rem] bg-white p-4">
+        <div className="bg-white p-4">
             <div className="flex justify-between mb-4">
                 <Span
                     children={"Últimas ofertas y prácticas"}

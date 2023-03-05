@@ -22,7 +22,7 @@ export const ImageLink: React.FC<ImageLinkProps> = ({
         <Redirect
             href={href}
             ariaLabel={ariaLabel}
-            redirectClassName={["w-fit block", linkClassName].join(" ")}
+            redirectClassName={["w-full block", linkClassName].join(" ")}
         >
             <Image src={src} alt={alt} imageClassName={imageClassName} />
         </Redirect>

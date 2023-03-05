@@ -35,24 +35,24 @@ export const MenuLink: React.FC<MenuLinkProps> = ({
                 href={href}
                 ariaLabel={ariaLabel}
                 redirectClassName={[
-                    "h-fit block w-full",
+                    "h-fit w-fit block",
                     menuLinkClassName,
                 ].join(" ")}
             >
                 <Span
                     children={mainText}
                     spanClassName={[
-                        "text-xl text-center block text-[#555]",
+                        "text-xl block text-[#555] text-left lg:text-center",
                         `${mouseEnter && "text-blue-600"}`,
                     ].join(" ")}
                 />
                 <Span
                     children={subText}
-                    spanClassName="text-xs text-center block text-[#555] self-end mb-[3px] ml-1"
+                    spanClassName="text-xs block text-[#555] self-end mb-[3px] ml-1 text-left lg:text-center"
                 />
             </Redirect>
             {subSections && mouseEnter && (
-                <ul className="z-10 absolute">
+                <ul className=" lg:z-10 lg:absolute">
                     {subSections?.map((subSection) => {
                         const { href, ariaLabel, children } = subSection;
                         return (

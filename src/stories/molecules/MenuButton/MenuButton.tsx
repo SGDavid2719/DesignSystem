@@ -28,7 +28,7 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ sections }) => {
             />
             {showMenu &&
                 ReactDOM.createPortal(
-                    <div className="mt-2 border grid grid-cols-4 bg-white m-6 p-2">
+                    <div className="mt-2 border grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 bg-white m-6 p-2">
                         {sections.map((section) => {
                             const { title, sectionLinks } = section;
 

@@ -21,9 +21,9 @@ export const InfoCard = ({
     iconId,
 }: InfoCardProps) => {
     return (
-        <div className="w-[22rem] h-[34rem] bg-white">
-            <div className="">
-                <ImageLink {...cardPhoto} imageClassName=" w-full" />
+        <div className="w-full h-[34rem] bg-white">
+            <div>
+                <ImageLink {...cardPhoto} imageClassName="w-full" />
             </div>
             <div className="flex gap-2 p-4 h-[8rem]">
                 <div className="w-1/5">

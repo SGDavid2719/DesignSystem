@@ -13,7 +13,7 @@ export const HiddenMenu = ({ menuLinks }: HiddenMenuProps) => {
             {openned && (
                 <ul
                     className={[
-                        "bg-white grid grid-cols-3 lg:grid-cols-6",
+                        "bg-white grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6",
                         "border-b",
                         "gap-2",
                         "p-[1rem]",
@@ -28,7 +28,7 @@ export const HiddenMenu = ({ menuLinks }: HiddenMenuProps) => {
                                     ariaLabel={ariaLabel}
                                     mainText={mainText}
                                     subText={subText}
-                                    menuLinkClassName="bg-[#f6f6f6] p-[0.75rem]"
+                                    menuLinkClassName="bg-[#f6f6f6] p-[0.75rem] w-full"
                                 />
                             </li>
                         );
