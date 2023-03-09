@@ -45,11 +45,9 @@ export const NavBar = ({ mainLinks, sections }: NavBarProps) => {
                             </li>
                         );
                     })}
-                    {showMenu && (
-                        <li className="mt-4">
-                            <MenuButton sections={sections} />
-                        </li>
-                    )}
+                    <li className="mt-4">
+                        <MenuButton sections={sections} />
+                    </li>
                 </ul>
             </nav>
             <div id="overlays" className="z-10 relative" />
