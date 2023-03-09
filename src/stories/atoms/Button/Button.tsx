@@ -30,6 +30,14 @@ interface ButtonProps {
      */
     ariaExpanded?: boolean;
     /**
+     * Aria checked
+     */
+    ariaChecked?: boolean;
+    /**
+     * Aria label
+     */
+    ariaLabel?: string;
+    /**
      * Disabled
      */
     disabled?: boolean;
@@ -89,6 +97,8 @@ export const Button: React.FC<ButtonProps> = ({
     title = "Button",
     ariaControls,
     ariaExpanded = false,
+    ariaLabel,
+    ariaChecked,
     disabled = false,
     tabIndex,
     size = "sm",
@@ -108,8 +118,10 @@ export const Button: React.FC<ButtonProps> = ({
             type={type}
             role={role}
             title={title}
+            aria-label={ariaLabel}
             aria-controls={ariaControls}
-            aria-expanded={ariaExpanded}
+            aria-expanded={role !== "switch" ? ariaExpanded : undefined}
+            aria-checked={ariaChecked}
             disabled={disabled}
             tabIndex={tabIndex}
             className={[
