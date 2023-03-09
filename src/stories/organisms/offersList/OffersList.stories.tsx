@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { OffersList } from "./OffersList";
+import { Rel } from "../../../shared/types";
 
 export default {
     title: "Organisms/OffersList",
@@ -18,6 +19,7 @@ Default.args = {
         {
             offerRedirect: {
                 href: "href",
+                rel: "next" as Rel,
                 ariaLabel: "offerRedirect",
                 children: "Back office Dpto Expansión (sector hotelero)",
             },
@@ -29,6 +31,7 @@ Default.args = {
         {
             offerRedirect: {
                 href: "href",
+                rel: "next" as Rel,
                 ariaLabel: "offerRedirect",
                 children: "Back office Dpto Expansión (sector hotelero)",
             },
@@ -40,6 +43,7 @@ Default.args = {
         {
             offerRedirect: {
                 href: "href",
+                rel: "next" as Rel,
                 ariaLabel: "offerRedirect",
                 children: "Back office Dpto Expansión (sector hotelero)",
             },
@@ -51,6 +55,7 @@ Default.args = {
     ],
     redirect: {
         href: "href",
+        rel: "next" as Rel,
         ariaLabel: "mainRedirect",
         children: "... visualiza todas las ofertas",
     },

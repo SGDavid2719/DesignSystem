@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Redirect, RedirectProps } from "../../atoms/redirect/Redirect";
 import { Span } from "../../atoms/span/Span";
+import { Rel } from "../../../shared/types";
 
 export interface MenuLinkProps {
     href: string;
+    rel: Rel;
     ariaLabel: string;
     mainText: string;
     subText: string;
@@ -13,6 +15,7 @@ export interface MenuLinkProps {
 
 export const MenuLink: React.FC<MenuLinkProps> = ({
     href,
+    rel,
     ariaLabel,
     mainText,
     subText,
@@ -32,6 +35,7 @@ export const MenuLink: React.FC<MenuLinkProps> = ({
     return (
         <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             <Redirect
+                rel={rel}
                 href={href}
                 ariaLabel={ariaLabel}
                 redirectClassName={[
@@ -54,13 +58,14 @@ export const MenuLink: React.FC<MenuLinkProps> = ({
             {subSections && mouseEnter && (
                 <ul className=" lg:z-10 lg:absolute">
                     {subSections?.map((subSection) => {
-                        const { href, ariaLabel, children } = subSection;
+                        const { href, ariaLabel, children, rel } = subSection;
                         return (
                             <li
                                 key={href}
                                 className="hover:text-blue-600 border px-[1rem] py-[0.25rem] bg-white w-[20rem]"
                             >
                                 <Redirect
+                                    rel={rel}
                                     href={href}
                                     ariaLabel={ariaLabel}
                                     children={children}

@@ -1,8 +1,10 @@
 import { Redirect } from "../../atoms/redirect/Redirect";
 import { Icon } from "../../atoms/icon/Icon";
+import { Rel } from "../../../shared/types";
 
 export interface IconLinkProps {
     href: string;
+    rel: Rel;
     ariaLabel: string;
     iconLinkClassName?: string;
     iconId: string;
@@ -13,9 +15,11 @@ export const IconLink: React.FC<IconLinkProps> = ({
     ariaLabel,
     iconLinkClassName,
     iconId,
+    rel,
 }) => {
     return (
         <Redirect
+            rel={rel}
             href={href}
             ariaLabel={ariaLabel}
             redirectClassName={[

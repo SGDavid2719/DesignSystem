@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { OfferLink } from "./OfferLink";
+import { Rel } from "../../../shared/types";
 
 export default {
     title: "Molecules/OfferLink",
@@ -18,6 +19,7 @@ export const Default = Template.bind({});
 Default.args = {
     offerRedirect: {
         href: "href",
+        rel: "next" as Rel,
         ariaLabel: "offerRedirect",
         children: "Back office Dpto Expansión (sector hotelero)",
     },

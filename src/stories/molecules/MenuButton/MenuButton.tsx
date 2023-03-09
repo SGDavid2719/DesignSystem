@@ -45,11 +45,13 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ sections }) => {
                                                 ariaLabel,
                                                 mainText,
                                                 subText,
+                                                rel,
                                             } = sectionLink;
 
                                             return (
                                                 <li className="mb-1" key={href}>
                                                     <MenuLink
+                                                        rel={rel}
                                                         href={href}
                                                         ariaLabel={ariaLabel}
                                                         mainText={mainText}

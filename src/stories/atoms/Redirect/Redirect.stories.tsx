@@ -17,12 +17,14 @@ const Template: ComponentStory<typeof Redirect> = (args) => (
 export const Default = Template.bind({});
 Default.args = {
     href: "/?path=/story/atoms-button--default",
+    rel: "next",
     ariaLabel: "button",
 };
 
 export const WithChildren = Template.bind({});
 WithChildren.args = {
     href: "/?path=/story/atoms-button--default",
+    rel: "next",
     ariaLabel: "children",
     children: <p>Children</p>,
 };

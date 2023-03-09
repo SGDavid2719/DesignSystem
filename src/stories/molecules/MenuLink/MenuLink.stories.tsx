@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { MenuLink } from "./MenuLink";
+import { Rel } from "../../../shared/types";
 
 export default {
     title: "Molecules/MenuLink",
@@ -31,11 +32,13 @@ WithSubsections.args = {
     subSections: [
         {
             href: "string2",
+            rel: "next" as Rel,
             ariaLabel: "ariaLabel",
             children: "string1",
         },
         {
             href: "string3",
+            rel: "next" as Rel,
             ariaLabel: "ariaLabel",
             children: "string2",
         },

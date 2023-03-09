@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Footer } from "./Footer";
+import { Rel } from "../../../shared/types";
 
 export default {
     title: "Organisms/Footer",
@@ -60,36 +61,42 @@ Default.args = {
     iconsLinks: [
         {
             href: "link1",
+            rel: "next" as Rel,
             ariaLabel: "link1",
             iconId: "home",
             iconLinkClassName: "text-blue-400",
         },
         {
             href: "link2",
+            rel: "next" as Rel,
             ariaLabel: "link2",
             iconId: "magnifying-glass",
             iconLinkClassName: "text-blue-400",
         },
         {
             href: "link3",
+            rel: "next" as Rel,
             ariaLabel: "link3",
             iconId: "facebook",
             iconLinkClassName: "text-blue-400",
         },
         {
             href: "link4",
+            rel: "next" as Rel,
             ariaLabel: "link4",
             iconId: "twitter",
             iconLinkClassName: "text-blue-400",
         },
         {
             href: "link5",
+            rel: "next" as Rel,
             ariaLabel: "link5",
             iconId: "youtube",
             iconLinkClassName: "text-blue-400",
         },
         {
             href: "link6",
+            rel: "next" as Rel,
             ariaLabel: "link6",
             iconId: "instagram",
             iconLinkClassName: "text-blue-400",
@@ -98,16 +105,19 @@ Default.args = {
     mainLinks: [
         {
             href: "string1",
+            rel: "next" as Rel,
             children: "Aviso legal",
             ariaLabel: "Aviso legal",
         },
         {
             href: "string2",
+            rel: "next" as Rel,
             children: "Política de privacidad",
             ariaLabel: "Política de privacidad",
         },
         {
             href: "string3",
+            rel: "next" as Rel,
             children: "Mapa de contenidos",
             ariaLabel: "Mapa de contenidos",
         },
@@ -115,11 +125,13 @@ Default.args = {
     secondaryLinks: [
         {
             href: "string4",
+            rel: "next" as Rel,
             children: "Política de cookies (galetes)",
             ariaLabel: "Política de cookies (galetes)",
         },
         {
             href: "string5",
+            rel: "next" as Rel,
             children: "Configurar cookies (galetes)",
             ariaLabel: "Configurar cookies (galetes)",
         },

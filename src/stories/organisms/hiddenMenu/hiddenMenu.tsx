@@ -20,10 +20,12 @@ export const HiddenMenu = ({ menuLinks }: HiddenMenuProps) => {
                     ].join(" ")}
                 >
                     {menuLinks.map((menuLink) => {
-                        const { href, ariaLabel, mainText, subText } = menuLink;
+                        const { href, ariaLabel, mainText, subText, rel } =
+                            menuLink;
                         return (
                             <li key={href}>
                                 <MenuLink
+                                    rel={rel}
                                     href={href}
                                     ariaLabel={ariaLabel}
                                     mainText={mainText}

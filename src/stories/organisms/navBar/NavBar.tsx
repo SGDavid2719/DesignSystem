@@ -31,10 +31,12 @@ export const NavBar = ({ mainLinks, sections }: NavBarProps) => {
                             mainText,
                             subText,
                             subSections,
+                            rel,
                         } = menuLink;
                         return (
                             <li key={href}>
                                 <MenuLink
+                                    rel={rel}
                                     href={href}
                                     ariaLabel={ariaLabel}
                                     mainText={mainText}

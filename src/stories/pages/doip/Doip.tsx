@@ -1,3 +1,4 @@
+import { Rel } from "../../../shared/types";
 import { Button } from "../../atoms/button/Button";
 import { Image } from "../../atoms/image/Image";
 import { Redirect } from "../../atoms/redirect/Redirect";
@@ -13,36 +14,42 @@ export const DoipPage = () => {
     const menuLinks = [
         {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "link1",
             mainText: "Deporte",
             subText: "a la UIB",
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "link2",
             mainText: "Residencia",
             subText: "de Estudiants",
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "link3",
             mainText: "OTRI",
             subText: "y Proyectos",
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "link4",
             mainText: "UIBCongrés",
             subText: "Events Management",
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "link5",
             mainText: "Orientación",
             subText: "e Inserción Profesional",
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "link6",
             mainText: "UIBdigital",
             subText: "acceso usuarios",
@@ -51,6 +58,7 @@ export const DoipPage = () => {
 
     const logoLink = {
         href: "/?path=/story/pages-notfoundpage--default",
+        rel: "next" as Rel,
         ariaLabel: "logo",
         src: "./assets/logo.png",
         alt: "logo",
@@ -59,31 +67,37 @@ export const DoipPage = () => {
     const iconsLink = [
         {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "link1",
             iconId: "home",
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "link2",
             iconId: "magnifying-glass",
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "link3",
             iconId: "facebook",
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "link4",
             iconId: "twitter",
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "link5",
             iconId: "youtube",
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "link6",
             iconId: "instagram",
         },
@@ -91,6 +105,7 @@ export const DoipPage = () => {
 
     const yearsRedirect = {
         href: "/",
+        rel: "next" as Rel,
         ariaLabel: "25añosFUEIB",
         children: "#25añosFUEIB",
     };
@@ -98,37 +113,50 @@ export const DoipPage = () => {
     const mainLinks = [
         {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "link1",
             mainText: "DOIP",
             subText: "saber más",
             subSections: [
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "¿Qué hacemos?",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "¿Quiénes somos?",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Ubicación y horarios",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Datos y cifras",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Datos y cifras mensuales",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Noticias del DOIP",
                 },
@@ -136,37 +164,51 @@ export const DoipPage = () => {
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
+
+            rel: "next" as Rel,
             ariaLabel: "link2",
             mainText: "Universitarios",
             subText: "estudiantes y titulados",
             subSections: [
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Alta/Acceso DOIP",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Tablón de ofertas",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Prácticas y empleo",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Preguntas frecuentes",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Condiciones y normativa",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Decálogo del estudiante en prácticas",
                 },
@@ -174,27 +216,37 @@ export const DoipPage = () => {
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
+
+            rel: "next" as Rel,
             ariaLabel: "link3",
             mainText: "Empresas",
             subText: "y entidades",
             subSections: [
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Alta/Acceso DOIP",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Busca candidatos",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Preguntas frecuentes",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Condiciones, costes y normativa",
                 },
@@ -202,38 +254,52 @@ export const DoipPage = () => {
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
+
+            rel: "next" as Rel,
             ariaLabel: "link4",
             mainText: "JOB DAY UIB",
             subText: "Foro de la ocupación",
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
+
+            rel: "next" as Rel,
             ariaLabel: "link5",
             mainText: "Orientación profesional",
             subText: "en mallorca, menorca y pituisas",
             subSections: [
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "¿Qué es el servicio de Orientación profesional?",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Pide una cita al servicio de orientación",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Recursos útiles",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Asesoramiento en oposiciones",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+
+                    rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Cápsula de éxito profesional",
                 },
@@ -241,12 +307,15 @@ export const DoipPage = () => {
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
+
+            rel: "next" as Rel,
             ariaLabel: "link6",
             mainText: "Cápsulas",
             subText: "de éxito profesional",
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "link7",
             mainText: "Blog",
             subText: "del DOIP",
@@ -259,42 +328,49 @@ export const DoipPage = () => {
             sectionLinks: [
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link1",
                     mainText: "Deporte",
                     subText: "a la UIB",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link2",
                     mainText: "Residencia",
                     subText: "de Estudiants",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link3",
                     mainText: "OTRI",
                     subText: "y Proyectos",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link4",
                     mainText: "UIBCongrés",
                     subText: "Events Management",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link5",
                     mainText: "Orientación",
                     subText: "e Inserción Profesional",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link6",
                     mainText: "UIBdigital",
                     subText: "acceso usuarios",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link7",
                     mainText: "UIBdigital",
                     subText: "acceso usuarios",
@@ -306,42 +382,49 @@ export const DoipPage = () => {
             sectionLinks: [
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link1",
                     mainText: "Deporte",
                     subText: "a la UIB",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link2",
                     mainText: "Residencia",
                     subText: "de Estudiants",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link3",
                     mainText: "OTRI",
                     subText: "y Proyectos",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link4",
                     mainText: "UIBCongrés",
                     subText: "Events Management",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link5",
                     mainText: "Orientación",
                     subText: "e Inserción Profesional",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link6",
                     mainText: "UIBdigital",
                     subText: "acceso usuarios",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link7",
                     mainText: "UIBdigital",
                     subText: "acceso usuarios",
@@ -353,42 +436,49 @@ export const DoipPage = () => {
             sectionLinks: [
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link1",
                     mainText: "Deporte",
                     subText: "a la UIB",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link2",
                     mainText: "Residencia",
                     subText: "de Estudiants",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link3",
                     mainText: "OTRI",
                     subText: "y Proyectos",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link4",
                     mainText: "UIBCongrés",
                     subText: "Events Management",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link5",
                     mainText: "Orientación",
                     subText: "e Inserción Profesional",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link6",
                     mainText: "UIBdigital",
                     subText: "acceso usuarios",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link7",
                     mainText: "UIBdigital",
                     subText: "acceso usuarios",
@@ -400,42 +490,49 @@ export const DoipPage = () => {
             sectionLinks: [
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link1",
                     mainText: "Deporte",
                     subText: "a la UIB",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link2",
                     mainText: "Residencia",
                     subText: "de Estudiants",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link3",
                     mainText: "OTRI",
                     subText: "y Proyectos",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link4",
                     mainText: "UIBCongrés",
                     subText: "Events Management",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link5",
                     mainText: "Orientación",
                     subText: "e Inserción Profesional",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link6",
                     mainText: "UIBdigital",
                     subText: "acceso usuarios",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "link7",
                     mainText: "UIBdigital",
                     subText: "acceso usuarios",
@@ -455,6 +552,7 @@ export const DoipPage = () => {
 
     const offersLink = {
         href: "/?path=/story/pages-notfoundpage--default",
+        rel: "next" as Rel,
         ariaLabel: "logo",
         src: "./assets/tableroOfertas.png",
         alt: "Tablero ofertas",
@@ -468,6 +566,7 @@ export const DoipPage = () => {
     const firstInfoCard = {
         cardPhoto: {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "logo",
             src: "./assets/infoImage.png",
             alt: "logo",
@@ -475,12 +574,14 @@ export const DoipPage = () => {
         dateTime: new Date(2023, 2, 22),
         mainRedirect: {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "mainRedirect",
             children:
                 "1.256 ofertas de trabajo y 589 prácticas extracurriculares, balance del DOIP durante el curso 2021-22",
         },
         secondaryRedirect: {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "secondaryRedirect",
             children: "Doip",
         },
@@ -491,6 +592,7 @@ export const DoipPage = () => {
     const secondInfoCard = {
         cardPhoto: {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "logo",
             src: "./assets/infoImage2.png",
             alt: "logo",
@@ -498,12 +600,14 @@ export const DoipPage = () => {
         dateTime: new Date(2023, 1, 19),
         mainRedirect: {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "mainRedirect",
             children:
                 "La FUEIB da a conocer la Residencia de Estudiantes, el DOIP y CampusEsport en Ibiza",
         },
         secondaryRedirect: {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "secondaryRedirect",
             children: "Doip",
         },
@@ -516,6 +620,7 @@ export const DoipPage = () => {
             {
                 offerRedirect: {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "offerRedirect",
                     children: "Sales Development Representative",
                 },
@@ -527,6 +632,7 @@ export const DoipPage = () => {
             {
                 offerRedirect: {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "offerRedirect",
                     children: "Back office Dpto Expansión (sector hotelero)",
                 },
@@ -538,6 +644,7 @@ export const DoipPage = () => {
             {
                 offerRedirect: {
                     href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next" as Rel,
                     ariaLabel: "offerRedirect",
                     children: "JOB DAY UIB 2023 - Administativo/a",
                 },
@@ -549,6 +656,7 @@ export const DoipPage = () => {
         ],
         redirect: {
             href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
             ariaLabel: "mainRedirect",
             children: "... visualiza todas las ofertas",
         },
@@ -606,37 +714,43 @@ export const DoipPage = () => {
         secondaryParagraph: "Agencia de colocación nº0400000007",
         iconsLinks: [
             {
-                href: "link1",
+                href: "/?path=/story/pages-notfoundpage--default",
+                rel: "next" as Rel,
                 ariaLabel: "link1",
                 iconId: "home",
                 iconLinkClassName: "text-blue-400",
             },
             {
-                href: "link2",
+                href: "/?path=/story/pages-notfoundpage--default",
+                rel: "next" as Rel,
                 ariaLabel: "link2",
                 iconId: "magnifying-glass",
                 iconLinkClassName: "text-blue-400",
             },
             {
-                href: "link3",
+                href: "/?path=/story/pages-notfoundpage--default",
+                rel: "next" as Rel,
                 ariaLabel: "link3",
                 iconId: "facebook",
                 iconLinkClassName: "text-blue-400",
             },
             {
-                href: "link4",
+                href: "/?path=/story/pages-notfoundpage--default",
+                rel: "next" as Rel,
                 ariaLabel: "link4",
                 iconId: "twitter",
                 iconLinkClassName: "text-blue-400",
             },
             {
-                href: "link5",
+                href: "/?path=/story/pages-notfoundpage--default",
+                rel: "next" as Rel,
                 ariaLabel: "link5",
                 iconId: "youtube",
                 iconLinkClassName: "text-blue-400",
             },
             {
-                href: "link6",
+                href: "/?path=/story/pages-notfoundpage--default",
+                rel: "next" as Rel,
                 ariaLabel: "link6",
                 iconId: "instagram",
                 iconLinkClassName: "text-blue-400",
@@ -644,29 +758,34 @@ export const DoipPage = () => {
         ],
         mainLinks: [
             {
-                href: "string22",
+                href: "/?path=/story/pages-notfoundpage--default",
+                rel: "next" as Rel,
                 children: "Aviso legal",
                 ariaLabel: "Aviso legal",
             },
             {
-                href: "string23",
+                href: "/?path=/story/pages-notfoundpage--default",
+                rel: "next" as Rel,
                 children: "Política de privacidad",
                 ariaLabel: "Política de privacidad",
             },
             {
-                href: "string24",
+                href: "/?path=/story/pages-notfoundpage--default",
+                rel: "next" as Rel,
                 children: "Mapa de contenidos",
                 ariaLabel: "Mapa de contenidos",
             },
         ],
         secondaryLinks: [
             {
-                href: "string25",
+                href: "/?path=/story/pages-notfoundpage--default",
+                rel: "next" as Rel,
                 children: "Política de cookies (galetes)",
                 ariaLabel: "Política de cookies (galetes)",
             },
             {
-                href: "string26",
+                href: "/?path=/story/pages-notfoundpage--default",
+                rel: "next" as Rel,
                 children: "Configurar cookies (galetes)",
                 ariaLabel: "Configurar cookies (galetes)",
             },
