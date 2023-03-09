@@ -15,6 +15,7 @@ const Template: ComponentStory<typeof ImageLink> = (args) => (
 export const Default = Template.bind({});
 Default.args = {
     href: "href",
+    rel: "next",
     ariaLabel: "logo",
     src: "./assets/logo.png",
     alt: "logo",

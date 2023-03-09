@@ -2,6 +2,7 @@ import { Rel } from "../../../shared/types";
 import { Button } from "../../atoms/button/Button";
 import { Image } from "../../atoms/image/Image";
 import { Redirect } from "../../atoms/redirect/Redirect";
+import { Carousel } from "../../molecules/carousel/Carousel";
 import { ImageLink } from "../../molecules/imageLink/ImageLink";
 import { Footer } from "../../organisms/footer/Footer";
 import { HiddenMenu } from "../../organisms/hiddenMenu/HiddenMenu";
@@ -545,6 +546,30 @@ export const DoipPage = () => {
      * MAIN
      */
 
+    const carouselImages = [
+        {
+            href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
+            ariaLabel: "logo",
+            src: "./assets/logo.png",
+            alt: "logo",
+        },
+        {
+            href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
+            ariaLabel: "logo",
+            src: "./assets/departOrient.png",
+            alt: "logo",
+        },
+        {
+            href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next" as Rel,
+            ariaLabel: "logo",
+            src: "./assets/tableroOfertas.png",
+            alt: "logo",
+        },
+    ];
+
     const departmentImage = {
         src: "./assets/departOrient.png",
         alt: "Departamento orientación",
@@ -840,8 +865,8 @@ export const DoipPage = () => {
                             linkClassName="w-1/2 lg:w-full"
                         />
                     </div>
-                    <div className="w-full lg:w-2/3">
-                        <p>PENDING</p>
+                    <div className="w-full lg:w-2/3 px-10 py-14">
+                        <Carousel carouselImages={carouselImages} />
                     </div>
                 </div>
                 <div>
