@@ -13,31 +13,30 @@ export const Modal: React.FC<ModalProps> = ({
     setShowModal,
 }) => {
     return (
-        <div className="relative block m-0 w-[100vw] h-[100vh]">
+        <div className="h-screen w-full fixed left-0 top-0 flex justify-center items-center">
             <Backdrop
                 onOutsideClick={() => {
                     setShowModal();
                 }}
                 backdropClassName="bg-gray-500"
-            >
-                <div className="bg-white rounded shadow-lg w-10/12 md:w-1/3">
-                    <div className="border-b px-4 py-2 flex justify-between items-center">
-                        <h3 className="font-semibold text-lg">{modalTitle}</h3>
-                        <Button
-                            label="Close"
-                            renderIcon="cross"
-                            align="start"
-                            onClick={() => {
-                                setShowModal();
-                            }}
-                            btnClassName={
-                                "bg-white text-[#555] hover:font-bold hover:text-black w-[6rem] justify-center"
-                            }
-                        />
-                    </div>
-                    <div className="p-3">{modalBody}</div>
+            />
+            <div className="fixed z-20 bg-white rounded shadow-lg w-10/12 md:w-1/3">
+                <div className="border-b px-4 py-2 flex justify-between items-center">
+                    <h3 className="font-semibold text-lg">{modalTitle}</h3>
+                    <Button
+                        label="Close"
+                        renderIcon="cross"
+                        align="start"
+                        onClick={() => {
+                            setShowModal();
+                        }}
+                        btnClassName={
+                            "bg-white text-[#555] hover:font-bold hover:text-black w-[6rem] justify-center"
+                        }
+                    />
                 </div>
-            </Backdrop>
+                <div className="p-3">{modalBody}</div>
+            </div>
         </div>
     );
 };

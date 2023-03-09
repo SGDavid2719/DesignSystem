@@ -2,8 +2,6 @@ import { useState } from "react";
 import { Button } from "../../atoms/button/Button";
 import { MenuButton, Section } from "../../molecules/menuButton/MenuButton";
 import { MenuLink, MenuLinkProps } from "../../molecules/menuLink/MenuLink";
-import { Backdrop } from "../../atoms/backdrop/Backdrop";
-
 interface NavBarProps {
     mainLinks: MenuLinkProps[];
     sections: Section[];
@@ -54,8 +52,7 @@ export const NavBar = ({ mainLinks, sections }: NavBarProps) => {
                     )}
                 </ul>
             </nav>
-            {showMenu && <Backdrop onOutsideClick={() => setShowMenu(false)} />}
-            <div id="overlays" />
+            <div id="overlays" className="z-10 relative" />
         </>
     );
 };

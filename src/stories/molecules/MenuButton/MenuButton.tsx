@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "../../atoms/button/Button";
 import { MenuLink, MenuLinkProps } from "../menuLink/MenuLink";
 import ReactDOM from "react-dom";
+import { Backdrop } from "../../atoms/backdrop/Backdrop";
 
 export interface Section {
     title: string;
@@ -65,6 +66,7 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ sections }) => {
                     </div>,
                     portalElement!
                 )}
+            {showMenu && <Backdrop onOutsideClick={() => setShowMenu(false)} />}
         </>
     );
 };
