@@ -1,15 +1,15 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { AccessibilityModal } from "./AccessibilityModal";
+import { Sidebar } from "./Sidebar";
 
 export default {
-    title: "Organisms/AccessibilityModal",
-    component: AccessibilityModal,
+    title: "Organisms/Sidebar",
+    component: Sidebar,
     argTypes: {},
-} as ComponentMeta<typeof AccessibilityModal>;
+} as ComponentMeta<typeof Sidebar>;
 
-const Template: ComponentStory<typeof AccessibilityModal> = (args) => (
-    <AccessibilityModal {...args} />
+const Template: ComponentStory<typeof Sidebar> = (args) => (
+    <Sidebar {...args} />
 );
 
 export const Default = Template.bind({});
@@ -32,16 +32,19 @@ Default.args = {
         [
             {
                 text: "Option 1",
-                id: 4,
+                id: 1,
             },
             {
                 text: "Option 2",
-                id: 5,
+                id: 2,
             },
             {
                 text: "Option 3",
-                id: 6,
+                id: 3,
             },
         ],
     ],
+    selectOption: (id: number) => {
+        console.log(id);
+    },
 };

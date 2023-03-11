@@ -818,6 +818,37 @@ export const DoipPage = () => {
         ],
     };
 
+    const sidebarOptions = [
+        [
+            {
+                text: "Option 1",
+                id: 1,
+            },
+            {
+                text: "Option 2",
+                id: 2,
+            },
+            {
+                text: "Option 3",
+                id: 3,
+            },
+        ],
+        [
+            {
+                text: "Option 1",
+                id: 4,
+            },
+            {
+                text: "Option 2",
+                id: 5,
+            },
+            {
+                text: "Option 3",
+                id: 6,
+            },
+        ],
+    ];
+
     return (
         <div className="bg-[#f9f9f9]">
             <header>
@@ -893,7 +924,7 @@ export const DoipPage = () => {
                     <Image {...doipLogos} />
                 </div>
             </main>
-            <AccessibilityModal />
+            <AccessibilityModal sidebarOptions={sidebarOptions} />
             <Footer {...footer} />
         </div>
     );

@@ -18,9 +18,9 @@ export const Modal: React.FC<ModalProps> = ({
                 onOutsideClick={() => {
                     setShowModal();
                 }}
-                backdropClassName="backdrop-blur-sm"
+                backdropClassName="backdrop-blur-sm z-10"
             />
-            <div className="fixed z-20 bg-white rounded shadow-lg w-10/12 md:w-1/3">
+            <div className="fixed z-20 bg-white rounded shadow-lg w-8/12">
                 <div className="border-b px-4 py-2 flex justify-between items-center">
                     <h3 className="font-semibold text-lg">{modalTitle}</h3>
                     <Button
