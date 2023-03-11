@@ -43,7 +43,7 @@ export const Carousel: React.FC<CarouselProps> = ({ carouselImages }) => {
                         else return prevState - 1;
                     })
                 }
-                btnClassName="hover:bg-gray-400 flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                btnClassName="bg-gray-200 hover:bg-gray-400 flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
                 iconClassName="h-12 w-12"
             />
             <Button
@@ -56,7 +56,7 @@ export const Carousel: React.FC<CarouselProps> = ({ carouselImages }) => {
                         else return prevState + 1;
                     })
                 }
-                btnClassName="hover:bg-gray-400 flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                btnClassName="bg-gray-200 hover:bg-gray-400 flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
                 iconClassName="h-12 w-12"
             />
         </div>

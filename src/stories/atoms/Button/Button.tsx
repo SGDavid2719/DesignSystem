@@ -46,10 +46,6 @@ interface ButtonProps {
      */
     tabIndex?: number;
     /**
-     * Size
-     */
-    size?: "sm" | "md" | "lg" | "xl";
-    /**
      * Render Icon
      */
     renderIcon?: string;
@@ -101,7 +97,6 @@ export const Button: React.FC<ButtonProps> = ({
     ariaChecked,
     disabled = false,
     tabIndex,
-    size = "sm",
     renderIcon,
     hasIconOnly,
     align = "end",
@@ -128,9 +123,11 @@ export const Button: React.FC<ButtonProps> = ({
                 "p-1 flex",
                 `${disabled ? "cursor-not-allowed" : "cursor-pointer"}`,
                 `${
-                    align === "end"
-                        ? "justify-between"
-                        : "flex-row-reverse justify-end"
+                    renderIcon
+                        ? align === "end"
+                            ? "justify-between"
+                            : "flex-row-reverse justify-end"
+                        : ""
                 }`,
                 btnClassName,
             ].join(" ")}

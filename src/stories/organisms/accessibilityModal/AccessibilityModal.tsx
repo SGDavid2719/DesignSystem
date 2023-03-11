@@ -13,12 +13,13 @@ export const AccessibilityModal: React.FC<AccessibilityModalProps> = () => {
 
     return (
         <>
+            <div className="center"></div>
             {!showModal && (
                 <Button
-                    label="Show Accessibility Modal"
+                    label="A11y"
                     onClick={() => setShowModal(true)}
                     btnClassName={
-                        "bg-white text-[#555] hover:font-bold hover:text-black w-fit justify-center"
+                        "rounded-full fixed bottom-5 right-8 z-50 bg-blue-700 text-white h-11 w-11 items-center justify-center"
                     }
                 />
             )}

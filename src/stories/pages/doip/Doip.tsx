@@ -4,6 +4,7 @@ import { Image } from "../../atoms/image/Image";
 import { Redirect } from "../../atoms/redirect/Redirect";
 import { Carousel } from "../../molecules/carousel/Carousel";
 import { ImageLink } from "../../molecules/imageLink/ImageLink";
+import { AccessibilityModal } from "../../organisms/accessibilityModal/AccessibilityModal";
 import { Footer } from "../../organisms/footer/Footer";
 import { HiddenMenu } from "../../organisms/hiddenMenu/HiddenMenu";
 import { IconMenu } from "../../organisms/iconMenu/IconMenu";
@@ -892,6 +893,7 @@ export const DoipPage = () => {
                     <Image {...doipLogos} />
                 </div>
             </main>
+            <AccessibilityModal />
             <Footer {...footer} />
         </div>
     );
