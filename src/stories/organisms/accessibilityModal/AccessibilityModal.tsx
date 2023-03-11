@@ -3,13 +3,16 @@ import { Modal } from "../../molecules/modal/Modal";
 import { useState } from "react";
 import { Sidebar } from "../sidebar/Sidebar";
 import { DropdownOption } from "../../molecules/dropdown/Dropdown";
+import { Align } from "../../../shared/types";
 
 interface AccessibilityModalProps {
     sidebarOptions: DropdownOption[][];
+    align?: Align;
 }
 
 export const AccessibilityModal: React.FC<AccessibilityModalProps> = ({
     sidebarOptions,
+    align,
 }) => {
     const [showModal, setShowModal] = useState(false);
 
@@ -47,6 +50,7 @@ export const AccessibilityModal: React.FC<AccessibilityModalProps> = ({
                     setShowModal={() => setShowModal(false)}
                     modalTitle="Modal title"
                     modalBody={ModalContent()}
+                    align={align}
                 />
             )}
         </>

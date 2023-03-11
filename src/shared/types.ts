@@ -11,3 +11,5 @@ export type Rel = "alternate"
 | "prev"
 | "search"
 | "tag";
+
+export type Align = "center" | "left" | "right";

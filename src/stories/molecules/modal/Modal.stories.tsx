@@ -16,3 +16,11 @@ Default.args = {
     modalBody: <p>Modal body</p>,
     setShowModal: () => {},
 };
+
+export const LeftModal = Template.bind({});
+LeftModal.args = {
+    modalTitle: "Modal Title",
+    modalBody: <p>Modal body</p>,
+    setShowModal: () => {},
+    align: "left",
+};

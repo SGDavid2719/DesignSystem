@@ -1,17 +1,27 @@
 import { Button } from "../../atoms/button/Button";
 import { Backdrop } from "../../atoms/backdrop/Backdrop";
+import { Align } from "../../../shared/types";
 
 export interface ModalProps {
     modalTitle: string;
     modalBody: React.ReactNode;
     setShowModal: () => void;
+    align?: Align;
 }
 
 export const Modal: React.FC<ModalProps> = ({
     modalTitle,
     modalBody,
     setShowModal,
+    align = "center",
 }) => {
+    const modalStyle =
+        align === "center"
+            ? " w-8/12"
+            : align === "left"
+            ? "left-0 top-0 w-1/2 h-screen"
+            : "top-0 right-0 w-1/2 h-screen";
+
     return (
         <div className="h-screen w-full fixed left-0 top-0 flex justify-center items-center">
             <Backdrop
@@ -20,7 +30,12 @@ export const Modal: React.FC<ModalProps> = ({
                 }}
                 backdropClassName="backdrop-blur-sm z-10"
             />
-            <div className="fixed z-20 bg-white rounded shadow-lg w-8/12">
+            <div
+                className={[
+                    "fixed z-20 bg-white rounded shadow-lg",
+                    modalStyle,
+                ].join(" ")}
+            >
                 <div className="border-b px-4 py-2 flex justify-between items-center">
                     <h3 className="font-semibold text-lg">{modalTitle}</h3>
                     <Button
@@ -35,7 +50,7 @@ export const Modal: React.FC<ModalProps> = ({
                         }
                     />
                 </div>
-                <div className="p-3">{modalBody}</div>
+                <div className="p-4">{modalBody}</div>
             </div>
         </div>
     );

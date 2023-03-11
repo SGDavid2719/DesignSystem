@@ -924,7 +924,7 @@ export const DoipPage = () => {
                     <Image {...doipLogos} />
                 </div>
             </main>
-            <AccessibilityModal sidebarOptions={sidebarOptions} />
+            <AccessibilityModal sidebarOptions={sidebarOptions} align="left" />
             <Footer {...footer} />
         </div>
     );
