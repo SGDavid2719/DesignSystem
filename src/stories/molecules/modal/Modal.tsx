@@ -17,7 +17,7 @@ export const Modal: React.FC<ModalProps> = ({
 }) => {
     const modalStyle =
         align === "center"
-            ? " w-8/12"
+            ? "w-8/12 h-72"
             : align === "left"
             ? "left-0 top-0 w-1/2 h-screen"
             : "top-0 right-0 w-1/2 h-screen";
@@ -50,7 +50,7 @@ export const Modal: React.FC<ModalProps> = ({
                         }
                     />
                 </div>
-                <div className="p-4">{modalBody}</div>
+                <div>{modalBody}</div>
             </div>
         </div>
     );

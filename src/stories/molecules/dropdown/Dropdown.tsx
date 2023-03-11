@@ -6,12 +6,17 @@ export interface DropdownOption {
     id: number;
 }
 
-export interface DropdownProps {
+export interface DropdownOptions {
+    dropDownTitle: string;
     dropDownOptions: DropdownOption[];
+}
+
+export interface DropdownProps extends DropdownOptions {
     selectOption: (id: number) => void;
 }
 
 export const Dropdown: React.FC<DropdownProps> = ({
+    dropDownTitle,
     dropDownOptions,
     selectOption,
 }) => {
@@ -24,7 +29,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
     return (
         <div className="w-full">
             <Button
-                label="Dropdown"
+                label={dropDownTitle}
                 onClick={() => setShowDropdown((prevState) => !prevState)}
                 btnClassName={
                     "w-full items-center justify-center p-2 text-base font-normal text-white rounded-lg group hover:bg-gray-700 bg-gray-500"

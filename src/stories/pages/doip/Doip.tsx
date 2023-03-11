@@ -819,34 +819,78 @@ export const DoipPage = () => {
     };
 
     const sidebarOptions = [
-        [
-            {
-                text: "Option 1",
-                id: 1,
-            },
-            {
-                text: "Option 2",
-                id: 2,
-            },
-            {
-                text: "Option 3",
-                id: 3,
-            },
-        ],
-        [
-            {
-                text: "Option 1",
-                id: 4,
-            },
-            {
-                text: "Option 2",
-                id: 5,
-            },
-            {
-                text: "Option 3",
-                id: 6,
-            },
-        ],
+        {
+            dropDownTitle: "Backdrop",
+            dropDownOptions: [
+                {
+                    text: "Option 1",
+                    id: 1,
+                },
+            ],
+        },
+        {
+            dropDownTitle: "Button",
+            dropDownOptions: [
+                {
+                    text: "Option 1",
+                    id: 2,
+                },
+            ],
+        },
+        {
+            dropDownTitle: "Icon",
+            dropDownOptions: [
+                {
+                    text: "Option 1",
+                    id: 3,
+                },
+            ],
+        },
+        {
+            dropDownTitle: "Image",
+            dropDownOptions: [
+                {
+                    text: "Option 1",
+                    id: 4,
+                },
+            ],
+        },
+        {
+            dropDownTitle: "Paragraph",
+            dropDownOptions: [
+                {
+                    text: "Option 1",
+                    id: 5,
+                },
+            ],
+        },
+        {
+            dropDownTitle: "Redirect",
+            dropDownOptions: [
+                {
+                    text: "Option 1",
+                    id: 6,
+                },
+            ],
+        },
+        {
+            dropDownTitle: "Span",
+            dropDownOptions: [
+                {
+                    text: "Option 1",
+                    id: 7,
+                },
+            ],
+        },
+        {
+            dropDownTitle: "Time",
+            dropDownOptions: [
+                {
+                    text: "Option 1",
+                    id: 8,
+                },
+            ],
+        },
     ];
 
     return (

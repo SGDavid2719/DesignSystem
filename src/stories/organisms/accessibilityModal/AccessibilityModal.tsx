@@ -2,17 +2,17 @@ import { Button } from "../../atoms/button/Button";
 import { Modal } from "../../molecules/modal/Modal";
 import { useState } from "react";
 import { Sidebar } from "../sidebar/Sidebar";
-import { DropdownOption } from "../../molecules/dropdown/Dropdown";
+import { DropdownOptions } from "../../molecules/dropdown/Dropdown";
 import { Align } from "../../../shared/types";
 
 interface AccessibilityModalProps {
-    sidebarOptions: DropdownOption[][];
+    sidebarOptions: DropdownOptions[];
     align?: Align;
 }
 
 export const AccessibilityModal: React.FC<AccessibilityModalProps> = ({
     sidebarOptions,
-    align,
+    align = "left",
 }) => {
     const [showModal, setShowModal] = useState(false);
 
@@ -24,9 +24,9 @@ export const AccessibilityModal: React.FC<AccessibilityModalProps> = ({
                 <Sidebar
                     sidebarOptions={sidebarOptions}
                     selectOption={(id: number) => setSelectedOption(id)}
-                    sideBarClassName="p-2 w-1/3"
+                    sideBarClassName="p-2 w-1/3 h-screen"
                 />
-                <div className="p-2 w-full">
+                <div className="p-2 w-full overflow-y-scroll h-screen">
                     <p>{selectedOption}</p>
                 </div>
             </div>
@@ -35,7 +35,6 @@ export const AccessibilityModal: React.FC<AccessibilityModalProps> = ({
 
     return (
         <>
-            <div className="center"></div>
             {!showModal && (
                 <Button
                     label="A11y"

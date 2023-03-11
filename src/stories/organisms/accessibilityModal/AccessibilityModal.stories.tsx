@@ -15,33 +15,39 @@ const Template: ComponentStory<typeof AccessibilityModal> = (args) => (
 export const Default = Template.bind({});
 Default.args = {
     sidebarOptions: [
-        [
-            {
-                text: "Option 1",
-                id: 1,
-            },
-            {
-                text: "Option 2",
-                id: 2,
-            },
-            {
-                text: "Option 3",
-                id: 3,
-            },
-        ],
-        [
-            {
-                text: "Option 1",
-                id: 4,
-            },
-            {
-                text: "Option 2",
-                id: 5,
-            },
-            {
-                text: "Option 3",
-                id: 6,
-            },
-        ],
+        {
+            dropDownTitle: "First section",
+            dropDownOptions: [
+                {
+                    text: "Option 1",
+                    id: 1,
+                },
+                {
+                    text: "Option 2",
+                    id: 2,
+                },
+                {
+                    text: "Option 3",
+                    id: 3,
+                },
+            ],
+        },
+        {
+            dropDownTitle: "Second section",
+            dropDownOptions: [
+                {
+                    text: "Option 1",
+                    id: 4,
+                },
+                {
+                    text: "Option 2",
+                    id: 5,
+                },
+                {
+                    text: "Option 3",
+                    id: 6,
+                },
+            ],
+        },
     ],
 };
