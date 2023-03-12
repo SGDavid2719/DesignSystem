@@ -19,15 +19,15 @@ Default.args = {
             dropDownTitle: "First section",
             dropDownOptions: [
                 {
-                    text: "Option 1",
+                    title: "Option 1",
                     id: 1,
                 },
                 {
-                    text: "Option 2",
+                    title: "Option 2",
                     id: 2,
                 },
                 {
-                    text: "Option 3",
+                    title: "Option 3",
                     id: 3,
                 },
             ],
@@ -36,15 +36,15 @@ Default.args = {
             dropDownTitle: "Second section",
             dropDownOptions: [
                 {
-                    text: "Option 1",
+                    title: "Option 1",
                     id: 4,
                 },
                 {
-                    text: "Option 2",
+                    title: "Option 2",
                     id: 5,
                 },
                 {
-                    text: "Option 3",
+                    title: "Option 3",
                     id: 6,
                 },
             ],

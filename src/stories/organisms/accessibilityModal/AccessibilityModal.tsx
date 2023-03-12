@@ -2,16 +2,29 @@ import { Button } from "../../atoms/button/Button";
 import { Modal } from "../../molecules/modal/Modal";
 import { useState } from "react";
 import { Sidebar } from "../sidebar/Sidebar";
-import { DropdownOptions } from "../../molecules/dropdown/Dropdown";
+import {
+    DropdownOption,
+    DropdownOptions,
+} from "../../molecules/dropdown/Dropdown";
 import { Align } from "../../../shared/types";
 
+interface AccesibilityModalContent extends DropdownOption {
+    content?: React.ReactNode;
+}
+
+interface AccessibilityModalContents extends DropdownOptions {
+    dropDownOptions: AccesibilityModalContent[];
+}
+
 interface AccessibilityModalProps {
-    sidebarOptions: DropdownOptions[];
+    accessibilityModalTitle: string;
+    accessibilityModalContents: AccessibilityModalContents[];
     align?: Align;
 }
 
 export const AccessibilityModal: React.FC<AccessibilityModalProps> = ({
-    sidebarOptions,
+    accessibilityModalTitle,
+    accessibilityModalContents,
     align = "left",
 }) => {
     const [showModal, setShowModal] = useState(false);
@@ -19,15 +32,46 @@ export const AccessibilityModal: React.FC<AccessibilityModalProps> = ({
     const [selectedOption, setSelectedOption] = useState(0);
 
     const ModalContent = () => {
+        const contentToDisplay = accessibilityModalContents
+            .find((accessibilityModalContent) =>
+                accessibilityModalContent.dropDownOptions.find(
+                    (modalContent) => modalContent.id === selectedOption
+                )
+            )
+            ?.dropDownOptions?.find(
+                (modalContent) => modalContent.id === selectedOption
+            );
+
         return (
             <div className="flex gap-4">
                 <Sidebar
-                    sidebarOptions={sidebarOptions}
+                    sidebarOptions={accessibilityModalContents.map(
+                        (accessibilityModalContent) => {
+                            const { dropDownTitle, dropDownOptions } =
+                                accessibilityModalContent;
+
+                            return {
+                                dropDownTitle: dropDownTitle,
+                                dropDownOptions: dropDownOptions.map(
+                                    (dropDownOption) => {
+                                        return {
+                                            title: dropDownOption.title,
+                                            id: dropDownOption.id,
+                                        };
+                                    }
+                                ),
+                            };
+                        }
+                    )}
                     selectOption={(id: number) => setSelectedOption(id)}
                     sideBarClassName="p-2 w-1/3 h-screen"
                 />
-                <div className="p-2 w-full overflow-y-scroll h-screen">
-                    <p>{selectedOption}</p>
+                <div className="p-2 h-screen w-full">
+                    {contentToDisplay && contentToDisplay.content ? (
+                        contentToDisplay.content
+                    ) : selectedOption === 0 ? null : (
+                        <p>No content available</p>
+                    )}
                 </div>
             </div>
         );
@@ -47,7 +91,7 @@ export const AccessibilityModal: React.FC<AccessibilityModalProps> = ({
             {showModal && (
                 <Modal
                     setShowModal={() => setShowModal(false)}
-                    modalTitle="Modal title"
+                    modalTitle={accessibilityModalTitle}
                     modalBody={ModalContent()}
                     align={align}
                 />

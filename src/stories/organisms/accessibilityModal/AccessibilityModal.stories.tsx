@@ -14,38 +14,84 @@ const Template: ComponentStory<typeof AccessibilityModal> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-    sidebarOptions: [
+    accessibilityModalTitle: "Accessibility",
+    accessibilityModalContents: [
         {
-            dropDownTitle: "First section",
+            dropDownTitle: "Backdrop",
             dropDownOptions: [
                 {
-                    text: "Option 1",
+                    title: "Option 1",
+                    content: (
+                        <div>
+                            <p>
+                                <strong>Button:</strong> Content displayed
+                            </p>
+                        </div>
+                    ),
                     id: 1,
                 },
+            ],
+        },
+        {
+            dropDownTitle: "Button",
+            dropDownOptions: [
                 {
-                    text: "Option 2",
+                    title: "Option 1",
                     id: 2,
                 },
+            ],
+        },
+        {
+            dropDownTitle: "Icon",
+            dropDownOptions: [
                 {
-                    text: "Option 3",
+                    title: "Option 1",
                     id: 3,
                 },
             ],
         },
         {
-            dropDownTitle: "Second section",
+            dropDownTitle: "Image",
             dropDownOptions: [
                 {
-                    text: "Option 1",
+                    title: "Option 1",
                     id: 4,
                 },
+            ],
+        },
+        {
+            dropDownTitle: "Paragraph",
+            dropDownOptions: [
                 {
-                    text: "Option 2",
+                    title: "Option 1",
                     id: 5,
                 },
+            ],
+        },
+        {
+            dropDownTitle: "Redirect",
+            dropDownOptions: [
                 {
-                    text: "Option 3",
+                    title: "Option 1",
                     id: 6,
+                },
+            ],
+        },
+        {
+            dropDownTitle: "Span",
+            dropDownOptions: [
+                {
+                    title: "Option 1",
+                    id: 7,
+                },
+            ],
+        },
+        {
+            dropDownTitle: "Time",
+            dropDownOptions: [
+                {
+                    title: "Option 1",
+                    id: 8,
                 },
             ],
         },

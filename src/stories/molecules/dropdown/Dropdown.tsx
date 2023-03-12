@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "../../atoms/button/Button";
 
 export interface DropdownOption {
-    text: string;
+    title: string;
     id: number;
 }
 
@@ -40,11 +40,11 @@ export const Dropdown: React.FC<DropdownProps> = ({
             {showDropdown && (
                 <ul>
                     {dropDownOptions.map((option) => {
-                        const { text, id } = option;
+                        const { title, id } = option;
                         return (
                             <li key={id}>
                                 <Button
-                                    label={text}
+                                    label={title}
                                     onClick={() => selectOption(id)}
                                     btnClassName={
                                         "w-full items-center justify-center p-2 text-base font-normal text-white rounded-lg group hover:bg-gray-700 bg-gray-500 pl-11"

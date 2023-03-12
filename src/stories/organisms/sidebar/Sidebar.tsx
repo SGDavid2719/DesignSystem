@@ -2,8 +2,8 @@ import { Dropdown, DropdownOptions } from "../../molecules/dropdown/Dropdown";
 
 export interface SidebarProps {
     sidebarOptions: DropdownOptions[];
-    selectOption: (id: number) => void;
     sideBarClassName?: string;
+    selectOption: (id: number) => void;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
@@ -14,7 +14,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
     return (
         <aside
             className={[
-                "block bg-gray-500 overflow-y-scroll h-full w-full",
+                "block bg-gray-500 h-full w-full",
                 sideBarClassName,
             ].join(" ")}
         >
