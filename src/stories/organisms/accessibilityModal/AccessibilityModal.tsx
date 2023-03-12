@@ -64,7 +64,7 @@ export const AccessibilityModal: React.FC<AccessibilityModalProps> = ({
                         }
                     )}
                     selectOption={(id: number) => setSelectedOption(id)}
-                    sideBarClassName="p-2 w-1/3 h-screen"
+                    sideBarClassName="p-2 h-screen w-1/2"
                 />
                 <div className="p-2 h-screen w-full">
                     {contentToDisplay && contentToDisplay.content ? (

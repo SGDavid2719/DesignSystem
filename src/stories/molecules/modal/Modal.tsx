@@ -19,8 +19,8 @@ export const Modal: React.FC<ModalProps> = ({
         align === "center"
             ? "w-8/12 h-72"
             : align === "left"
-            ? "left-0 top-0 w-1/2 h-screen"
-            : "top-0 right-0 w-1/2 h-screen";
+            ? "left-0 top-0 w-2/3 h-screen"
+            : "top-0 right-0 w-2/3 h-screen";
 
     return (
         <div className="h-screen w-full fixed left-0 top-0 flex justify-center items-center">

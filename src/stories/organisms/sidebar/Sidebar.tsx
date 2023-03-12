@@ -13,10 +13,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 }) => {
     return (
         <aside
-            className={[
-                "block bg-gray-500 h-full w-full",
-                sideBarClassName,
-            ].join(" ")}
+            className={["block bg-gray-500 h-full", sideBarClassName].join(" ")}
         >
             <ul>
                 {sidebarOptions.map((options, index) => {

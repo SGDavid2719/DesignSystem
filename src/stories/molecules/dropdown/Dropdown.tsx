@@ -47,7 +47,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
                                     label={title}
                                     onClick={() => selectOption(id)}
                                     btnClassName={
-                                        "w-full items-center justify-center p-2 text-base font-normal text-white rounded-lg group hover:bg-gray-700 bg-gray-500 pl-11"
+                                        "w-full flex justify-end p-2 text-base font-normal text-white rounded-lg group hover:bg-gray-700 bg-gray-500"
                                     }
                                 />
                             </li>
