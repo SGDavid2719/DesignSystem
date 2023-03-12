@@ -63,7 +63,7 @@ export const DoipPage = () => {
         rel: "next" as Rel,
         ariaLabel: "logo",
         src: "./assets/logo.png",
-        alt: "logo",
+        alt: "",
     };
 
     const iconsLink = [
@@ -573,7 +573,7 @@ export const DoipPage = () => {
 
     const departmentImage = {
         src: "./assets/departOrient.png",
-        alt: "Departamento orientación",
+        alt: "",
     };
 
     const offersLink = {
@@ -940,43 +940,55 @@ export const DoipPage = () => {
                 </div>
             </header>
             <main>
-                <div className="block lg:flex">
-                    <div className="w-full flex lg:block lg:w-1/3 p-10">
-                        <Image
-                            {...departmentImage}
-                            imageClassName="w-1/2 lg:w-full"
-                        />
-                        <ImageLink
-                            {...offersLink}
-                            linkClassName="w-1/2 lg:w-full"
-                        />
+                <article>
+                    <div className="block lg:flex">
+                        <div className="w-full flex lg:block lg:w-1/3 p-10">
+                            <Image
+                                {...departmentImage}
+                                imageClassName="w-1/2 lg:w-full"
+                            />
+                            <ImageLink
+                                {...offersLink}
+                                linkClassName="w-1/2 lg:w-full"
+                            />
+                        </div>
+                        <div className="w-full lg:w-2/3 px-10 py-14">
+                            <Carousel carouselImages={carouselImages} />
+                        </div>
                     </div>
-                    <div className="w-full lg:w-2/3 px-10 py-14">
-                        <Carousel carouselImages={carouselImages} />
+                </article>
+                <article>
+                    <div>
+                        <h1 className="uppercase text-xl text-center">
+                            Actualidad
+                        </h1>
                     </div>
-                </div>
-                <div>
-                    <h1 className="uppercase text-xl text-center">
-                        Actualidad
-                    </h1>
-                </div>
-                <div className="p-8 block md:flex gap-3">
-                    <div className="block sm:flex gap-3 w-full lg:w-2/3 mt-4">
-                        <InfoCard {...firstInfoCard} infoCardClassName="mb-4" />
-                        <InfoCard {...secondInfoCard} infoCardClassName="" />
+                    <div className="p-8 block md:flex gap-3">
+                        <div className="block sm:flex gap-3 w-full lg:w-2/3 mt-4">
+                            <InfoCard
+                                {...firstInfoCard}
+                                infoCardClassName="mb-4"
+                            />
+                            <InfoCard
+                                {...secondInfoCard}
+                                infoCardClassName=""
+                            />
+                        </div>
+                        <div className="w-full md:w-1/3 mt-4">
+                            <OffersList {...offersList} />
+                        </div>
                     </div>
-                    <div className="w-full md:w-1/3 mt-4">
-                        <OffersList {...offersList} />
+                </article>
+                <article>
+                    <div>
+                        <h2 className="uppercase text-xl text-center">
+                            Con la colaboración de
+                        </h2>
                     </div>
-                </div>
-                <div>
-                    <h2 className="uppercase text-xl text-center">
-                        Con la colaboración de
-                    </h2>
-                </div>
-                <div className="p-8">
-                    <Image {...doipLogos} />
-                </div>
+                    <div className="p-8">
+                        <Image {...doipLogos} />
+                    </div>
+                </article>
             </main>
             <AccessibilityModal {...accessibilityModal} align="left" />
             <Footer {...footer} />
