@@ -34,6 +34,10 @@ interface ButtonProps {
      */
     ariaChecked?: boolean;
     /**
+     * Aria pressed
+     */
+    ariaPressed?: boolean;
+    /**
      * Aria label
      */
     ariaLabel?: string;
@@ -95,6 +99,7 @@ export const Button: React.FC<ButtonProps> = ({
     ariaExpanded = false,
     ariaLabel,
     ariaChecked,
+    ariaPressed = undefined,
     disabled = false,
     tabIndex,
     renderIcon,
@@ -116,6 +121,7 @@ export const Button: React.FC<ButtonProps> = ({
             aria-label={ariaLabel}
             aria-controls={ariaControls}
             aria-expanded={role !== "switch" ? ariaExpanded : undefined}
+            aria-pressed={ariaPressed}
             aria-checked={ariaChecked}
             disabled={disabled}
             tabIndex={tabIndex}
