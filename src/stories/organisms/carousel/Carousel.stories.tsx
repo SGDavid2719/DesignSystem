@@ -4,7 +4,7 @@ import { Carousel } from "./Carousel";
 import { Rel } from "../../../shared/types";
 
 export default {
-    title: "Molecules/Carousel",
+    title: "Organisms/Carousel",
     component: Carousel,
     argTypes: {},
 } as ComponentMeta<typeof Carousel>;

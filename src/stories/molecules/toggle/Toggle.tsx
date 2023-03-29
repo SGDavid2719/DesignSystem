@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "../../atoms/button/Button";
+import { Span } from "../../atoms/span/Span";
 
 interface ToggleProps {
     id: string;
@@ -40,16 +41,16 @@ export const Toggle: React.FC<ToggleProps> = ({
                 }}
             />
             <label htmlFor={id} id={toggleId} className="bg-white text-black">
-                <span>{label}</span>
+                <Span>{label}</Span>
                 <div className="mt-3 flex gap-3 spaccing-margin-t--lg cursor-pointer items-center w-[5.5rem]">
                     <div
                         className={`rounded-full w-[3rem] h-[1.5rem] ${
                             checked ? "bg-[#198038]" : "bg-[#8D8D8D]"
                         } ${before}`}
                     />
-                    <span className="font-semibold">
+                    <Span spanClassName="font-semibold">
                         {checked ? checkedText : notCheckedText}
-                    </span>
+                    </Span>
                 </div>
             </label>
         </div>

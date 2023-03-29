@@ -2,8 +2,8 @@ import { Paragraph } from "../../atoms/paragraph/Paragraph";
 import { RedirectProps } from "../../atoms/redirect/Redirect";
 import { IconLinkProps } from "../../molecules/iconLink/IconLink";
 import { LinksList } from "../../molecules/linksList/LinksList";
-import { OfficeItemProps } from "../../molecules/officesList/OfficeItem";
-import { OfficesList } from "../../molecules/officesList/OfficesList";
+import { OfficeItemProps } from "../../molecules/officeItem/OfficeItem";
+import { OfficesList } from "../officesList/OfficesList";
 import { IconMenu } from "../iconMenu/IconMenu";
 
 interface FooterProps {

@@ -23,13 +23,6 @@ Default.args = {
     onClick: handleOnClick,
 };
 
-export const WithIcon = Template.bind({});
-WithIcon.args = {
-    label: "Button",
-    renderIcon: "add",
-    align: "start",
-};
-
 // Default.play = async ({ canvasElement }) => {
 //     const canvas = within(canvasElement);
 //     const handleOnClick = jest.spyOn(canvas, "onClick" as any);

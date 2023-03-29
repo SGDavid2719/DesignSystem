@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ImageLink, ImageLinkProps } from "../imageLink/ImageLink";
+import { ImageLink, ImageLinkProps } from "../../molecules/imageLink/ImageLink";
 import { Button } from "../../atoms/button/Button";
 
 export interface CarouselProps {

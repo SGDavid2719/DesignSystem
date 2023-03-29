@@ -2,7 +2,7 @@ import { Rel } from "../../../shared/types";
 import { Button } from "../../atoms/button/Button";
 import { Image } from "../../atoms/image/Image";
 import { Redirect } from "../../atoms/redirect/Redirect";
-import { Carousel } from "../../molecules/carousel/Carousel";
+import { Carousel } from "../../organisms/carousel/Carousel";
 import { ImageLink } from "../../molecules/imageLink/ImageLink";
 import { AccessibilityModal } from "../../organisms/accessibilityModal/AccessibilityModal";
 import { Footer } from "../../organisms/footer/Footer";

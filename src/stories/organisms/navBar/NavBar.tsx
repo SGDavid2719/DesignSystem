@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "../../atoms/button/Button";
-import { MenuButton, Section } from "../../molecules/menuButton/MenuButton";
+import { MenuButton, Section } from "../menuButton/MenuButton";
 import { MenuLink, MenuLinkProps } from "../../molecules/menuLink/MenuLink";
 interface NavBarProps {
     mainLinks: MenuLinkProps[];

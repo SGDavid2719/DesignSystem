@@ -1,4 +1,7 @@
-import { OfficeItem, OfficeItemProps } from "./OfficeItem";
+import {
+    OfficeItem,
+    OfficeItemProps,
+} from "../../molecules/officeItem/OfficeItem";
 
 interface OfficesListProps {
     officesList: OfficeItemProps[];

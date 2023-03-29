@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { OfficesList } from "./OfficesList";
 
 export default {
-    title: "Molecules/OfficesList",
+    title: "Organisms/OfficesList",
     component: OfficesList,
     argTypes: {},
 } as ComponentMeta<typeof OfficesList>;

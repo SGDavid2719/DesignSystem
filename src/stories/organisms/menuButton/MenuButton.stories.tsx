@@ -4,7 +4,7 @@ import { MenuButton } from "./MenuButton";
 import { Rel } from "../../../shared/types";
 
 export default {
-    title: "Molecules/MenuButton",
+    title: "Organisms/MenuButton",
     component: MenuButton,
     argTypes: {
         backgroundColor: { control: "color" },
