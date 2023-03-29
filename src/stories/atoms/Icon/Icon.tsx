@@ -3,6 +3,7 @@ import { ICONS } from "../../../shared/icons";
 interface IconProps {
     iconId: string;
     iconClassName?: string;
+    dataTestid?: string;
 }
 
 export const Icon: React.FC<IconProps> = ({ iconId, iconClassName }) => {
