@@ -1,90 +1,80 @@
 import { Icon } from "../icon/Icon";
 
-import PropTypes from "prop-types";
-
 interface ButtonProps {
     /**
-     * Button type
+     * Propiedad opcional para indicar el tipo del botón.
      */
     type?: "button" | "reset" | "submit";
     /**
-     * Button role
+     * Propiedad opcional para indicar el rol del botón.
      */
     role?: string;
     /**
-     * Button contents
+     * Propiedad opcional para indicar el texto contenido del botón.
      */
     label?: string;
     /**
-     * Button title
-     */
-    title?: string;
-    /**
-     * Button styles from outside
+     * Propiedad opcional para indicar el estilo del botón.
      */
     btnClassName?: string;
     /**
-     * Aria controls
-     */
-    ariaControls?: string;
-    /**
-     * Aria expanded
+     * Propiedad opcional para indicar si un control se expande o se contrae, y si los elementos controlados se muestran u ocultan o no.
      */
     ariaExpanded?: boolean;
     /**
-     * Aria checked
+     * Propiedad opcional para indicar si el elemento está marcado, no marcado o indeterminado. Se utiliza en los Toggle.
      */
     ariaChecked?: boolean;
     /**
-     * Aria pressed
+     * Propiedad opcional para indicar el estado actual "pulsado" de un botón de alternar.
      */
     ariaPressed?: boolean;
     /**
-     * Aria label
+     * Propiedad opcional para indicar de forma accesible el contenido visible. Se utiliza para botones solo con icono.
      */
     ariaLabel?: string;
     /**
-     * Disabled
+     * Propiedad opcional para deshabilitar el botón.
      */
     disabled?: boolean;
     /**
-     * Tabindex
+     * Propiedad opcional para indicar el Tabindex.
      */
     tabIndex?: number;
     /**
-     * Render Icon
+     * Propiedad opcional para indicar qué icono se quiere renderizar.
      */
     renderIcon?: string;
     /**
-     * hasIconOnly
+     * Propiedad opcional para indicar que únicamente se muestre el icono renderizado.
      */
     hasIconOnly?: boolean;
     /**
-     * Icon styles from outside
+     * Propiedad opcional para indicar las clases del icono.
      */
     iconClassName?: string;
     /**
-     * Icon position
+     * Propiedad opcional para indicar el alineado del icono.
      */
     align?: "end" | "start";
     /**
-     * Optional click handler
+     * Propiedad opcional para indicar la acción cuando el botón es clicado.
      */
     onClick?: () => void;
     /**
-     * Optional blur handler
+     * Propiedad opcional para indicar la acción cuando el botón pierde el foco.
      */
     onBlur?: () => void;
     /**
-     * Optional focus handler
+     * Propiedad opcional para indicar la acción cuando el botón obtiene el foco.
      */
     onFocus?: () => void;
     /**
-     * Optional mouse enter handler
+     * Propiedad opcional para indicar la acción cuando el ratón entra en el botón.
      */
     onMouseEnter?: () => void;
     /**
-     * Optional mouse leave handler
+     * Propiedad opcional para indicar la acción cuando el ratón sale del botón.
      */
     onMouseLeave?: () => void;
 }
@@ -96,8 +86,6 @@ export const Button: React.FC<ButtonProps> = ({
     type = "button",
     role = "button",
     label,
-    title = "Button",
-    ariaControls,
     ariaExpanded = false,
     ariaLabel,
     ariaChecked,
@@ -119,9 +107,7 @@ export const Button: React.FC<ButtonProps> = ({
         <button
             type={type}
             role={role}
-            title={title}
             aria-label={ariaLabel}
-            aria-controls={ariaControls}
             aria-expanded={role !== "switch" ? ariaExpanded : undefined}
             aria-pressed={ariaPressed}
             aria-checked={ariaChecked}
