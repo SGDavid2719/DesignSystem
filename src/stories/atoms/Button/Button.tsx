@@ -1,5 +1,7 @@
 import { Icon } from "../icon/Icon";
 
+import PropTypes from "prop-types";
+
 interface ButtonProps {
     /**
      * Button type

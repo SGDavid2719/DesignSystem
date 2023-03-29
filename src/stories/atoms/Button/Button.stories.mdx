@@ -1,0 +1,36 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { Button } from "./Button";
+
+<Meta title="Atoms/Button" component={Button} />
+
+export const Template = (args) => <Button {...args} />;
+
+# Botón
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/atoms/Button)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+
+## Descripción general
+
+Botón es un elemento interactivo que s edefine con la etiqueta `<button>` y al cual es necesario añadir atributos como `onClick` que especifican lo que debe ocurrir cuando se hace clic.
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            label: "Button",
+            onClick: () => console.log("Testing button onClick function"),
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={Button} />
