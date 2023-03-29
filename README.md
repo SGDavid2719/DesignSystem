@@ -17,7 +17,7 @@ The page will reload if you make edits.\
 
 ## To deploy the solution to GitHub pages
 
-### `npm run pre-deply`
+### `npm run predeploy`
 
 ### `npm run deploy-storybook`
 

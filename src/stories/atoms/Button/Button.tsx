@@ -30,6 +30,18 @@ interface ButtonProps {
      */
     ariaExpanded?: boolean;
     /**
+     * Aria checked
+     */
+    ariaChecked?: boolean;
+    /**
+     * Aria pressed
+     */
+    ariaPressed?: boolean;
+    /**
+     * Aria label
+     */
+    ariaLabel?: string;
+    /**
      * Disabled
      */
     disabled?: boolean;
@@ -37,10 +49,6 @@ interface ButtonProps {
      * Tabindex
      */
     tabIndex?: number;
-    /**
-     * Size
-     */
-    size?: "sm" | "md" | "lg" | "xl";
     /**
      * Render Icon
      */
@@ -89,9 +97,11 @@ export const Button: React.FC<ButtonProps> = ({
     title = "Button",
     ariaControls,
     ariaExpanded = false,
+    ariaLabel,
+    ariaChecked,
+    ariaPressed = undefined,
     disabled = false,
     tabIndex,
-    size = "sm",
     renderIcon,
     hasIconOnly,
     align = "end",
@@ -108,17 +118,22 @@ export const Button: React.FC<ButtonProps> = ({
             type={type}
             role={role}
             title={title}
+            aria-label={ariaLabel}
             aria-controls={ariaControls}
-            aria-expanded={ariaExpanded}
+            aria-expanded={role !== "switch" ? ariaExpanded : undefined}
+            aria-pressed={ariaPressed}
+            aria-checked={ariaChecked}
             disabled={disabled}
             tabIndex={tabIndex}
             className={[
                 "p-1 flex",
                 `${disabled ? "cursor-not-allowed" : "cursor-pointer"}`,
                 `${
-                    align === "end"
-                        ? "justify-between"
-                        : "flex-row-reverse justify-end"
+                    renderIcon
+                        ? align === "end"
+                            ? "justify-between"
+                            : "flex-row-reverse justify-end"
+                        : ""
                 }`,
                 btnClassName,
             ].join(" ")}

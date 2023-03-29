@@ -8,9 +8,7 @@ import { Button } from "./Button";
 export default {
     title: "Atoms/Button",
     component: Button,
-    argTypes: {
-        backgroundColor: { control: "color" },
-    },
+    argTypes: {},
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
@@ -23,13 +21,6 @@ export const Default = Template.bind({});
 Default.args = {
     label: "Button",
     onClick: handleOnClick,
-};
-
-export const WithIcon = Template.bind({});
-WithIcon.args = {
-    label: "Button",
-    renderIcon: "add",
-    align: "start",
 };
 
 // Default.play = async ({ canvasElement }) => {

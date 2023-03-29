@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Button } from "../../atoms/button/Button";
-import { MenuLink, MenuLinkProps } from "../menuLink/MenuLink";
+import { MenuLink, MenuLinkProps } from "../../molecules/menuLink/MenuLink";
 import ReactDOM from "react-dom";
+import { Backdrop } from "../../atoms/backdrop/Backdrop";
 
 export interface Section {
     title: string;
@@ -28,7 +29,7 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ sections }) => {
             />
             {showMenu &&
                 ReactDOM.createPortal(
-                    <div className="mt-2 border grid grid-cols-4 bg-white m-6 p-2">
+                    <div className="mt-2 border grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 bg-white m-6 p-2">
                         {sections.map((section) => {
                             const { title, sectionLinks } = section;
 
@@ -44,11 +45,13 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ sections }) => {
                                                 ariaLabel,
                                                 mainText,
                                                 subText,
+                                                rel,
                                             } = sectionLink;
 
                                             return (
                                                 <li className="mb-1" key={href}>
                                                     <MenuLink
+                                                        rel={rel}
                                                         href={href}
                                                         ariaLabel={ariaLabel}
                                                         mainText={mainText}
@@ -65,6 +68,7 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ sections }) => {
                     </div>,
                     portalElement!
                 )}
+            {showMenu && <Backdrop onOutsideClick={() => setShowMenu(false)} />}
         </>
     );
 };

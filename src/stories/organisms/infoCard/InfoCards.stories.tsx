@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { InfoCard } from "./InfoCard";
+import { Rel } from "../../../shared/types";
 
 export default {
     title: "Organisms/InfoCard",
@@ -16,6 +17,7 @@ export const Default = Template.bind({});
 Default.args = {
     cardPhoto: {
         href: "href",
+        rel: "next" as Rel,
         ariaLabel: "logo",
         src: "./assets/logo.png",
         alt: "logo",
@@ -23,12 +25,14 @@ Default.args = {
     dateTime: new Date(2020, 4, 20),
     mainRedirect: {
         href: "href",
+        rel: "next" as Rel,
         ariaLabel: "mainRedirect",
         children:
             "1.256 ofertas de trabajo y 589 prácticas extracurriculares, balance del DOIP durante el curso 2021-22",
     },
     secondaryRedirect: {
         href: "href",
+        rel: "next" as Rel,
         ariaLabel: "secondaryRedirect",
         children: "Doip",
     },

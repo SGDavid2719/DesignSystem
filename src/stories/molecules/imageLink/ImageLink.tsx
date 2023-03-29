@@ -1,8 +1,10 @@
 import { Redirect } from "../../atoms/redirect/Redirect";
 import { Image } from "../../atoms/image/Image";
+import { Rel } from "../../../shared/types";
 
 export interface ImageLinkProps {
     href: string;
+    rel: Rel;
     ariaLabel: string;
     linkClassName?: string;
     imageClassName?: string;
@@ -13,6 +15,7 @@ export interface ImageLinkProps {
 export const ImageLink: React.FC<ImageLinkProps> = ({
     href,
     ariaLabel,
+    rel,
     linkClassName,
     imageClassName,
     src,
@@ -20,9 +23,10 @@ export const ImageLink: React.FC<ImageLinkProps> = ({
 }) => {
     return (
         <Redirect
+            rel={rel}
             href={href}
             ariaLabel={ariaLabel}
-            redirectClassName={["w-fit block", linkClassName].join(" ")}
+            redirectClassName={["w-full block", linkClassName].join(" ")}
         >
             <Image src={src} alt={alt} imageClassName={imageClassName} />
         </Redirect>

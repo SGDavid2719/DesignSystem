@@ -11,11 +11,12 @@ export const LinksList = ({ links, linksListClass }: LinksListProps) => {
     return (
         <ul className={["flex gap-4", linksListClass].join(" ")}>
             {links.map((link, index) => {
-                const { href, ariaLabel, children } = link;
+                const { href, ariaLabel, children, rel } = link;
                 return (
                     <Fragment key={href}>
                         <li className="w-fit">
                             <Redirect
+                                rel={rel}
                                 href={href}
                                 ariaLabel={ariaLabel}
                                 children={children}
