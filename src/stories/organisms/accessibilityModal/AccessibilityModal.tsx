@@ -88,14 +88,13 @@ export const AccessibilityModal: React.FC<AccessibilityModalProps> = ({
                     }
                 />
             )}
-            {showModal && (
-                <Modal
-                    setShowModal={() => setShowModal(false)}
-                    modalTitle={accessibilityModalTitle}
-                    modalBody={ModalContent()}
-                    align={align}
-                />
-            )}
+            <Modal
+                setShowModal={() => setShowModal(false)}
+                modalTitle={accessibilityModalTitle}
+                modalBody={ModalContent()}
+                align={align}
+                showModal={showModal}
+            />
         </>
     );
 };

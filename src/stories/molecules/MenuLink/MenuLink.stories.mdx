@@ -1,0 +1,78 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { MenuLink } from "./MenuLink";
+
+<Meta title="Molecules/MenuLink" component={MenuLink} />
+
+export const Template = (args) => <MenuLink {...args} />;
+
+# Item de menú como enlace
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/molecules/MenuLink)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Componente formado por un enlace y un icono. Su objetivo es servir de enlace a través de una representación gráfica, pero para ser accesible debe indicarse un texto alternativo.
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            href: "/?path=/story/pages-notfoundpage--default",
+            ariaLabel: "ariaLabel",
+            mainText: "Main text",
+            subText: "Sub text",
+            subSections: [
+                {
+                    href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next",
+                    ariaLabel: "ariaLabel",
+                    children: "string1",
+                },
+                {
+                    href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next",
+                    ariaLabel: "ariaLabel",
+                    children: "string2",
+                },
+            ],
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={MenuLink} />
+
+## Desarrollo atómico
+
+Al ser una molécula, este componente está compuesto por dos o varios átomos. En este caso, se trata de un enlace, contenedores en línea y una lista de enlaces.
+
+```jsx
+<div onMouseEnter onMouseLeave>
+    <Redirect rel href ariaLabel>
+        <Span children={mainText} />
+        <Span children={subText} />
+    </Redirect>
+    {subSections && mouseEnter && (
+        <ul>
+            {subSections?.map((subSection) => {
+                const { href, ariaLabel, children, rel } = subSection;
+                return (
+                    <li key>
+                        <Redirect rel href ariaLabel children />
+                    </li>
+                );
+            })}
+        </ul>
+    )}
+</div>
+```

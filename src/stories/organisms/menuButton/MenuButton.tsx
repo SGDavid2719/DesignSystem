@@ -56,7 +56,7 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ sections }) => {
                                                         ariaLabel={ariaLabel}
                                                         mainText={mainText}
                                                         subText={subText}
-                                                        menuLinkClassName="flex align-baseline"
+                                                        redirectClassName="flex align-baseline"
                                                     />
                                                 </li>
                                             );

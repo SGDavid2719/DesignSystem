@@ -1,4 +1,4 @@
-interface ImageProps {
+export interface ImageProps {
     /**
      * Propiedad obligatoria para indicar donde se encuentra la imagen.
      */

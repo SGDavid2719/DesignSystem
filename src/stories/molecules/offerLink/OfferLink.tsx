@@ -4,12 +4,33 @@ import { Icon } from "../../atoms/icon/Icon";
 import { dateDiffInDays } from "../../../utils/dateFunctions";
 
 export interface OfferLinkProps {
+    /**
+     * Propiedad obligatoria para indicar el enlace de la oferta.
+     */
     offerRedirect: RedirectProps;
+    /**
+     * Propiedad opcional para indicar el primer subtítulo.
+     */
     firstSubtitle?: string;
+    /**
+     * Propiedad opcional para indicar el segundo subtítulo.
+     */
     secondSubtitle?: string;
+    /**
+     * Propiedad obligatoria para indicar el nombre de la oferta.
+     */
     offerName: string;
+    /**
+     * Propiedad obligatoria para indicar el lugar de la oferta.
+     */
     placeName: string;
+    /**
+     * Propiedad obligatoria para indicar la fecha de publicación de la oferta.
+     */
     publicationDate: Date;
+    /**
+     * Propiedad obligatoria para indicar el número de referencia de la oferta.
+     */
     referenceNumber: number;
 }
 

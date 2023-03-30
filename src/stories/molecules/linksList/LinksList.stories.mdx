@@ -1,0 +1,80 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { LinksList } from "./LinksList";
+
+<Meta title="Molecules/LinksList" component={LinksList} />
+
+export const Template = (args) => <LinksList {...args} />;
+
+# Lista de enlaces
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/molecules/LinksList)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Componente formado por una lista de enlaces relacionados. <br />
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            links: [
+                {
+                    href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next",
+                    children: "Aviso legal",
+                    ariaLabel: "Aviso legal",
+                },
+                {
+                    href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next",
+                    children: "Política de privacidad",
+                    ariaLabel: "Política de privacidad",
+                },
+                {
+                    href: "/?path=/story/pages-notfoundpage--default",
+                    rel: "next",
+                    children: "Mapa de contenidos",
+                    ariaLabel: "Mapa de contenidos",
+                },
+            ],
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={LinksList} />
+
+## Desarrollo atómico
+
+Al ser una molécula, este componente está compuesto por dos o varios átomos. En este caso, se trata de una lista, con items de tipo enlace. <br />
+Además, después de cada enlace exceptuando el último, se añade un punto.
+
+```jsx
+<ul>
+    {links.map((link, index) => {
+        const { href, ariaLabel, children, rel } = link;
+        return (
+            <Fragment key>
+                <li>
+                    <Redirect rel href ariaLabel children />
+                </li>
+                {index + 1 !== links.length && (
+                    <li>
+                        <Span children="·" />
+                    </li>
+                )}
+            </Fragment>
+        );
+    })}
+</ul>
+```

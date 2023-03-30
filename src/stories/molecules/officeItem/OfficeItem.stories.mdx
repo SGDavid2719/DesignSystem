@@ -1,0 +1,94 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { OfficeItem } from "./OfficeItem";
+
+<Meta title="Molecules/OfficeItem" component={OfficeItem} />
+
+export const Template = (args) => <OfficeItem {...args} />;
+
+# Oficina
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/molecules/OfficeItem)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Componente para mostrar la información relacionada con una oficina, como el nombre, localización, número de teléfono, correo y horarios.
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            name: "DOIP Campus",
+            location:
+                "Ctra. de Valldemossa, km 7.5 (Edificio Instalaciones Deportivas, Campus UIB). 07122 Palma, Illes Balears (España)",
+            phoneNumber: "(+34) 971259697",
+            email: "doip@fueib.org",
+            schedules: ["Lu-Ju: 08:00-15:30", "Vi: 08:00-15:00"],
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={OfficeItem} />
+
+## Desarrollo atómico
+
+Al ser una molécula, este componente está compuesto por dos o varios átomos. <br />
+En este caso, está compuesto por contenedores en línea e iconos.
+
+```jsx
+<div>
+    <div>{name}</div>
+    <div>
+        <Span
+            children={
+                <>
+                    <Icon iconId="location" />
+                    {location}
+                </>
+            }
+        />
+    </div>
+    <div>
+        <Span
+            children={
+                <>
+                    <Icon iconId="phone" />
+                    {phoneNumber}
+                </>
+            }
+        />
+    </div>
+    <div>
+        <Span
+            children={
+                <>
+                    <Icon iconId="mail" />
+                    {email}
+                </>
+            }
+        />
+    </div>
+    <div>
+        <Span
+            children={
+                <>
+                    <Icon iconId="schedule" />
+                    {schedules.map((schedule, index) => (
+                        <Span key children={schedule} />
+                    ))}
+                </>
+            }
+        />
+    </div>
+</div>
+```

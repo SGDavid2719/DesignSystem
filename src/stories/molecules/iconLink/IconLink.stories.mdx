@@ -1,0 +1,51 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { IconLink } from "./IconLink";
+
+<Meta title="Molecules/IconLink" component={IconLink} />
+
+export const Template = (args) => <IconLink {...args} />;
+
+# Icono enlace
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/molecules/IconLink)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Componente formado por un enlace y un icono. Su objetivo es servir de enlace a través de una representación gráfica, pero para ser accesible debe indicarse un texto alternativo. <br />
+Este icono debe formar parte de la lista de iconos disponibles.
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next",
+            ariaLabel: "notFound",
+            iconId: "home",
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={IconLink} />
+
+## Desarrollo atómico
+
+Al ser una molécula, este componente está compuesto por dos o varios átomos. <br />
+En este caso, se trata de un enlace y un icono.
+
+```jsx
+<Redirect rel href ariaLabel>
+    <Icon iconId />
+</Redirect>
+```

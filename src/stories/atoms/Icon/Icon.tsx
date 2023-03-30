@@ -1,6 +1,6 @@
 import { ICONS } from "../../../shared/icons";
 
-interface IconProps {
+export interface IconProps {
     /**
      * Propiedad obligatoria para indicar el icono a representar.
      */

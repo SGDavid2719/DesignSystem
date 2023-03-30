@@ -14,9 +14,9 @@ export interface RedirectProps {
      */
     ariaLabel: string;
     /**
-     * Propiedad obligatoria para indicar el contenido del componente.
+     * Propiedad opcional para indicar el contenido del componente.
      */
-    children: React.ReactNode | string;
+    children?: React.ReactNode | string;
     /**
      * Propiedad opcional para indicar el estilo.
      */

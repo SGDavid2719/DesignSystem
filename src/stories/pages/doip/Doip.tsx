@@ -744,42 +744,42 @@ export const DoipPage = () => {
                 rel: "next" as Rel,
                 ariaLabel: "link1",
                 iconId: "home",
-                iconLinkClassName: "text-blue-400",
+                iconClassName: "text-blue-400",
             },
             {
                 href: "/?path=/story/pages-notfoundpage--default",
                 rel: "next" as Rel,
                 ariaLabel: "link2",
                 iconId: "magnifying-glass",
-                iconLinkClassName: "text-blue-400",
+                iconClassName: "text-blue-400",
             },
             {
                 href: "/?path=/story/pages-notfoundpage--default",
                 rel: "next" as Rel,
                 ariaLabel: "link3",
                 iconId: "facebook",
-                iconLinkClassName: "text-blue-400",
+                iconClassName: "text-blue-400",
             },
             {
                 href: "/?path=/story/pages-notfoundpage--default",
                 rel: "next" as Rel,
                 ariaLabel: "link4",
                 iconId: "twitter",
-                iconLinkClassName: "text-blue-400",
+                iconClassName: "text-blue-400",
             },
             {
                 href: "/?path=/story/pages-notfoundpage--default",
                 rel: "next" as Rel,
                 ariaLabel: "link5",
                 iconId: "youtube",
-                iconLinkClassName: "text-blue-400",
+                iconClassName: "text-blue-400",
             },
             {
                 href: "/?path=/story/pages-notfoundpage--default",
                 rel: "next" as Rel,
                 ariaLabel: "link6",
                 iconId: "instagram",
-                iconLinkClassName: "text-blue-400",
+                iconClassName: "text-blue-400",
             },
         ],
         mainLinks: [
@@ -912,7 +912,7 @@ export const DoipPage = () => {
                         <ImageLink
                             {...logoLink}
                             imageClassName="h-[5rem]"
-                            linkClassName="w-fit"
+                            redirectClassName="w-fit"
                         />
                     </div>
                     <div className="w-full mt-4 lg:mt-0 lg:w-1/3">
@@ -949,7 +949,7 @@ export const DoipPage = () => {
                             />
                             <ImageLink
                                 {...offersLink}
-                                linkClassName="w-1/2 lg:w-full"
+                                redirectClassName="w-1/2 lg:w-full"
                             />
                         </div>
                         <div className="w-full lg:w-2/3 px-10 py-14">
