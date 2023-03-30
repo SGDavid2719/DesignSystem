@@ -2,10 +2,25 @@ import { Icon } from "../../atoms/icon/Icon";
 import { Span } from "../../atoms/span/Span";
 
 export interface OfficeItemProps {
+    /**
+     * Propiedad obligatoria para indicar el nombre de la oficina.
+     */
     name: string;
+    /**
+     * Propiedad obligatoria para indicar la localización de la oficina.
+     */
     location: string;
+    /**
+     * Propiedad obligatoria para indicar el número de teléfono de la oficina.
+     */
     phoneNumber: string;
+    /**
+     * Propiedad obligatoria para indicar el correo de la oficina.
+     */
     email: string;
+    /**
+     * Propiedad obligatoria para indicar los horarios de la oficina.
+     */
     schedules: string[];
 }
 
@@ -74,7 +89,9 @@ export const OfficeItem = ({
                                 <Span
                                     key={index}
                                     children={schedule}
-                                    spanClassName={`${index !== 0 && "block"}`}
+                                    spanClassName={`${
+                                        index !== 0 ? "block" : ""
+                                    }`}
                                 />
                             ))}{" "}
                         </>

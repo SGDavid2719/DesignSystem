@@ -1,0 +1,58 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { Icon, ListOfIcons } from "./Icon";
+
+<Meta title="Atoms/Icon" component={Icon} />
+
+export const Template = (args) => <Icon {...args} />;
+
+export const IconsList = (args) => <ListOfIcons {...args} />;
+
+# Icono
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/atoms/Icon)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [Lista de iconos](#lista-de-iconos)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Este componente es un átomo ya que es una unidad indivisible. <br />
+Un icono es un elemento que representa un objeto o una idea de forma gráfica.
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            iconId: "location",
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## Lista de iconos
+
+Esta es la lista de todos los iconos disponibles.
+
+<Canvas>
+    <Story name="IconsList">{IconsList.bind({})}</Story>
+</Canvas>
+
+## API Componente
+
+<Props of={Icon} />
+
+## Desarrollo atómico
+
+Al ser una unidad indivisible se utiliza únicamente la etiqueta HTML propia como es `<svg>` y `<path>`.
+
+```jsx
+<svg xmlns="http://www.w3.org/2000/svg" viewBox={iconId} fill="currentColor">
+    <path fillRule="evenodd" d clipRule="evenodd" />
+</svg>
+```

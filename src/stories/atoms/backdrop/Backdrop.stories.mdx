@@ -1,0 +1,45 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { Backdrop } from "./Backdrop";
+
+<Meta title="Atoms/Backdrop" component={Backdrop} />
+
+export const Template = (args) => <Backdrop {...args} />;
+
+# Enlace
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/atoms/Backdrop)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Este componente es un átomo ya que es una unidad indivisible. <br />
+Un fondo es un componente contenedor que ocupa toda la pantalla y se suele utilizar para ejecutar funciones al hacer `click` fuera del componente que contiene.
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            onOutsideClick: () => {},
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={Backdrop} />
+
+## Desarrollo atómico
+
+Al ser una unidad indivisible se utiliza únicamente la etiqueta HTML.
+
+```jsx
+<div onClick />
+```

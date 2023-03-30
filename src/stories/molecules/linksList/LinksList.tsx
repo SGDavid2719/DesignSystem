@@ -3,17 +3,23 @@ import { Redirect, RedirectProps } from "../../atoms/redirect/Redirect";
 import { Span } from "../../atoms/span/Span";
 
 interface LinksListProps {
+    /**
+     * Propiedad obligatoria para indicar la lista de enlaces con sus propiedades pertinentes.
+     */
     links: RedirectProps[];
+    /**
+     * Propiedad opcional para indicar las clases de la lista.
+     */
     linksListClass?: string;
 }
 
 export const LinksList = ({ links, linksListClass }: LinksListProps) => {
     return (
         <ul className={["flex gap-4", linksListClass].join(" ")}>
-            {links.map((link, index) => {
+            {links.map((link, linkIndex) => {
                 const { href, ariaLabel, children, rel } = link;
                 return (
-                    <Fragment key={href}>
+                    <Fragment key={linkIndex}>
                         <li className="w-fit">
                             <Redirect
                                 rel={rel}
@@ -23,7 +29,7 @@ export const LinksList = ({ links, linksListClass }: LinksListProps) => {
                                 redirectClassName="text-sm"
                             />
                         </li>
-                        {index + 1 !== links.length && (
+                        {linkIndex + 1 !== links.length && (
                             <li>
                                 <Span children="·" />
                             </li>

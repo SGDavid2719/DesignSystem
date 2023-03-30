@@ -1,6 +1,15 @@
-interface ImageProps {
+export interface ImageProps {
+    /**
+     * Propiedad obligatoria para indicar donde se encuentra la imagen.
+     */
     src: string;
+    /**
+     * Propiedad obligatoria para indicar un texto alternativo a la imagen.
+     */
     alt: string;
+    /**
+     * Propiedad opcional para indicar el estilo de la imagen.
+     */
     imageClassName?: string;
 }
 

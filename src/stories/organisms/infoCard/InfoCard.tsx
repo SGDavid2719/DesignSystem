@@ -1,7 +1,7 @@
 import { Icon } from "../../atoms/icon/Icon";
 import { Paragraph } from "../../atoms/paragraph/Paragraph";
 import { Redirect, RedirectProps } from "../../atoms/redirect/Redirect";
-import { Time } from "../../atoms/time/Time";
+import { Time } from "../../molecules/time/Time";
 import { ImageLink, ImageLinkProps } from "../../molecules/imageLink/ImageLink";
 
 interface InfoCardProps {

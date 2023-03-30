@@ -30,7 +30,7 @@ export const HiddenMenu = ({ menuLinks }: HiddenMenuProps) => {
                                     ariaLabel={ariaLabel}
                                     mainText={mainText}
                                     subText={subText}
-                                    menuLinkClassName="bg-[#f6f6f6] p-[0.75rem] w-full"
+                                    redirectClassName="bg-[#f6f6f6] p-[0.75rem] w-full"
                                 />
                             </li>
                         );

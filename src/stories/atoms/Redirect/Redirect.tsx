@@ -1,10 +1,25 @@
 import { Rel } from "../../../shared/types";
 
 export interface RedirectProps {
+    /**
+     * Propiedad obligatoria para indicar la dirección.
+     */
     href: string;
+    /**
+     * Propiedad obligatoria para indicar la relación entre el documento actual y el relacionado.
+     */
     rel: Rel;
+    /**
+     * Propiedad obligatoria para indicar un texto alternativo que aporta definición al enlace.
+     */
     ariaLabel: string;
-    children: React.ReactNode | string;
+    /**
+     * Propiedad opcional para indicar el contenido del componente.
+     */
+    children?: React.ReactNode | string;
+    /**
+     * Propiedad opcional para indicar el estilo.
+     */
     redirectClassName?: string;
 }
 

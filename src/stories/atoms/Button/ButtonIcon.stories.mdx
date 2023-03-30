@@ -2,7 +2,7 @@ import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
 import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
 import { Button } from "./Button";
 
-<Meta title="Atoms/Button" component={Button} />
+<Meta title="Molecules/ButtonWithIcon" component={Button} />
 
 export const Template = (args) => <Button {...args} />;
 
@@ -18,8 +18,7 @@ export const Template = (args) => <Button {...args} />;
 
 ## Descripción general
 
-Este componente es un átomo ya que es una unidad indivisible. <br />
-Un botón es un elemento interactivo que se define con la etiqueta `<button>`, y al cual es necesario añadir atributos como `onClick` para especificar lo que debe ocurrir cuando se hace click.
+Componente formado por un botón y un icono. Este icono debe formar parte de la lista de iconos disponibles.
 
 <Canvas>
     <Story
@@ -27,6 +26,7 @@ Un botón es un elemento interactivo que se define con la etiqueta `<button>`, y
         args={{
             label: "Button",
             onClick: () => console.log("Testing button onClick function"),
+            renderIcon: "add",
         }}
     >
         {Template.bind({})}
@@ -39,8 +39,12 @@ Un botón es un elemento interactivo que se define con la etiqueta `<button>`, y
 
 ## Desarrollo atómico
 
-Al ser una unidad indivisible se utiliza únicamente la etiqueta HTML propia para los botones.
+Al ser una molécula, este componente está compuesto por dos o varios átomos. En este caso, se trata de un botón y un icono.
 
 ```jsx
-<button />
+<button>
+    <div className={`my-auto`}>
+        {<Icon iconId={renderIcon} iconClassName={iconClassName} />}
+    </div>
+</button>
 ```

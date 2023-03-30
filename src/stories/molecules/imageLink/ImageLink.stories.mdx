@@ -1,0 +1,52 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { ImageLink } from "./ImageLink";
+
+<Meta title="Molecules/ImageLink" component={ImageLink} />
+
+export const Template = (args) => <ImageLink {...args} />;
+
+# Imagen enlace
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/molecules/ImageLink)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Componente formado por un enlace y una imagen. Su objetivo es servir de enlace a través de una representación gráfica,
+pero para ser accesible debe indicarse un texto alternativo tanto para la imagen como para el enlace. <br />
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            href: "/?path=/story/pages-notfoundpage--default",
+            rel: "next",
+            ariaLabel: "notFound",
+            src: "./assets/logo.png",
+            alt: "logo",
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={ImageLink} />
+
+## Desarrollo atómico
+
+Al ser una molécula, este componente está compuesto por dos o varios átomos. <br />
+En este caso, se trata de un enlace y una imagen.
+
+```jsx
+<Redirect rel href ariaLabel>
+    <Image src alt imageClassName />
+</Redirect>
+```

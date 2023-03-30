@@ -42,7 +42,7 @@ export const NavBar = ({ mainLinks, sections }: NavBarProps) => {
                                     mainText={mainText}
                                     subText={subText}
                                     subSections={subSections}
-                                    menuLinkClassName="p-[0.75rem] uppercase"
+                                    redirectClassName="p-[0.75rem] uppercase"
                                 />
                             </li>
                         );

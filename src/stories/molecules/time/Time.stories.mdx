@@ -1,0 +1,48 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { Time } from "./Time";
+
+<Meta title="Molecules/Time" component={Time} />
+
+export const Template = (args) => <Time {...args} />;
+
+# Tiempo
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/molecules/Time)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Este componente es una molécula ya que está compuesto por dos o más átomos. <br />
+Un elemento `<time>` se utiliza para definir un `datetime` específico que pueda ser traducido por un formateador por máquina.
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            dateTime: new Date(2020, 4, 20),
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={Time} />
+
+## Desarrollo atómico
+
+Este componente es una molécula y está compuesto por átomos `<span>` y `<time>` con el objetivo de hacerlo más visual.
+
+```jsx
+<time dateTime>
+    <Span children={day} />
+    <Span children={month} />
+</time>
+```
