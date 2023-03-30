@@ -1,5 +1,11 @@
 interface SpanProps {
+    /**
+     * Propiedad obligatoria para indicar el contenido del componente.
+     */
     children: React.ReactNode | string;
+    /**
+     * Propiedad opcional para indicar el estilo.
+     */
     spanClassName?: string;
 }
 

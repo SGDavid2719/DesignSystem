@@ -1,5 +1,11 @@
 interface BackdropProps {
+    /**
+     * Propiedad obligatoria para indicar que acción debe lanzarse al hacer click.
+     */
     onOutsideClick: () => void;
+    /**
+     * Propiedad opcional para indicar el estilo.
+     */
     backdropClassName?: string;
 }
 

@@ -1,6 +1,9 @@
-import { Span } from "../span/Span";
+import { Span } from "../../atoms/span/Span";
 
 export interface TimeProps {
+    /**
+     * Propiedad obligatoria para indicar la fecha.
+     */
     dateTime: Date;
 }
 

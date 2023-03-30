@@ -1,0 +1,45 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { Span } from "./Span";
+
+<Meta title="Atoms/Span" component={Span} />
+
+export const Template = (args) => <Span {...args} />;
+
+# Contenedor en línea
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/atoms/Span)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Este componente es un átomo ya que es una unidad indivisible. <br />
+Un contenedor en línea se utiliza para marcar una parte del texto.
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            children: "Span",
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={Span} />
+
+## Desarrollo atómico
+
+Al ser una unidad indivisible se utiliza únicamente la etiqueta HTML propia para los contenedores en línea.
+
+```jsx
+<span>{children}</span>
+```
