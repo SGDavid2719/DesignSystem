@@ -1,0 +1,443 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { NavBar } from "./NavBar";
+
+<Meta title="Organisms/NavBar" component={NavBar} />
+
+export const Template = (args) => <NavBar {...args} />;
+
+# Tiempo
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/organisms/navBar)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Un elemento `<NavBar>` se utiliza para visualizar la barra principal de enlaces, es común en todas las pantallas.
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            mainLinks: [
+                {
+                    href: "link1",
+                    rel: "next",
+                    ariaLabel: "link1",
+                    mainText: "Deporte",
+                    subText: "a la UIB",
+                    subSections: [
+                        {
+                            href: "string1",
+                            rel: "next",
+                            ariaLabel: "ariaLabel",
+                            children: "string1",
+                        },
+                        {
+                            href: "string2",
+                            rel: "next",
+                            ariaLabel: "ariaLabel",
+                            children: "string2",
+                        },
+                    ],
+                },
+                {
+                    href: "link2",
+                    rel: "next",
+                    ariaLabel: "link2",
+                    mainText: "Residencia",
+                    subText: "de Estudiants",
+                    subSections: [
+                        {
+                            href: "string3",
+                            rel: "next",
+                            ariaLabel: "ariaLabel",
+                            children: "string3",
+                        },
+                        {
+                            href: "string4",
+                            rel: "next",
+                            ariaLabel: "ariaLabel",
+                            children: "string4",
+                        },
+                    ],
+                },
+                {
+                    href: "link3",
+                    rel: "next",
+                    ariaLabel: "link3",
+                    mainText: "OTRI",
+                    subText: "y Proyectos",
+                    subSections: [
+                        {
+                            href: "string5",
+                            rel: "next",
+                            ariaLabel: "ariaLabel",
+                            children: "string5",
+                        },
+                        {
+                            href: "string6",
+                            rel: "next",
+                            ariaLabel: "ariaLabel",
+                            children: "string6",
+                        },
+                    ],
+                },
+                {
+                    href: "link4",
+                    rel: "next",
+                    ariaLabel: "link4",
+                    mainText: "UIBCongrés",
+                    subText: "Events Management",
+                    subSections: [
+                        {
+                            href: "string7",
+                            rel: "next",
+                            ariaLabel: "ariaLabel",
+                            children: "string7",
+                        },
+                        {
+                            href: "string8",
+                            rel: "next",
+                            ariaLabel: "ariaLabel",
+                            children: "string8",
+                        },
+                    ],
+                },
+                {
+                    href: "link5",
+                    rel: "next",
+                    ariaLabel: "link5",
+                    mainText: "Orientación",
+                    subText: "e Inserción Profesional",
+                    subSections: [
+                        {
+                            href: "string9",
+                            rel: "next",
+                            ariaLabel: "ariaLabel",
+                            children: "string9",
+                        },
+                        {
+                            href: "string10",
+                            rel: "next",
+                            ariaLabel: "ariaLabel",
+                            children: "string10",
+                        },
+                    ],
+                },
+                {
+                    href: "link6",
+                    rel: "next",
+                    ariaLabel: "link6",
+                    mainText: "UIBdigital",
+                    subText: "acceso usuarios",
+                    subSections: [
+                        {
+                            href: "string11",
+                            rel: "next",
+                            ariaLabel: "ariaLabel",
+                            children: "string11",
+                        },
+                        {
+                            href: "string12",
+                            rel: "next",
+                            ariaLabel: "ariaLabel",
+                            children: "string12",
+                        },
+                    ],
+                },
+                {
+                    href: "link7",
+                    rel: "next",
+                    ariaLabel: "link7",
+                    mainText: "UIBdigital",
+                    subText: "acceso usuarios",
+                    subSections: [
+                        {
+                            href: "string13",
+                            rel: "next",
+                            ariaLabel: "ariaLabel",
+                            children: "string13",
+                        },
+                        {
+                            href: "string14",
+                            rel: "next",
+                            ariaLabel: "ariaLabel",
+                            children: "string14",
+                        },
+                    ],
+                },
+            ],
+            sections: [
+                {
+                    title: "Universitaris",
+                    sectionLinks: [
+                        {
+                            href: "link1",
+                            rel: "next",
+                            ariaLabel: "link1",
+                            mainText: "Deporte",
+                            subText: "a la UIB",
+                        },
+                        {
+                            href: "link2",
+                            rel: "next",
+                            ariaLabel: "link2",
+                            mainText: "Residencia",
+                            subText: "de Estudiants",
+                        },
+                        {
+                            href: "link3",
+                            rel: "next",
+                            ariaLabel: "link3",
+                            mainText: "OTRI",
+                            subText: "y Proyectos",
+                        },
+                        {
+                            href: "link4",
+                            rel: "next",
+                            ariaLabel: "link4",
+                            mainText: "UIBCongrés",
+                            subText: "Events Management",
+                        },
+                        {
+                            href: "link5",
+                            rel: "next",
+                            ariaLabel: "link5",
+                            mainText: "Orientación",
+                            subText: "e Inserción Profesional",
+                        },
+                        {
+                            href: "link6",
+                            rel: "next",
+                            ariaLabel: "link6",
+                            mainText: "UIBdigital",
+                            subText: "acceso usuarios",
+                        },
+                        {
+                            href: "link7",
+                            rel: "next",
+                            ariaLabel: "link7",
+                            mainText: "UIBdigital",
+                            subText: "acceso usuarios",
+                        },
+                    ],
+                },
+                {
+                    title: "Universitaris",
+                    sectionLinks: [
+                        {
+                            href: "link1",
+                            rel: "next",
+                            ariaLabel: "link1",
+                            mainText: "Deporte",
+                            subText: "a la UIB",
+                        },
+                        {
+                            href: "link2",
+                            rel: "next",
+                            ariaLabel: "link2",
+                            mainText: "Residencia",
+                            subText: "de Estudiants",
+                        },
+                        {
+                            href: "link3",
+                            rel: "next",
+                            ariaLabel: "link3",
+                            mainText: "OTRI",
+                            subText: "y Proyectos",
+                        },
+                        {
+                            href: "link4",
+                            rel: "next",
+                            ariaLabel: "link4",
+                            mainText: "UIBCongrés",
+                            subText: "Events Management",
+                        },
+                        {
+                            href: "link5",
+                            rel: "next",
+                            ariaLabel: "link5",
+                            mainText: "Orientación",
+                            subText: "e Inserción Profesional",
+                        },
+                        {
+                            href: "link6",
+                            rel: "next",
+                            ariaLabel: "link6",
+                            mainText: "UIBdigital",
+                            subText: "acceso usuarios",
+                        },
+                        {
+                            href: "link7",
+                            rel: "next",
+                            ariaLabel: "link7",
+                            mainText: "UIBdigital",
+                            subText: "acceso usuarios",
+                        },
+                    ],
+                },
+                {
+                    title: "Universitaris",
+                    sectionLinks: [
+                        {
+                            href: "link1",
+                            rel: "next",
+                            ariaLabel: "link1",
+                            mainText: "Deporte",
+                            subText: "a la UIB",
+                        },
+                        {
+                            href: "link2",
+                            rel: "next",
+                            ariaLabel: "link2",
+                            mainText: "Residencia",
+                            subText: "de Estudiants",
+                        },
+                        {
+                            href: "link3",
+                            rel: "next",
+                            ariaLabel: "link3",
+                            mainText: "OTRI",
+                            subText: "y Proyectos",
+                        },
+                        {
+                            href: "link4",
+                            rel: "next",
+                            ariaLabel: "link4",
+                            mainText: "UIBCongrés",
+                            subText: "Events Management",
+                        },
+                        {
+                            href: "link5",
+                            rel: "next",
+                            ariaLabel: "link5",
+                            mainText: "Orientación",
+                            subText: "e Inserción Profesional",
+                        },
+                        {
+                            href: "link6",
+                            rel: "next",
+                            ariaLabel: "link6",
+                            mainText: "UIBdigital",
+                            subText: "acceso usuarios",
+                        },
+                        {
+                            href: "link7",
+                            rel: "next",
+                            ariaLabel: "link7",
+                            mainText: "UIBdigital",
+                            subText: "acceso usuarios",
+                        },
+                    ],
+                },
+                {
+                    title: "Universitaris",
+                    sectionLinks: [
+                        {
+                            href: "link1",
+                            rel: "next",
+                            ariaLabel: "link1",
+                            mainText: "Deporte",
+                            subText: "a la UIB",
+                        },
+                        {
+                            href: "link2",
+                            rel: "next",
+                            ariaLabel: "link2",
+                            mainText: "Residencia",
+                            subText: "de Estudiants",
+                        },
+                        {
+                            href: "link3",
+                            rel: "next",
+                            ariaLabel: "link3",
+                            mainText: "OTRI",
+                            subText: "y Proyectos",
+                        },
+                        {
+                            href: "link4",
+                            rel: "next",
+                            ariaLabel: "link4",
+                            mainText: "UIBCongrés",
+                            subText: "Events Management",
+                        },
+                        {
+                            href: "link5",
+                            rel: "next",
+                            ariaLabel: "link5",
+                            mainText: "Orientación",
+                            subText: "e Inserción Profesional",
+                        },
+                        {
+                            href: "link6",
+                            rel: "next",
+                            ariaLabel: "link6",
+                            mainText: "UIBdigital",
+                            subText: "acceso usuarios",
+                        },
+                        {
+                            href: "link7",
+                            rel: "next",
+                            ariaLabel: "link7",
+                            mainText: "UIBdigital",
+                            subText: "acceso usuarios",
+                        },
+                    ],
+                },
+            ],
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={NavBar} />
+
+## Desarrollo atómico
+
+Este componente es un organismo y está compuesto por moléculas como `<MenuButton>` y una lista de `<MenuLink>`. <br />
+Es necesario incluir el `<div>` con id `overlays` ya que el menú desplegado se mostrará ahí.
+
+```jsx
+<>
+    <div>
+        <Button
+            renderIcon="menu"
+            align="start"
+            onClick={() => setShowMenu((prevState) => !prevState)}
+        />
+    </div>
+    <nav>
+        <ul>
+            {mainLinks.map((menuLink) => {
+                const { href, ariaLabel, mainText, subText, subSections, rel } =
+                    menuLink;
+                return (
+                    <li key>
+                        <MenuLink
+                            rel
+                            href
+                            ariaLabel
+                            mainText
+                            subText
+                            subSections
+                        />
+                    </li>
+                );
+            })}
+            <li>
+                <MenuButton sections />
+            </li>
+        </ul>
+    </nav>
+    <div id="overlays" />
+</>
+```

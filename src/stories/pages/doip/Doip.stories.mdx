@@ -1,0 +1,97 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { DoipPage } from "./Doip";
+
+<Meta title="Pages/DoipPage" component={DoipPage} />
+
+export const Template = (args) => <DoipPage {...args} />;
+
+# DoipPage
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/pages/doip)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Este componente es una representación específica de la página principal del DOIPPAGE.
+
+<Canvas>
+    <Story name="Default" args={{}}>
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={DoipPage} />
+
+## Desarrollo atómico
+
+Al ser una página específica está compuesta por las moléculas definidas previamente con datos cargados.
+
+```jsx
+<div>
+    <header>
+        <HiddenMenu menuLinks />
+        <div>
+            <div>
+                <ImageLink {...logoLink} />
+            </div>
+            <div>
+                <div>
+                    <IconMenu iconLinks />
+                </div>
+                <div>
+                    <Redirect {...yearsRedirect} />
+                    <Button label />
+                    <Button label />
+                </div>
+            </div>
+        </div>
+        <div>
+            <NavBar mainLinks sections />
+        </div>
+    </header>
+    <main>
+        <article>
+            <div>
+                <div>
+                    <Image {...departmentImage} />
+                    <ImageLink {...offersLink} />
+                </div>
+                <div>
+                    <Carousel carouselImages />
+                </div>
+            </div>
+        </article>
+        <article>
+            <div>
+                <h1>Actualidad</h1>
+            </div>
+            <div>
+                <div>
+                    <InfoCard {...firstInfoCard} />
+                    <InfoCard {...secondInfoCard} />
+                </div>
+                <div>
+                    <OffersList {...offersList} />
+                </div>
+            </div>
+        </article>
+        <article>
+            <div>
+                <h2>Con la colaboración de</h2>
+            </div>
+            <div>
+                <Image {...doippageLogos} />
+            </div>
+        </article>
+    </main>
+    <Footer {...footer} />
+</div>
+```

@@ -25,6 +25,7 @@ export const Icon: React.FC<IconProps> = ({ iconId, iconClassName }) => {
                     : "0 0 20 20"
             }
             fill="currentColor"
+            aria-label={iconId}
         >
             <path
                 fillRule="evenodd"

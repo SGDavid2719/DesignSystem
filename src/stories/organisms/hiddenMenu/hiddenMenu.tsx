@@ -3,6 +3,9 @@ import { Button } from "../../atoms/button/Button";
 import { MenuLink, MenuLinkProps } from "../../molecules/menuLink/MenuLink";
 
 interface HiddenMenuProps {
+    /**
+     * Propiedad obligatoria para indicar la lista de enlaces con sus propiedades pertinentes.
+     */
     menuLinks: MenuLinkProps[];
 }
 export const HiddenMenu = ({ menuLinks }: HiddenMenuProps) => {

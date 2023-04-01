@@ -3,6 +3,9 @@ import { ImageLink, ImageLinkProps } from "../../molecules/imageLink/ImageLink";
 import { Button } from "../../atoms/button/Button";
 
 export interface CarouselProps {
+    /**
+     * Propiedad obligatoria para indicar la lista de imágenes como enlaces con sus propiedades pertinentes.
+     */
     carouselImages: ImageLinkProps[];
 }
 
@@ -20,6 +23,7 @@ export const Carousel: React.FC<CarouselProps> = ({ carouselImages }) => {
                                 showImage !== index ? "hidden" : ""
                             } duration-700 ease-in-out`}
                             data-carousel-item
+                            key={index}
                         >
                             <ImageLink
                                 href={href}

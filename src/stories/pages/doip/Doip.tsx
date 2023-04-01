@@ -4,7 +4,6 @@ import { Image } from "../../atoms/image/Image";
 import { Redirect } from "../../atoms/redirect/Redirect";
 import { Carousel } from "../../organisms/carousel/Carousel";
 import { ImageLink } from "../../molecules/imageLink/ImageLink";
-import { AccessibilityModal } from "../../organisms/accessibilityModal/AccessibilityModal";
 import { Footer } from "../../organisms/footer/Footer";
 import { HiddenMenu } from "../../organisms/hiddenMenu/HiddenMenu";
 import { IconMenu } from "../../organisms/iconMenu/IconMenu";
@@ -818,91 +817,6 @@ export const DoipPage = () => {
         ],
     };
 
-    const accessibilityModal = {
-        accessibilityModalTitle: "Accessibility",
-        accessibilityModalContents: [
-            {
-                dropDownTitle: "Backdrop",
-                dropDownOptions: [
-                    {
-                        title: "Option 1",
-                        content: (
-                            <div>
-                                <p>
-                                    <strong>Button:</strong> Content displayed
-                                </p>
-                            </div>
-                        ),
-                        id: 1,
-                    },
-                ],
-            },
-            {
-                dropDownTitle: "Button",
-                dropDownOptions: [
-                    {
-                        title: "Option 1",
-                        id: 2,
-                    },
-                ],
-            },
-            {
-                dropDownTitle: "Icon",
-                dropDownOptions: [
-                    {
-                        title: "Option 1",
-                        id: 3,
-                    },
-                ],
-            },
-            {
-                dropDownTitle: "Image",
-                dropDownOptions: [
-                    {
-                        title: "Option 1",
-                        id: 4,
-                    },
-                ],
-            },
-            {
-                dropDownTitle: "Paragraph",
-                dropDownOptions: [
-                    {
-                        title: "Option 1",
-                        id: 5,
-                    },
-                ],
-            },
-            {
-                dropDownTitle: "Redirect",
-                dropDownOptions: [
-                    {
-                        title: "Option 1",
-                        id: 6,
-                    },
-                ],
-            },
-            {
-                dropDownTitle: "Span",
-                dropDownOptions: [
-                    {
-                        title: "Option 1",
-                        id: 7,
-                    },
-                ],
-            },
-            {
-                dropDownTitle: "Time",
-                dropDownOptions: [
-                    {
-                        title: "Option 1",
-                        id: 8,
-                    },
-                ],
-            },
-        ],
-    };
-
     return (
         <div className="bg-[#f9f9f9]">
             <header>
@@ -990,7 +904,6 @@ export const DoipPage = () => {
                     </div>
                 </article>
             </main>
-            <AccessibilityModal {...accessibilityModal} align="left" />
             <Footer {...footer} />
         </div>
     );
