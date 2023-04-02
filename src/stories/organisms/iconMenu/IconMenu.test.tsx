@@ -2,7 +2,7 @@ import { IconMenu } from "./IconMenu";
 import { render, screen } from "@testing-library/react";
 
 describe("IconMenu", () => {
-    it("debería renderizar 3 elementos con rol `link`", () => {
+    it("debería renderizar 6 elementos con rol `link` y 6 con rol `graphics-symbol`", () => {
         render(
             <IconMenu
                 iconLinks={[
@@ -46,5 +46,6 @@ describe("IconMenu", () => {
             />
         );
         expect(screen.getAllByRole("link").length).toBe(6);
+        expect(screen.getAllByRole("graphics-symbol").length).toBe(6);
     });
 });

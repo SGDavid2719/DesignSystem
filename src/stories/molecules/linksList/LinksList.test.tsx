@@ -1,5 +1,5 @@
 import { LinksList } from "./LinksList";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 describe("LinksList", () => {
     it("debería renderizar 3 enlaces", () => {
@@ -27,7 +27,6 @@ describe("LinksList", () => {
                 ]}
             />
         );
-        const redirects = document.querySelectorAll("a");
-        expect(redirects.length).toBe(3);
+        expect(screen.queryAllByRole("link").length).toBe(3);
     });
 });

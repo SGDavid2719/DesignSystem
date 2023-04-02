@@ -49,6 +49,6 @@ describe("OfficesList", () => {
                 ]}
             />
         );
-        expect(screen.queryAllByRole("img").length).toBe(16);
+        expect(screen.queryAllByRole("graphics-symbol").length).toBe(16);
     });
 });
