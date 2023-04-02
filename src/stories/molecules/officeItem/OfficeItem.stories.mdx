@@ -42,52 +42,36 @@ Componente para mostrar la información relacionada con una oficina, como el nom
 
 ## Desarrollo atómico
 
-Esta molécuña está compuesta por contenedores en línea e iconos.
+Esta molécula está compuesta por contenedores en línea e iconos.
 
 ```jsx
 <div>
     <div>{name}</div>
     <div>
-        <Span
-            children={
-                <>
-                    <Icon iconId="location" />
-                    {location}
-                </>
-            }
-        />
+        <div>
+            <Icon iconId="location" />
+            <Span children={location} />
+        </div>
     </div>
     <div>
-        <Span
-            children={
-                <>
-                    <Icon iconId="phone" />
-                    {phoneNumber}
-                </>
-            }
-        />
+        <div>
+            <Icon iconId="phone" />
+            <Span children={phoneNumber} />
+        </div>
     </div>
     <div>
-        <Span
-            children={
-                <>
-                    <Icon iconId="mail" />
-                    {email}
-                </>
-            }
-        />
+        <div>
+            <Icon iconId="mail" />
+            <Span children={email} />
+        </div>
     </div>
     <div>
-        <Span
-            children={
-                <>
-                    <Icon iconId="schedule" />
-                    {schedules.map((schedule, index) => (
-                        <Span key children={schedule} />
-                    ))}
-                </>
-            }
-        />
+        <div>
+            <Icon iconId="schedule" />
+            {schedules.map((schedule, index) => (
+                <Span key children={schedule} />
+            ))}
+        </div>
     </div>
 </div>
 ```
