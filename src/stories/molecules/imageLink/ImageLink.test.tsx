@@ -1,7 +1,7 @@
 import { ImageLink } from "./ImageLink";
 import { render, screen } from "@testing-library/react";
 
-describe("Button", () => {
+describe("ImageLink", () => {
     it("debería renderizar una imagen dentro de un enlace", () => {
         render(
             <ImageLink href="href" ariaLabel="home" rel="next" src="" alt="" />

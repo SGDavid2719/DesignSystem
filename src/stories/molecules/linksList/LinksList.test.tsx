@@ -1,7 +1,7 @@
 import { LinksList } from "./LinksList";
 import { render, screen } from "@testing-library/react";
 
-describe("Button", () => {
+describe("LinksList", () => {
     it("debería renderizar 3 enlaces", () => {
         render(
             <LinksList
@@ -27,7 +27,6 @@ describe("Button", () => {
                 ]}
             />
         );
-        const redirects = document.querySelectorAll("a");
-        expect(redirects.length).toBe(3);
+        expect(screen.queryAllByRole("link").length).toBe(3);
     });
 });

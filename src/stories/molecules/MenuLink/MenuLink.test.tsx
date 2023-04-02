@@ -1,7 +1,7 @@
 import { MenuLink } from "./MenuLink";
 import { render, screen, fireEvent } from "@testing-library/react";
 
-describe("Button", () => {
+describe("MenuLink", () => {
     it("debería renderizar una sublista con 2 enlaces al hacer hover", () => {
         render(
             <MenuLink

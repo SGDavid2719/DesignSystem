@@ -7,11 +7,29 @@ import { OfficesList } from "../officesList/OfficesList";
 import { IconMenu } from "../iconMenu/IconMenu";
 
 interface FooterProps {
+    /**
+     * Propiedad obligatoria para indicar la lista de oficinas con sus propiedades pertinentes.
+     */
     officesList: OfficeItemProps[];
+    /**
+     * Propiedad obligatoria para indicar el texto principal.
+     */
     mainParagraph: string;
+    /**
+     * Propiedad obligatoria para indicar el texto secundario.
+     */
     secondaryParagraph: string;
+    /**
+     * Propiedad obligatoria para indicar la lista iconos como enlaces con sus propiedades pertinentes.
+     */
     iconsLinks: IconLinkProps[];
+    /**
+     * Propiedad obligatoria para indicar la lista primaria de enlaces con sus propiedades pertinentes.
+     */
     mainLinks: RedirectProps[];
+    /**
+     * Propiedad obligatoria para indicar la lista secundaria de enlaces con sus propiedades pertinentes.
+     */
     secondaryLinks: RedirectProps[];
 }
 

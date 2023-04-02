@@ -1,0 +1,311 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { MenuButton } from "./MenuButton";
+
+<Meta title="Organisms/MenuButton" component={MenuButton} />
+
+export const Template = (args) => <MenuButton {...args} />;
+
+# Botón de menú
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/organisms/menuButton)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Un elemento `<MenuButton>` se utiliza para visualizar el menú con todos los enlaces a los diferentes documentos. <br />
+Cada una de las secciones, al hacer `hover` sobre ellas si está definida, aparece una lista de enlaces relacionados.
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            sections: [
+                {
+                    title: "Universitaris",
+                    sectionLinks: [
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link1",
+                            mainText: "Deporte",
+                            subText: "a la UIB",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link2",
+                            mainText: "Residencia",
+                            subText: "de Estudiants",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link3",
+                            mainText: "OTRI",
+                            subText: "y Proyectos",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link4",
+                            mainText: "UIBCongrés",
+                            subText: "Events Management",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link5",
+                            mainText: "Orientación",
+                            subText: "e Inserción Profesional",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link6",
+                            mainText: "UIBdigital",
+                            subText: "acceso usuarios",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link7",
+                            mainText: "UIBdigital",
+                            subText: "acceso usuarios",
+                        },
+                    ],
+                },
+                {
+                    title: "Universitaris",
+                    sectionLinks: [
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link1",
+                            mainText: "Deporte",
+                            subText: "a la UIB",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link2",
+                            mainText: "Residencia",
+                            subText: "de Estudiants",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link3",
+                            mainText: "OTRI",
+                            subText: "y Proyectos",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link4",
+                            mainText: "UIBCongrés",
+                            subText: "Events Management",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link5",
+                            mainText: "Orientación",
+                            subText: "e Inserción Profesional",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link6",
+                            mainText: "UIBdigital",
+                            subText: "acceso usuarios",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link7",
+                            mainText: "UIBdigital",
+                            subText: "acceso usuarios",
+                        },
+                    ],
+                },
+                {
+                    title: "Universitaris",
+                    sectionLinks: [
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link1",
+                            mainText: "Deporte",
+                            subText: "a la UIB",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link2",
+                            mainText: "Residencia",
+                            subText: "de Estudiants",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link3",
+                            mainText: "OTRI",
+                            subText: "y Proyectos",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link4",
+                            mainText: "UIBCongrés",
+                            subText: "Events Management",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link5",
+                            mainText: "Orientación",
+                            subText: "e Inserción Profesional",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link6",
+                            mainText: "UIBdigital",
+                            subText: "acceso usuarios",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link7",
+                            mainText: "UIBdigital",
+                            subText: "acceso usuarios",
+                        },
+                    ],
+                },
+                {
+                    title: "Universitaris",
+                    sectionLinks: [
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link1",
+                            mainText: "Deporte",
+                            subText: "a la UIB",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link2",
+                            mainText: "Residencia",
+                            subText: "de Estudiants",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link3",
+                            mainText: "OTRI",
+                            subText: "y Proyectos",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link4",
+                            mainText: "UIBCongrés",
+                            subText: "Events Management",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link5",
+                            mainText: "Orientación",
+                            subText: "e Inserción Profesional",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link6",
+                            mainText: "UIBdigital",
+                            subText: "acceso usuarios",
+                        },
+                        {
+                            href: "/?path=/story/pages-notfoundpage--default",
+                            rel: "next",
+                            ariaLabel: "link7",
+                            mainText: "UIBdigital",
+                            subText: "acceso usuarios",
+                        },
+                    ],
+                },
+            ],
+            test: true,
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={MenuButton} />
+
+## Desarrollo atómico
+
+Este componente es un organismo y está compuesto por moléculas como una lista de `<MenuLink>`
+
+```jsx
+<>
+    <Button
+        label="MENÚ"
+        renderIcon="menu"
+        align="start"
+        onClick={() => setShowMenu((prevState) => !prevState)}
+    />
+    {showMenu &&
+        ReactDOM.createPortal(
+            <div>
+                {sections.map((section, sectionIndex) => {
+                    const { title, sectionLinks } = section;
+
+                    return (
+                        <div key>
+                            <h1>
+                                {title}
+                            </h1>
+                            <ul>
+                                {sectionLinks.map((sectionLink, sectionLinkIndex) => {
+                                    const {
+                                        href,
+                                        ariaLabel,
+                                        mainText,
+                                        subText,
+                                        rel,
+                                    } = sectionLink;
+
+                                    return (
+                                        <li key>
+                                            <MenuLink
+                                                rel
+                                                href
+                                                ariaLabel
+                                                mainText
+                                                subText
+                                            />
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </div>
+                    );
+                })}
+            </div>,
+            portalElement!
+        )}
+    {showMenu && <Backdrop onOutsideClick={() => setShowMenu(false)} />}
+</>
+```

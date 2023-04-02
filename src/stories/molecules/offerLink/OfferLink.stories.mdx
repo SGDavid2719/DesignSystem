@@ -8,7 +8,7 @@ export const Template = (args) => <OfferLink {...args} />;
 
 # Oferta con enlace
 
-[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/molecules/OfferLink)
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/molecules/offerLink)
 
 ## Tabla de contenidos
 
@@ -48,8 +48,7 @@ Componente para mostrar una oferta, indicando el lugar, la fecha de publiación,
 
 ## Desarrollo atómico
 
-Al ser una molécula, este componente está compuesto por dos o varios átomos. <br />
-En este caso, se trata de un enlace y un icono.
+Esta molécula está compuesta de un enlaces e iconos.
 
 ```jsx
 <div>
@@ -57,50 +56,39 @@ En este caso, se trata de un enlace y un icono.
         <Redirect {...offerRedirect} />
     </div>
     {(firstSubtitle || secondSubtitle) && (
-        <div className="flex gap-1">
-            <Span children={firstSubtitle} /> -{" "}
-            <Span children={secondSubtitle} />
+        <div>
+            <Span children={firstSubtitle} />
+            - <Span children={secondSubtitle} />
         </div>
     )}
     <div>
-        <Span
-            children={
-                <>
-                    <Icon iconId="phone" />
-                    {offerName}
-                </>
-            }
-        />
+        <div>
+            <Icon iconId="money" />
+            <Span children={offerName} />
+        </div>
     </div>
     <div>
-        <Span
-            children={
-                <>
-                    <Icon iconId="location" />
-                    {placeName}
-                </>
-            }
-        />
+        <div>
+            <Icon iconId="location" />
+            <Span children={placeName} />
+        </div>
     </div>
     <div>
-        <Span
-            children={
-                <>
-                    <Icon iconId="schedule" />{" "}
-                    {`Hace ${dateDiffInDays(new Date(), publicationDate)} días`}{" "}
-                </>
-            }
-        />
+        <div>
+            <Icon iconId="schedule" />
+            <Span
+                children={`Hace ${dateDiffInDays(
+                    new Date(),
+                    publicationDate
+                )} días`}
+            />
+        </div>
     </div>
     <div>
-        <Span
-            children={
-                <>
-                    <Icon iconId="mail" />
-                    {`Ref. ${referenceNumber}`}
-                </>
-            }
-        />
+        <div>
+            <Icon iconId="mail" />
+            <Span children={`Ref. ${referenceNumber}`} />
+        </div>
     </div>
 </div>
 ```

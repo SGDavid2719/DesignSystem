@@ -10,10 +10,20 @@ export interface Section {
 }
 
 interface MenuButtonProps {
+    /**
+     * Propiedad obligatoria para indicar las secciones del menú. Éstas contienen `title` y `sectionLinks` con sus propiedades pertinentes.
+     */
     sections: Section[];
+    /**
+     * Propiedad opcional únicamente para uso durante las pruebas. Sirve para renderizar el elemento `<div>` que hace falta para mostrar el menú desplegado.
+     */
+    test?: boolean;
 }
 
-export const MenuButton: React.FC<MenuButtonProps> = ({ sections }) => {
+export const MenuButton: React.FC<MenuButtonProps> = ({
+    sections,
+    test = false,
+}) => {
     const [showMenu, setShowMenu] = useState(false);
 
     const portalElement = document.getElementById("overlays");
@@ -30,37 +40,47 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ sections }) => {
             {showMenu &&
                 ReactDOM.createPortal(
                     <div className="mt-2 border grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 bg-white m-6 p-2">
-                        {sections.map((section) => {
+                        {sections.map((section, sectionIndex) => {
                             const { title, sectionLinks } = section;
 
                             return (
-                                <div className="p-4" key={title}>
+                                <div
+                                    className="p-4"
+                                    key={`${sectionIndex}${title}`}
+                                >
                                     <h1 className="uppercaset text-2xl text-blue-600 font-light mb-1">
                                         {title}
                                     </h1>
                                     <ul>
-                                        {sectionLinks.map((sectionLink) => {
-                                            const {
-                                                href,
-                                                ariaLabel,
-                                                mainText,
-                                                subText,
-                                                rel,
-                                            } = sectionLink;
+                                        {sectionLinks.map(
+                                            (sectionLink, sectionLinkIndex) => {
+                                                const {
+                                                    href,
+                                                    ariaLabel,
+                                                    mainText,
+                                                    subText,
+                                                    rel,
+                                                } = sectionLink;
 
-                                            return (
-                                                <li className="mb-1" key={href}>
-                                                    <MenuLink
-                                                        rel={rel}
-                                                        href={href}
-                                                        ariaLabel={ariaLabel}
-                                                        mainText={mainText}
-                                                        subText={subText}
-                                                        redirectClassName="flex align-baseline"
-                                                    />
-                                                </li>
-                                            );
-                                        })}
+                                                return (
+                                                    <li
+                                                        className="mb-1"
+                                                        key={`${sectionIndex}${sectionLinkIndex}${href}`}
+                                                    >
+                                                        <MenuLink
+                                                            rel={rel}
+                                                            href={href}
+                                                            ariaLabel={
+                                                                ariaLabel
+                                                            }
+                                                            mainText={mainText}
+                                                            subText={subText}
+                                                            redirectClassName="flex align-baseline"
+                                                        />
+                                                    </li>
+                                                );
+                                            }
+                                        )}
                                     </ul>
                                 </div>
                             );
@@ -69,6 +89,13 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ sections }) => {
                     portalElement!
                 )}
             {showMenu && <Backdrop onOutsideClick={() => setShowMenu(false)} />}
+            {test && (
+                <div
+                    id="overlays"
+                    data-testid="overlays"
+                    className="z-10 relative"
+                />
+            )}
         </>
     );
 };

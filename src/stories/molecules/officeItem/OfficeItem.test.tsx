@@ -1,8 +1,7 @@
-import { dateDiffInDays } from "../../../utils/dateFunctions";
 import { OfficeItem } from "./OfficeItem";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
-describe("Button", () => {
+describe("OfficeItem", () => {
     it("debería renderizar el nombre, el lugar, el número de teléfono y el correo", () => {
         render(
             <OfficeItem
@@ -33,19 +32,19 @@ describe("Button", () => {
                 schedules={["Lu-Ju: 08:00-15:30", "Vi: 08:00-15:00"]}
             />
         );
-        const icons = document.querySelectorAll("svg");
-        expect(icons.length).toBe(4);
+        expect(screen.queryAllByRole("graphics-symbol").length).toBe(4);
     });
 
-    // it("debería renderizar los horarios", () => {
-    //     render(
-    //         <OfficeItem
-    //             name="DOIP Campus"
-    //             location="Ctra. de Valldemossa, km 7.5 (Edificio Instalaciones Deportivas, Campus UIB). 07122 Palma, Illes Balears (España)"
-    //             phoneNumber="(+34) 971259697"
-    //             email="doip@fueib.org"
-    //             schedules={["Lu-Ju: 08:00-15:30", "Vi: 08:00-15:00"]}
-    //         />
-    //     );
-    // });
+    it("debería no haber otros elementos a parte de texto dentro de una etiqueta `span`", () => {
+        render(
+            <OfficeItem
+                name="DOIP Campus"
+                location="Ctra. de Valldemossa, km 7.5 (Edificio Instalaciones Deportivas, Campus UIB). 07122 Palma, Illes Balears (España)"
+                phoneNumber="(+34) 971259697"
+                email="doip@fueib.org"
+                schedules={["Lu-Ju: 08:00-15:30", "Vi: 08:00-15:00"]}
+            />
+        );
+        expect(screen.getByText("DOIP Campus").textContent).toBe("DOIP Campus");
+    });
 });

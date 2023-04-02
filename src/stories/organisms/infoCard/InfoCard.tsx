@@ -5,14 +5,36 @@ import { Time } from "../../molecules/time/Time";
 import { ImageLink, ImageLinkProps } from "../../molecules/imageLink/ImageLink";
 
 interface InfoCardProps {
+    /**
+     * Propiedad obligatoria para indicar la imagen principal como enlace con sus propiedades pertinentes.
+     */
     cardPhoto: ImageLinkProps;
+    /**
+     * Propiedad obligatoria para indicar la fecha.
+     */
     dateTime: Date;
+    /**
+     * Propiedad obligatoria para indicar el enlace principal con sus propiedades pertinentes.
+     */
     mainRedirect: RedirectProps;
+    /**
+     * Propiedad obligatoria para indicar el enlace secundario con sus propiedades pertinentes.
+     */
     secondaryRedirect: RedirectProps;
+    /**
+     * Propiedad obligatoria para indicar el texto informativo.
+     */
     text: string;
+    /**
+     * Propiedad obligatoria para indicar el icono del pie de tarjeta.
+     */
     iconId: string;
+    /**
+     * Propiedad opcional para modificar el estilo de la tarjeta.
+     */
     infoCardClassName?: string;
 }
+
 export const InfoCard = ({
     cardPhoto,
     dateTime,
@@ -46,7 +68,7 @@ export const InfoCard = ({
             <div className="p-4">
                 <Paragraph text={text} textClassName="text-justify" />
             </div>
-            <div className="flex gap-2 p-4 bottom-0 lg:absolute">
+            <div className="flex gap-2 p-4 bottom-0">
                 <Icon iconId={iconId} iconClassName="mt-1" />
                 <Redirect
                     {...secondaryRedirect}

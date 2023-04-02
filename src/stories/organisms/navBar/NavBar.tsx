@@ -3,7 +3,13 @@ import { Button } from "../../atoms/button/Button";
 import { MenuButton, Section } from "../menuButton/MenuButton";
 import { MenuLink, MenuLinkProps } from "../../molecules/menuLink/MenuLink";
 interface NavBarProps {
+    /**
+     * Propiedad obligatoria para indicar los enlaces principales con sus propiedades pertinentes.
+     */
     mainLinks: MenuLinkProps[];
+    /**
+     * Propiedad obligatoria para indicar las secciones del menú con sus propiedades pertinentes.
+     */
     sections: Section[];
 }
 export const NavBar = ({ mainLinks, sections }: NavBarProps) => {
@@ -24,7 +30,7 @@ export const NavBar = ({ mainLinks, sections }: NavBarProps) => {
             </div>
             <nav className={`${showMenu ? "block" : "hidden"} lg:block`}>
                 <ul className={[`inline-block`, "gap-2", "lg:flex"].join(" ")}>
-                    {mainLinks.map((menuLink) => {
+                    {mainLinks.map((menuLink, menuLinkIndex) => {
                         const {
                             href,
                             ariaLabel,
@@ -34,7 +40,7 @@ export const NavBar = ({ mainLinks, sections }: NavBarProps) => {
                             rel,
                         } = menuLink;
                         return (
-                            <li key={href}>
+                            <li key={`${menuLinkIndex}${href}`}>
                                 <MenuLink
                                     rel={rel}
                                     href={href}
@@ -52,7 +58,11 @@ export const NavBar = ({ mainLinks, sections }: NavBarProps) => {
                     </li>
                 </ul>
             </nav>
-            <div id="overlays" className="z-10 relative" />
+            <div
+                id="overlays"
+                data-testid="overlays"
+                className="z-10 relative"
+            />
         </>
     );
 };

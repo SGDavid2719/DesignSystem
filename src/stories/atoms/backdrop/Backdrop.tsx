@@ -20,6 +20,7 @@ export const Backdrop: React.FC<BackdropProps> = ({
                 backdropClassName,
             ].join(" ")}
             onClick={onOutsideClick}
+            data-testid="backdrop"
         />
     );
 };

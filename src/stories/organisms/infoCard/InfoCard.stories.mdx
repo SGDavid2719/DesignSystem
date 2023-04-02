@@ -1,0 +1,85 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { InfoCard } from "./InfoCard";
+
+<Meta title="Organisms/InfoCard" component={InfoCard} />
+
+export const Template = (args) => <InfoCard {...args} />;
+
+# Tarjeta de información
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/organisms/infoCard)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Un elemento `<InfoCard>` se utiliza para visualizar una tarjeta que contiene una imagen, un título, información, una fecha y un enlace.
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            cardPhoto: {
+                href: "href",
+                rel: "next",
+                ariaLabel: "logo",
+                src: "./assets/logo.png",
+                alt: "logo",
+            },
+            dateTime: new Date(2020, 4, 20),
+            mainRedirect: {
+                href: "href",
+                rel: "next",
+                ariaLabel: "mainRedirect",
+                children:
+                    "1.256 ofertas de trabajo y 589 prácticas extracurriculares, balance del DOIP durante el curso 2021-22",
+            },
+            secondaryRedirect: {
+                href: "href",
+                rel: "next",
+                ariaLabel: "secondaryRedirect",
+                children: "Doip",
+            },
+            text: "Durante el curso 2021-22, 589 estudiantes han podido realizar prácticas extracurriculares a empresas y se han gestionado 1.256 ofertas laborales. El número de contratos laborales firmados de los que se tiene constancia es de 197.",
+            iconId: "tags",
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={InfoCard} />
+
+## Desarrollo atómico
+
+Este componente es un organismo y está compuesto por moléculas como `<ImageLink>` y `<IconButton>`.
+
+```jsx
+<div>
+    <div>
+        <ImageLink {...cardPhoto} />
+    </div>
+    <div>
+        <div>
+            <Time dateTime />
+        </div>
+        <div>
+            <Redirect {...mainRedirect} />
+        </div>
+    </div>
+    <div>
+        <Paragraph text />
+    </div>
+    <div>
+        <Icon iconId />
+        <Redirect {...secondaryRedirect} />
+    </div>
+</div>
+```

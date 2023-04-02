@@ -21,6 +21,18 @@ describe("Image", () => {
         expect(screen.getByRole("link")).toHaveAttribute("rel", "next");
     });
 
+    it("debería especificar el atributo `aria-label`", () => {
+        render(
+            <Redirect href="" rel="next" ariaLabel="aria-label">
+                Children
+            </Redirect>
+        );
+        expect(screen.getByRole("link")).toHaveAttribute(
+            "aria-label",
+            "aria-label"
+        );
+    });
+
     it("debería renderizar el contenido", () => {
         render(
             <Redirect href="" rel="next" ariaLabel="">

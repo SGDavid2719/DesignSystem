@@ -1,0 +1,109 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { HiddenMenu } from "./HiddenMenu";
+
+<Meta title="Organisms/HiddenMenu" component={HiddenMenu} />
+
+export const Template = (args) => <HiddenMenu {...args} />;
+
+# Menú oculto
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/organisms/hiddenMenu)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Un elemento `<HiddenMenu>` se utiliza para visualizar el menú oculto que se encuentra en la cabecera y muestra los diferentes documentos relacionados.
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            menuLinks: [
+                {
+                    href: "link1",
+                    rel: "next",
+                    ariaLabel: "link1",
+                    mainText: "Deporte",
+                    subText: "a la UIB",
+                },
+                {
+                    href: "link2",
+                    rel: "next",
+                    ariaLabel: "link2",
+                    mainText: "Residencia",
+                    subText: "de Estudiants",
+                },
+                {
+                    href: "link3",
+                    rel: "next",
+                    ariaLabel: "link3",
+                    mainText: "OTRI",
+                    subText: "y Proyectos",
+                },
+                {
+                    href: "link4",
+                    rel: "next",
+                    ariaLabel: "link4",
+                    mainText: "UIBCongrés",
+                    subText: "Events Management",
+                },
+                {
+                    href: "link5",
+                    rel: "next",
+                    ariaLabel: "link5",
+                    mainText: "Orientación",
+                    subText: "e Inserción Profesional",
+                },
+                {
+                    href: "link6",
+                    rel: "next",
+                    ariaLabel: "link6",
+                    mainText: "UIBdigital",
+                    subText: "acceso usuarios",
+                },
+            ],
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={HiddenMenu} />
+
+## Desarrollo atómico
+
+Este componente es un organismo y está compuesto por moléculas como una lista de `<MenuLink>`. <br />
+Todo el menú está compuesto por componentes del menú que son a su vez redirecciones.
+
+```jsx
+<div>
+    {openned && (
+        <ul>
+            {menuLinks.map((menuLink) => {
+                const { href, ariaLabel, mainText, subText, rel } = menuLink;
+                return (
+                    <li key>
+                        <MenuLink rel href ariaLabel mainText subText />
+                    </li>
+                );
+            })}
+        </ul>
+    )}
+    <div>
+        <Button
+            label="FUEIB"
+            renderIcon="add"
+            align="start"
+            onClick={() => setOppened((prevState) => !prevState)}
+        />
+    </div>
+</div>
+```

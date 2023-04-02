@@ -61,64 +61,40 @@ export const OfferLink: React.FC<OfferLinkProps> = ({
                 </div>
             )}
             <div>
-                <Span
-                    children={
-                        <>
-                            {" "}
-                            <Icon
-                                iconId="phone"
-                                iconClassName="inline-block"
-                            />{" "}
-                            {offerName}{" "}
-                        </>
-                    }
-                    spanClassName="text-green-900 font-semibold"
-                />
+                <div>
+                    <Icon iconId="money" iconClassName="inline-block" />
+                    <Span
+                        spanClassName="text-green-900 font-semibold ml-1"
+                        children={offerName}
+                    />
+                </div>
             </div>
             <div>
-                <Span
-                    children={
-                        <>
-                            {" "}
-                            <Icon
-                                iconId="location"
-                                iconClassName="inline-block"
-                            />{" "}
-                            {placeName}{" "}
-                        </>
-                    }
-                />
+                <div>
+                    <Icon iconId="location" iconClassName="inline-block" />
+                    <Span spanClassName="ml-1" children={placeName} />
+                </div>
             </div>
             <div>
-                <Span
-                    children={
-                        <>
-                            {" "}
-                            <Icon
-                                iconId="schedule"
-                                iconClassName="inline-block"
-                            />{" "}
-                            {`Hace ${dateDiffInDays(
-                                new Date(),
-                                publicationDate
-                            )} días`}{" "}
-                        </>
-                    }
-                />
+                <div>
+                    <Icon iconId="schedule" iconClassName="inline-block" />
+                    <Span
+                        spanClassName="ml-1"
+                        children={`Hace ${dateDiffInDays(
+                            new Date(),
+                            publicationDate
+                        )} días`}
+                    />
+                </div>
             </div>
             <div>
-                <Span
-                    children={
-                        <>
-                            {" "}
-                            <Icon
-                                iconId="mail"
-                                iconClassName="inline-block"
-                            />{" "}
-                            {`Ref. ${referenceNumber}`}{" "}
-                        </>
-                    }
-                />
+                <div>
+                    <Icon iconId="mail" iconClassName="inline-block" />
+                    <Span
+                        spanClassName="ml-1"
+                        children={`Ref. ${referenceNumber}`}
+                    />
+                </div>
             </div>
         </div>
     );

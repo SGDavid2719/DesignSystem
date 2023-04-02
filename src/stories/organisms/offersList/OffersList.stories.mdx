@@ -1,0 +1,108 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { OffersList } from "./OffersList";
+
+<Meta title="Organisms/OffersList" component={OffersList} />
+
+export const Template = (args) => <OffersList {...args} />;
+
+# Lista de ofertas
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/organisms/offersList)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Un elemento `<OffersList>` se utiliza para visualizar la lista de ofertas disponibles.
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            offerLinks: [
+                {
+                    offerRedirect: {
+                        href: "href",
+                        rel: "next",
+                        ariaLabel: "offerRedirect",
+                        children:
+                            "Back office Dpto Expansión (sector hotelero)",
+                    },
+                    offerName: "Oferta de trabajo",
+                    placeName: "Islas Baleares, España",
+                    publicationDate: new Date(2023, 2, 20),
+                    referenceNumber: 10742,
+                },
+                {
+                    offerRedirect: {
+                        href: "href",
+                        rel: "next",
+                        ariaLabel: "offerRedirect",
+                        children:
+                            "Back office Dpto Expansión (sector hotelero)",
+                    },
+                    offerName: "Oferta de trabajo",
+                    placeName: "Islas Baleares, España",
+                    publicationDate: new Date(2023, 2, 20),
+                    referenceNumber: 10743,
+                },
+                {
+                    offerRedirect: {
+                        href: "href",
+                        rel: "next",
+                        ariaLabel: "offerRedirect",
+                        children:
+                            "Back office Dpto Expansión (sector hotelero)",
+                    },
+                    offerName: "Oferta de trabajo",
+                    placeName: "Islas Baleares, España",
+                    publicationDate: new Date(2023, 2, 20),
+                    referenceNumber: 10744,
+                },
+            ],
+            redirect: {
+                href: "href",
+                rel: "next",
+                ariaLabel: "mainRedirect",
+                children: "... visualiza todas las ofertas",
+            },
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={OffersList} />
+
+## Desarrollo atómico
+
+Este componente es un organismo y está compuesto por moléculas como una lista de `<OfferLink>`. <br />
+Para hacer accesible la lista en vez de hacer scroll automático se ha habilitado el scroll manual.
+
+```jsx
+<div>
+    <div>
+        <Span children />
+        <Icon iconId />
+    </div>
+    <div>
+        {offerLinks.map((offerLink) => {
+            return (
+                <div key>
+                    <OfferLink {...offerLink} />
+                </div>
+            );
+        })}
+    </div>
+    <div>
+        <Redirect {...redirect} />
+    </div>
+</div>
+```

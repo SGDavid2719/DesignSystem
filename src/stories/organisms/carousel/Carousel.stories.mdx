@@ -1,0 +1,106 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { Carousel } from "./Carousel";
+
+<Meta title="Organisms/Carousel" component={Carousel} />
+
+export const Template = (args) => <Carousel {...args} />;
+
+# Carrusel
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/organisms/carousel)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Un elemento `<Carousel>` se utiliza para visualizar varias imágenes navegando entre ellas mediante unos botones laterales.
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            carouselImages: [
+                {
+                    href: "href",
+                    rel: "next",
+                    ariaLabel: "logo",
+                    src: "./assets/logo.png",
+                    alt: "logo",
+                },
+                {
+                    href: "href",
+                    rel: "next",
+                    ariaLabel: "logo",
+                    src: "./assets/departOrient.png",
+                    alt: "logo",
+                },
+                {
+                    href: "href",
+                    rel: "next",
+                    ariaLabel: "logo",
+                    src: "./assets/tableroOfertas.png",
+                    alt: "logo",
+                },
+            ],
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={Carousel} />
+
+## Desarrollo atómico
+
+Este componente es un organismo y está compuesto por moléculas como `<ImageLink>` y `<IconButton>`. <br />
+Las imágenes del carousel son también enlaces y para navegar entre las imágenes se utilizan los botones leterales.
+
+```jsx
+<div data-carousel="static">
+    <div>
+        {carouselImages.map((imageLink, index) => {
+            const { href, ariaLabel, src, alt, rel } = imageLink;
+            return (
+                <div data-carousel-item>
+                    <ImageLink
+                        href={href}
+                        ariaLabel={ariaLabel}
+                        src={src}
+                        alt={alt}
+                        rel={rel}
+                    />
+                </div>
+            );
+        })}
+    </div>
+    <Button
+        hasIconOnly={true}
+        renderIcon="chevron-left"
+        align="start"
+        onClick={() =>
+            setShowImage((prevState) => {
+                if (prevState === 0) return carouselImages.length - 1;
+                else return prevState - 1;
+            })
+        }
+    />
+    <Button
+        hasIconOnly={true}
+        renderIcon="chevron-right"
+        align="start"
+        onClick={() =>
+            setShowImage((prevState) => {
+                if (prevState === carouselImages.length - 1) return 0;
+                else return prevState + 1;
+            })
+        }
+    />
+</div>
+```
