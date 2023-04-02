@@ -1,8 +1,8 @@
 import { dateDiffInDays } from "../../../utils/dateFunctions";
 import { OfferLink } from "./OfferLink";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
-describe("Button", () => {
+describe("OfferLink", () => {
     it("debería renderizar el enlace, el título, subtítulo, nombre, lugar, fecha y número de referencia", () => {
         render(
             <OfferLink

@@ -2,13 +2,12 @@ import { DoipPage } from "./Doip";
 import { render, screen } from "@testing-library/react";
 
 describe("DoipPage", () => {
-    it("debería renderizar 5 elementos con rol `img`, 3 imágenes y 2 iconos", () => {
+    it("debería renderizar 7 elementos con rol `img`, 48 con rol `graphics-symbol`, 40 con rol `link` y 7 con rol `button`", () => {
         render(<DoipPage />);
         const images = screen.getAllByRole("img");
-        expect(images.length).toBe(57);
-        // expect(images[0]).toHaveAttribute("alt") ||
-        //     expect(images[0]).toHaveAttribute("aria-label");
-        // images.forEach((image) => expect(image).toHaveAttribute("alt"));
+        expect(images.length).toBe(9);
+        const icons = screen.getAllByRole("graphics-symbol");
+        expect(icons.length).toBe(48);
         const redirects = screen.getAllByRole("link");
         expect(redirects.length).toBe(40);
         redirects.forEach((redirect) =>

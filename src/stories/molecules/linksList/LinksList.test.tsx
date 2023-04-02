@@ -1,7 +1,7 @@
 import { LinksList } from "./LinksList";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
-describe("Button", () => {
+describe("LinksList", () => {
     it("debería renderizar 3 enlaces", () => {
         render(
             <LinksList

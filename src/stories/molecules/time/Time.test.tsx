@@ -1,7 +1,7 @@
 import { Time } from "./Time";
 import { render, screen } from "@testing-library/react";
 
-describe("Button", () => {
+describe("Time", () => {
     it("debería renderizar un componente time", () => {
         render(<Time dateTime={new Date(2020, 4, 20)} />);
         const time = document.querySelector("time");

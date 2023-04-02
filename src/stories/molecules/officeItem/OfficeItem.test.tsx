@@ -1,8 +1,7 @@
-import { dateDiffInDays } from "../../../utils/dateFunctions";
 import { OfficeItem } from "./OfficeItem";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
-describe("Button", () => {
+describe("OfficeItem", () => {
     it("debería renderizar el nombre, el lugar, el número de teléfono y el correo", () => {
         render(
             <OfficeItem

@@ -31,6 +31,7 @@ describe("InfoCard", () => {
             />
         );
         expect(screen.getAllByRole("link").length).toBe(3);
-        expect(screen.getAllByRole("img").length).toBe(2);
+        expect(screen.getAllByRole("img").length).toBe(1);
+        expect(screen.getAllByRole("graphics-symbol").length).toBe(1);
     });
 });

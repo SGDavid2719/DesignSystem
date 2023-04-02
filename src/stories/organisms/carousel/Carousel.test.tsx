@@ -30,7 +30,8 @@ describe("Carousel", () => {
                 ]}
             />
         );
-        expect(screen.getAllByRole("img").length).toBe(5);
+        expect(screen.getAllByRole("graphics-symbol").length).toBe(2);
+        expect(screen.getAllByRole("img").length).toBe(3);
     });
 
     it("debería renderizar 3 elementos con rol `link`", () => {

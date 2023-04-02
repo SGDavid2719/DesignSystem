@@ -1,7 +1,7 @@
 import { Modal } from "./Modal";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
-describe("Button", () => {
+describe("Modal", () => {
     it("debería renderizar un modal con un body", () => {
         render(
             <Modal

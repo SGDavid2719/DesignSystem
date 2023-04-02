@@ -129,7 +129,7 @@ describe("Footer", () => {
                 ]}
             />
         );
-        expect(screen.getAllByRole("img").length).toBe(22);
+        expect(screen.getAllByRole("graphics-symbol").length).toBe(22);
         expect(screen.getAllByRole("link").length).toBe(11);
     });
 });
