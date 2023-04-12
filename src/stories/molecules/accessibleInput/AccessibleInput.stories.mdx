@@ -1,0 +1,82 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { AccessibleInput } from "./AccessibleInput";
+
+<Meta title="Molecules/AccessibleInput" component={AccessibleInput} />
+
+export const Template = (args) => <AccessibleInput {...args} />;
+
+# Entrada accesible
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/atoms/AccessibleInput)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Este elemento es un elemento accesible, y se utilizan para crear campos para introductir datos facilitando información sobre su función.
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            name: "AccessibleInput",
+            htmlFor: "AccessibleInput",
+            text: "AccessibleInput",
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## Con placeholder
+
+<Canvas>
+    <Story
+        name="With Placeholder"
+        args={{
+            name: "AccessibleInput",
+            htmlFor: "AccessibleInput",
+            text: "AccessibleInput",
+            placeholder: "AccessibleInput",
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## De tipo CheckBox
+
+<Canvas>
+    <Story
+        name="Checkbox"
+        args={{
+            name: "AccessibleInput",
+            htmlFor: "AccessibleInput",
+            text: "AccessibleInput",
+            type: "checkbox",
+            placeholder: "AccessibleInput",
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={AccessibleInput} />
+
+## Desarrollo atómico
+
+Esta molécula está compuesta de una etiqueta y de una entrada.
+
+```jsx
+<>
+    {!placeholderCheckingType && <Label text htmlFor />}
+    <Input name type value maxLength minLength placeholder readOnly />
+</>
+```

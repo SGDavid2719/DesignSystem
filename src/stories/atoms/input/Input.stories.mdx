@@ -1,0 +1,45 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { Input } from "./Input";
+
+<Meta title="Atoms/Input" component={Input} />
+
+export const Template = (args) => <Input {...args} />;
+
+# Entrada
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/atoms/Input)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Este elemento se utiliza con la etiqueta `<input>`, y se utilizan para crear campos para introductir datos.
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            name: "test",
+            placeholder: "test",
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={Input} />
+
+## Desarrollo atómico
+
+Al ser una unidad indivisible se utiliza únicamente la etiqueta HTML propia para los botones.
+
+```jsx
+<input />
+```

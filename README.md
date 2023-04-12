@@ -29,6 +29,6 @@ The deploys to GitHub Pages.
 
 View deployment [Design System](https://sgdavid2719.github.io/DesignSystem/)
 
-## To build the solution
+## To test the solution
 
-### `npm run build`
+### `npm run test -- --coverage`
