@@ -1,0 +1,44 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { Label } from "./Label";
+
+<Meta title="Atoms/Label" component={Label} />
+
+export const Template = (args) => <Label {...args} />;
+
+# Etiqueta
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/atoms/Label)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Este elemento se utiliza con la etiqueta `<label>`, y representa un título para un elemento en una interfaz de usuario.
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            text: "Label",
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={Label} />
+
+## Desarrollo atómico
+
+Al ser una unidad indivisible se utiliza únicamente la etiqueta HTML propia para los botones.
+
+```jsx
+<label />
+```
