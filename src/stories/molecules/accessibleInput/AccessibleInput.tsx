@@ -16,7 +16,6 @@ export const AccessibleInput: React.FC<AccessibleInputProps> = ({
     minLength,
     placeholder,
     readOnly = false,
-    onChange,
     inputClassName,
 }) => {
     const placeholderCheckingType =
@@ -44,7 +43,6 @@ export const AccessibleInput: React.FC<AccessibleInputProps> = ({
                 placeholder={placeholderCheckingType}
                 readOnly={readOnly}
                 inputClassName={`block border-2 p-1 ${inputClassName}`}
-                onChange={onChange}
             />
         </div>
     );
