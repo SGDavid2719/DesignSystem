@@ -1,0 +1,73 @@
+import { Meta, Story, Props, Canvas } from "@storybook/addon-docs";
+import { withKnobs, boolean, select, text } from "@storybook/addon-knobs";
+import { Searcher } from "./Searcher";
+
+<Meta title="Organisms/Searcher" component={Searcher} />
+
+export const Template = (args) => <Searcher {...args} />;
+
+# Buscador
+
+[Código fuente](https://github.com/SGDavid2719/DesignSystem/tree/master/src/stories/organisms/Searcher)
+
+## Tabla de contenidos
+
+-   [Descripción general](#descripción-general)
+-   [API Componente](#api-componente)
+-   [Desarrollo atómico](#desarrollo-atómico)
+
+## Descripción general
+
+Este elemento es un formulario con campo de búsqueda y controles, y se utiliza para realizar una búsqueda.
+
+<Canvas>
+    <Story
+        name="Default"
+        args={{
+            name: "Searcher",
+            htmlFor: "Searcher",
+            text: "Searcher",
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## API Componente
+
+<Props of={Searcher} />
+
+## Desarrollo atómico
+
+Este organismo está compuesto por un formulario, un campo de introducción de datos, un botón de buscar y un botón de limpiar.
+
+```jsx
+<form className="flex gap-2">
+    <AccessibleInput
+        text
+        htmlFor
+        name
+        type
+        value={searchingValue}
+        maxLength
+        minLength
+        placeholder
+        readOnly
+        onChange={setSearchingValue}
+    />
+    <Button
+        type="submit"
+        hasIconOnly={true}
+        renderIcon="magnifying-glass"
+        align="start"
+        onClick
+    />
+    <Button
+        type="reset"
+        hasIconOnly={true}
+        renderIcon="cross"
+        align="start"
+        onClick
+    />
+</form>
+```

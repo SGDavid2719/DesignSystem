@@ -9,11 +9,11 @@ describe("DoipPage", () => {
         const icons = screen.getAllByRole("graphics-symbol");
         expect(icons.length).toBe(48);
         const redirects = screen.getAllByRole("link");
-        expect(redirects.length).toBe(40);
+        expect(redirects.length).toBe(38);
         redirects.forEach((redirect) =>
             expect(redirect).toHaveAttribute("aria-label")
         );
         const buttons = screen.getAllByRole("button");
-        expect(buttons.length).toBe(7);
+        expect(buttons.length).toBe(9);
     });
 });

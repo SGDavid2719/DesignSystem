@@ -10,6 +10,7 @@ import { IconMenu } from "../../organisms/iconMenu/IconMenu";
 import { InfoCard } from "../../organisms/infoCard/InfoCard";
 import { NavBar } from "../../organisms/navBar/NavBar";
 import { OffersList } from "../../organisms/offersList/OffersList";
+import { Searcher } from "../../organisms/searcher/Searcher";
 
 export const DoipPage = () => {
     const menuLinks = [
@@ -71,12 +72,6 @@ export const DoipPage = () => {
             rel: "next" as Rel,
             ariaLabel: "link1",
             iconId: "home",
-        },
-        {
-            href: "/?path=/story/pages-notfoundpage--default",
-            rel: "next" as Rel,
-            ariaLabel: "link2",
-            iconId: "magnifying-glass",
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
@@ -748,13 +743,6 @@ export const DoipPage = () => {
             {
                 href: "/?path=/story/pages-notfoundpage--default",
                 rel: "next" as Rel,
-                ariaLabel: "link2",
-                iconId: "magnifying-glass",
-                iconClassName: "text-blue-400",
-            },
-            {
-                href: "/?path=/story/pages-notfoundpage--default",
-                rel: "next" as Rel,
                 ariaLabel: "link3",
                 iconId: "facebook",
                 iconClassName: "text-blue-400",
@@ -822,16 +810,26 @@ export const DoipPage = () => {
             <header>
                 <HiddenMenu menuLinks={menuLinks} />
                 <div className="block lg:flex my-10 px-10">
-                    <div className="w-full lg:w-2/3">
+                    <div className="w-full lg:w-1/2">
                         <ImageLink
                             {...logoLink}
                             imageClassName="h-[5rem]"
                             redirectClassName="w-fit"
                         />
                     </div>
-                    <div className="w-full mt-4 lg:mt-0 lg:w-1/3">
-                        <div>
-                            <IconMenu iconLinks={iconsLink} />
+                    <div className="w-full mt-4 lg:mt-0 lg:w-1/2">
+                        <div className="flex">
+                            <div className="w-1/2">
+                                <IconMenu iconLinks={iconsLink} />
+                            </div>
+                            <div className="w-1/2">
+                                <Searcher
+                                    text="Buscar"
+                                    htmlFor="search"
+                                    name="search"
+                                    placeholder="Buscar"
+                                />
+                            </div>
                         </div>
                         <div className="mt-4 flex justify-start lg:justify-end gap-4">
                             <Redirect
