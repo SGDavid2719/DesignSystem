@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { InputType } from "../../../shared/types";
 
 export interface InputProps {
@@ -48,6 +49,8 @@ export const Input: React.FC<InputProps> = ({
     readOnly = false,
     inputClassName,
 }) => {
+    const [searchingValue, setSearchingValue] = useState(value ?? "");
+
     const placeholderCheckingType =
         type === "email" ||
         type === "number" ||
@@ -63,13 +66,17 @@ export const Input: React.FC<InputProps> = ({
         <input
             type={type}
             name={name}
+            aria-label={name}
             id={name}
-            value={value}
+            value={searchingValue}
             maxLength={maxLength}
             minLength={minLength}
             placeholder={placeholderCheckingType}
             readOnly={readOnly}
             className={inputClassName}
+            onChange={(event) => {
+                setSearchingValue(event.target.value);
+            }}
         />
     );
 };

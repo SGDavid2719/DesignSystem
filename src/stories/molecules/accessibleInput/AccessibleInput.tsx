@@ -16,6 +16,7 @@ export const AccessibleInput: React.FC<AccessibleInputProps> = ({
     minLength,
     placeholder,
     readOnly = false,
+    inputClassName,
 }) => {
     const placeholderCheckingType =
         type === "email" ||
@@ -41,7 +42,7 @@ export const AccessibleInput: React.FC<AccessibleInputProps> = ({
                 minLength={minLength}
                 placeholder={placeholderCheckingType}
                 readOnly={readOnly}
-                inputClassName="block border-2"
+                inputClassName={`block border-2 p-1 ${inputClassName}`}
             />
         </div>
     );
