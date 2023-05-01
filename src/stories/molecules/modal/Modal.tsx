@@ -32,12 +32,21 @@ export const Modal: React.FC<ModalProps> = ({
     showModal = false,
     align = "center",
 }) => {
-    const modalStyle =
-        align === "center"
-            ? "w-8/12 h-72"
-            : align === "left"
-            ? "left-0 top-0 w-2/3 h-screen"
-            : "top-0 right-0 w-2/3 h-screen";
+    const modalStyle = (align: Align) => {
+        let alignStyle = "";
+        switch (align) {
+            case "center":
+                alignStyle = "w-8/12 h-72";
+                break;
+            case "left":
+                alignStyle = "left-0 top-0 w-2/3 h-screen";
+                break;
+            default:
+                alignStyle = "top-0 right-0 w-2/3 h-screen";
+                break;
+        }
+        return alignStyle;
+    };
 
     if (showModal) {
         return (
@@ -51,7 +60,7 @@ export const Modal: React.FC<ModalProps> = ({
                 <div
                     className={[
                         "fixed z-20 bg-white rounded shadow-lg",
-                        modalStyle,
+                        modalStyle(align),
                     ].join(" ")}
                 >
                     <div className="border-b px-4 py-2 flex justify-between items-center">

@@ -69,7 +69,7 @@ export const OfficeItem = ({
                     />
                     {schedules.map((schedule, index) => (
                         <Span
-                            key={index}
+                            key={`schedule${schedule}`}
                             children={schedule}
                             spanClassName={`${index !== 0 ? "block" : "ml-1"}`}
                         />

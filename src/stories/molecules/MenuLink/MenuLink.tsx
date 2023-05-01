@@ -61,11 +61,11 @@ export const MenuLink: React.FC<MenuLinkProps> = ({
             </Redirect>
             {subSections && mouseEnter && (
                 <ul className=" lg:z-10 lg:absolute">
-                    {subSections?.map((subSection, subSectionIndex) => {
+                    {subSections?.map((subSection) => {
                         const { href, ariaLabel, children, rel } = subSection;
                         return (
                             <li
-                                key={subSectionIndex}
+                                key={`link${href}${ariaLabel}`}
                                 className="hover:text-blue-600 border px-[1rem] py-[0.25rem] bg-white w-[20rem]"
                             >
                                 <Redirect

@@ -16,7 +16,7 @@ export const AccessibilityContent: React.FC<AccessibilityContentProps> = ({
             <h1 className="font-semibold text-xl mb-4">{title}</h1>
             <div className="flex gap-2 mb-4">
                 {tags.map((tag) => {
-                    return <Tag text={tag} />;
+                    return <Tag key={tag} text={tag} />;
                 })}
             </div>
             <div>{body}</div>

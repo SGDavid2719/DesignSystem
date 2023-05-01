@@ -23,7 +23,7 @@ export const Carousel: React.FC<CarouselProps> = ({ carouselImages }) => {
                                 showImage !== index ? "hidden" : ""
                             } duration-700 ease-in-out`}
                             data-carousel-item
-                            key={index}
+                            key={`imagelink${href}${ariaLabel}`}
                         >
                             <ImageLink
                                 href={href}

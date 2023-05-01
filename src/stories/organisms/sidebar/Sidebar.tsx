@@ -16,10 +16,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
             className={["block bg-gray-500 h-full", sideBarClassName].join(" ")}
         >
             <ul>
-                {sidebarOptions.map((options, index) => {
+                {sidebarOptions.map((options) => {
                     const { dropDownOptions, dropDownTitle } = options;
                     return (
-                        <li key={index}>
+                        <li key={`dropdown${dropDownTitle}`}>
                             <Dropdown
                                 dropDownTitle={dropDownTitle}
                                 dropDownOptions={dropDownOptions}

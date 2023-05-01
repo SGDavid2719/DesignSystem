@@ -30,7 +30,7 @@ export const NavBar = ({ mainLinks, sections }: NavBarProps) => {
             </div>
             <nav className={`${showMenu ? "block" : "hidden"} lg:block`}>
                 <ul className={[`inline-block`, "gap-2", "lg:flex"].join(" ")}>
-                    {mainLinks.map((menuLink, menuLinkIndex) => {
+                    {mainLinks.map((menuLink) => {
                         const {
                             href,
                             ariaLabel,
@@ -40,7 +40,7 @@ export const NavBar = ({ mainLinks, sections }: NavBarProps) => {
                             rel,
                         } = menuLink;
                         return (
-                            <li key={`${menuLinkIndex}${href}`}>
+                            <li key={`menuLink${href}${ariaLabel}`}>
                                 <MenuLink
                                     rel={rel}
                                     href={href}

@@ -116,42 +116,36 @@ export const DoipPage = () => {
             subSections: [
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "¿Qué hacemos?",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "¿Quiénes somos?",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Ubicación y horarios",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Datos y cifras",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Datos y cifras mensuales",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Noticias del DOIP",
@@ -168,42 +162,36 @@ export const DoipPage = () => {
             subSections: [
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Alta/Acceso DOIP",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Tablón de ofertas",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Prácticas y empleo",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Preguntas frecuentes",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Condiciones y normativa",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Decálogo del estudiante en prácticas",
@@ -220,28 +208,24 @@ export const DoipPage = () => {
             subSections: [
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Alta/Acceso DOIP",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Busca candidatos",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Preguntas frecuentes",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Condiciones, costes y normativa",
@@ -250,7 +234,6 @@ export const DoipPage = () => {
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
-
             rel: "next" as Rel,
             ariaLabel: "link4",
             mainText: "JOB DAY UIB",
@@ -266,35 +249,30 @@ export const DoipPage = () => {
             subSections: [
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "¿Qué es el servicio de Orientación profesional?",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Pide una cita al servicio de orientación",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Recursos útiles",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Asesoramiento en oposiciones",
                 },
                 {
                     href: "/?path=/story/pages-notfoundpage--default",
-
                     rel: "next" as Rel,
                     ariaLabel: "ariaLabel",
                     children: "Cápsula de éxito profesional",
@@ -303,7 +281,6 @@ export const DoipPage = () => {
         },
         {
             href: "/?path=/story/pages-notfoundpage--default",
-
             rel: "next" as Rel,
             ariaLabel: "link6",
             mainText: "Cápsulas",

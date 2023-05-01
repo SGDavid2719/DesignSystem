@@ -103,6 +103,17 @@ export const Button: React.FC<ButtonProps> = ({
     btnClassName,
     iconClassName,
 }) => {
+    const renderIconClass = (align: "end" | "start", renderIcon?: string) => {
+        let iconClass = "";
+        if (renderIcon) {
+            iconClass =
+                align === "end"
+                    ? "justify-between"
+                    : "flex-row-reverse justify-end";
+        }
+        return iconClass;
+    };
+
     return (
         <button
             type={type}
@@ -116,13 +127,7 @@ export const Button: React.FC<ButtonProps> = ({
             className={[
                 "p-1 flex",
                 `${disabled ? "cursor-not-allowed" : "cursor-pointer"}`,
-                `${
-                    renderIcon
-                        ? align === "end"
-                            ? "justify-between"
-                            : "flex-row-reverse justify-end"
-                        : ""
-                }`,
+                `${renderIconClass(align, renderIcon)}`,
                 btnClassName,
             ].join(" ")}
             onClick={onClick}

@@ -19,7 +19,7 @@ export const LinksList = ({ links, linksListClass }: LinksListProps) => {
             {links.map((link, linkIndex) => {
                 const { href, ariaLabel, children, rel } = link;
                 return (
-                    <Fragment key={linkIndex}>
+                    <Fragment key={`link${href}${ariaLabel}`}>
                         <li className="w-fit">
                             <Redirect
                                 rel={rel}
